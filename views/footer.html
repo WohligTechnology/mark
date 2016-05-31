@@ -1,12 +1,37 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <p>Copyright &copy; {{template.year}}. All Right Resvered.</p>
+            <div class="col-md-2">
+              <ul class="list-unstyled">
+                <li>Overview</li>
+                <li><a ui-sref="home">Vision</a></li>
+                <li><a ui-sref="home">Mission</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              <ul class="list-unstyled">
+                <li>Brands</li>
+                <li><a ui-sref="dessange">Dessange Paris</a></li>
+                <li><a ui-sref="albane">Camille Albane Paris</a></li>
+                <li><a ui-sref="phytodess">Phytodess Paris</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              <ul class="list-unstyled ul-head">
+                <li><a ui-sref="home">Careers</a></li>
+                <li><a ui-sref="home">Media</a></li>
+                <li><a ui-sref="home">Contact Us</a></li>
+              </ul>
             </div>
             <div class="col-md-6">
-                <div class="pull-right">
-                    <p>Developed by <a href="http://www.wohlig.com" target="_blank">Wohlig Technology</a>.</p>
+                <div class="pull-right no-pad-p">
+                  <p ng-include="template.social"></p>
+                    <p>&copy;
+                        {{template.year}}
+                        MARK SALON &amp; SPA | All rights reserved</p>
+                    <p>Designed by
+                        <a href="http://www.wohlig.com" target="_blank">TING</a>
+                    </p>
                 </div>
             </div>
         </div>

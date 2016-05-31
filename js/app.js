@@ -19,7 +19,6 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             controller: 'HomeCtrl'
         })
 
-
     .state('dessange', {
         url: "/brands/dessange",
         templateUrl: "views/template.html",
@@ -41,7 +40,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     .state('media-corner', {
         url: "/media-corner",
         templateUrl: "views/template.html",
-        controller: 'HomeCtrl'
+        controller: 'MediaCornerCtrl'
     })
 
     ;
