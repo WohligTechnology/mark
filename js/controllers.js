@@ -7,8 +7,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 
-
-
     $scope.section = {
         one: "views/section/section1.html",
         two: "views/section/section2.html",
@@ -16,6 +14,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         four: "views/section/section4.html",
         five: "views/section/section5.html"
     };
+
+    $scope.$on('$viewContentLoaded', function(){
+      
+    });
 
 })
 
