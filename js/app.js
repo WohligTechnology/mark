@@ -16,7 +16,10 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
         .state('home', {
             url: "/",
             templateUrl: "views/template.html",
-            controller: 'HomeCtrl'
+            controller: 'HomeCtrl',
+            params: {
+              'id': 'home',
+            }
         })
 
     .state('dessange', {

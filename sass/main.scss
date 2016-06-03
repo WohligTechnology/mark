@@ -116,4 +116,10 @@ a, .btn {
     }
   }
 }
+.navbar-toggle .icon-bar {
+  background-color: $brand-primary;
+}
+.section {
+  padding-top: 150px;
+}
 @import "fancybox-override";

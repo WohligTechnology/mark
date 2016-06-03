@@ -1,6 +1,6 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("home");
     $scope.menutitle = NavigationService.makeactive("Home");
@@ -15,8 +15,41 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         five: "views/section/section5.html"
     };
 
-    $scope.$on('$viewContentLoaded', function(){
-      
+    $scope.changePage = function(text) {
+      console.log(text);
+      var length = $(".fp-section").length;
+      // if (typeof $.fn.fullpage.destroy == 'function') {
+      //   $.fn.fullpage.destroy('all');
+      // }
+      if (length === 0) {
+        $('.fullpage').fullpage();
+      }
+      $scope.homeval = text;
+      switch (text) {
+        case "contact":
+          $.fn.fullpage.moveTo(5);
+          break;
+        case "careers":
+          $.fn.fullpage.moveTo(4);
+          break;
+        case "brands":
+          $.fn.fullpage.moveTo(3);
+          break;
+        case "overview":
+          $.fn.fullpage.moveTo(2);
+          break;
+        case "home":
+          $.fn.fullpage.moveTo(1);
+          break;
+        default:
+          $.fn.fullpage.moveTo(1);
+          break;
+      }
+    };
+    $scope.$on('$viewContentLoaded', function() {
+      $timeout(function() {
+        $scope.changePage($stateParams.id);
+      }, 1000);
     });
 
 })
