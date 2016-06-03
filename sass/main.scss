@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Hammersmith+One);
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
@@ -8,21 +10,17 @@
 $brand-primary: #fff !default;
 $brand-success: #84ce3c !default;
 $brand-warning: #ffec39 !default;
-$brand-danger:  #fc483f !default;
-$brand-info:    #959595 !default;
-
-$facebook:  #3a579d !default;
-$twitter:   #49c8f5 !default;
-
-$text-color:            $brand-primary !default;
-$link-color:            $brand-primary !default;
-$link-hover-color:      darken($link-color, 15%) !default;
+$brand-danger: #fc483f !default;
+$brand-info: #959595 !default;
+$facebook: #3a579d !default;
+$twitter: #49c8f5 !default;
+$text-color: $brand-primary !default;
+$link-color: $brand-primary !default;
+$link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: none !default;
-$body-bg:               #000 !default;
-
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
-
+$body-bg: #000 !default;
+$font-family-sans-serif: "Maven Pro", MavenPro, Arial, sans-serif !default;
+$font-family-serif: "Hammersmith One", Hammersmith, serif !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 body {
   // padding-top: 70px;
@@ -43,10 +41,12 @@ img.doneLoading {
 nav li:hover .dropdown-menu {
   display: block;
 }
-a, .btn {
+a,
+.btn {
   cursor: pointer;
   @include transition(all ease 300ms);
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     outline: none;
   }
 }
@@ -57,7 +57,8 @@ a, .btn {
       background: transparent;
       border: 1px $brand-primary solid;
       color: $brand-primary;
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background: $brand-primary;
         color: #000;
       }
@@ -69,7 +70,8 @@ a, .btn {
       background: transparent;
       border: 1px $brand-info solid;
       color: $brand-info;
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background: $brand-info;
         color: #000;
       }
@@ -93,7 +95,6 @@ a, .btn {
 }
 //bootstrap forms
 /* Start writing sass here */
-
 .uppercase {
   text-transform: uppercase;
 }
@@ -103,7 +104,8 @@ a, .btn {
       color: $brand-info;
       @include transition(all 300ms ease);
     }
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       .fa-facebook-square {
         color: $facebook;
       }
@@ -121,5 +123,144 @@ a, .btn {
 }
 .section {
   padding-top: 150px;
+  position: relative;
+}
+.width150 {
+  img {
+    width: 150px;
+  }
+}
+.logo {
+  display: block;
+  img {
+    padding: 15px 20px;
+  }
+}
+.brand-primary {
+  color: #fff;
+}
+.menu-header {
+  .navbar-nav {
+    float: right;
+  }
+}
+.nav {
+  li {
+    a {
+      text-transform: uppercase;
+      font-family: $font-family-serif;
+      font-weight: 400;
+      padding: 10px 0 10px 25px;
+      &:hover,
+      &:focus {
+        color: darken($brand-primary, 30%);
+        background-color: transparent;
+      }
+    }
+  }
+}
+.position-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  @include transform(translate(-50%,-50%));
+  &.top60 {
+    top: 60%;
+    width: 480px;
+  }
+}
+.home-landing {
+  h4 {
+    font-family: $font-family-sans-serif;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .logo {
+    padding-bottom: 30px;
+    img {
+      width: 350px;
+    }
+  }
+}
+.fp-viewing-0 header {
+  display: none;
+}
+.in-middle {
+  height: 70vh;
+  position: relative;
+}
+.spread-head {
+  margin: 0;
+  font-family: $font-family-serif;
+  font-weight: 700;
+  letter-spacing: 30px;
+  font-size: 100px;
+  color: #abaaa9;
+}
+p {
+  font-family: $font-family-sans-serif;
+}
+.cont-overview {
+  p {
+    margin-bottom: 20px;
+  }
+}
+.big-text {
+  font-size: 20px;
+  line-height: 120%;
+  font-family: $font-family-serif;
+}
+.full-width {
+  width: 100%;
+}
+.brand-holder {
+  width: 80%;
+  padding: 20px;
+  cursor: pointer;
+  background: transparent;
+  @include transition(background 300ms ease,all ease 300ms);
+  img {
+    display: block;
+    padding-bottom: 30px;
+  }
+  button {
+    opacity: 0;
+    @include transition(all ease 300ms);
+  }
+  &:hover {
+    @include background(linear-gradient(rgba(255, 255, 255, 0.40), rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.03),rgba(255, 255, 255, 0)));
+    button {
+      opacity: 1;
+    }
+  }
+}
+.overlay-box {
+  @include background(linear-gradient(to left,rgba(37, 37, 37, 0.95), rgba(37, 37, 37, 0.75), rgba(37, 37, 37, 0.5), rgba(37, 37, 37, 0.10)));
+  padding: 10px 40px;
+  margin: 0 -30px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+.section.one {
+  background: url('../img/home/landing.jpg') no-repeat;
+  background-size: 100%;
+}
+.section.two {
+  background: url('../img/home/overview.jpg') no-repeat;
+  background-size: 100%;
+}
+.section.three {
+  background: url('../img/home/brands.jpg') no-repeat;
+  background-size: 100%;
+}
+.section.four {
+  background: url('../img/home/careers.jpg') no-repeat;
+  background-size: 100%;
+}
+.section.five {
+  background: url('../img/home/contact.jpg') no-repeat;
+  background-size: 100%;
 }
 @import "fancybox-override";

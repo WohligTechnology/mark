@@ -31,7 +31,7 @@ var navigationservice = angular.module('navigationservice', [])
     anchor: "careers",
     subnav: []
   },{
-    name: "Contant Us",
+    name: "Contact Us",
     classis: "active",
     anchor: "contact-us",
     subnav: []
