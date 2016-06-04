@@ -18,6 +18,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.changePage = function(text) {
     console.log(text);
     var length = $(".fp-section").length;
+    console.log(length);
+    console.log($(".fp-section"));
     // if (typeof $.fn.fullpage.destroy == 'function') {
     //   $.fn.fullpage.destroy('all');
     // }
