@@ -2,5 +2,6 @@
   <li ng-repeat="menu in navigation" class="{{menu.classis}}">
     <a ui-sref="{{menu.anchor}}" ng-if="menu.anchor">{{menu.name}}</a>
     <a href="{{menu.link}}" ng-if="menu.link">{{menu.name}}</a>
+    <a ng-click="changePage('{{menu.pagename}}')" ng-if="menu.pagename">{{menu.name}}</a>
   </li>
 </ul>

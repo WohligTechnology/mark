@@ -3,6 +3,7 @@ var jsArray = [
     './bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
     './bower_components/flexslider/jquery.flexslider-min.js',
     './bower_components/fancyBox/source/jquery.fancybox.js',
+    './bower_components/fullpage.js/dist/jquery.fullPage.js',
     './bower_components/angular/angular.min.js',
     './bower_components/angular-sanitize/angular-sanitize.min.js',
     './bower_components/angular-animate/angular-animate.min.js',
@@ -19,7 +20,6 @@ var jsArray = [
     './js/controllers.js',
     './js/templateservice.js',
     './js/navigation.js',
-
     //please do not change it
     './w/js/templates.js',
 ];

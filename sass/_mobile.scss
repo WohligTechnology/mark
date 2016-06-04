@@ -1,0 +1,94 @@
+@media (max-width: $screen-sm-max) {
+  .spread-head {
+    letter-spacing: 20px;
+    font-size: 60px;
+  }
+  .brand-holder {
+    width: 100%;
+  }
+  .spread-head-contact {
+    padding: 0;
+  }
+  .contact .underline-form {
+    padding: 0 10px;
+  }
+}
+@media (max-width: $screen-xs-max) {
+  .section {
+    padding-top: 75px;
+  }
+  .home-landing .logo {
+    padding: 0;
+    img {
+      width: 250px;
+    }
+  }
+  .nav li a {
+    padding: 5px 25px;
+  }
+  .position-center.top60 {
+    width: auto;
+  }
+  .spread-head,
+  .spread-head-contact {
+    letter-spacing: 8px;
+    font-size: 36px;
+    text-align: center;
+    line-height: 110%;
+  }
+  .position-center {
+    position: static;
+    transform: translate(0);
+  }
+  .in-middle {
+    height: auto;
+  }
+  .big-text {
+    font-size: 16px;
+  }
+  .brand-holder img {
+    padding-bottom: 0;
+    width: 130px;
+    margin: 0 auto;
+  }
+  .social-top {
+    position: absolute;
+    top: 0;
+    right: 14px;
+  }
+  .navbar-toggle {
+    margin-top: 30px;
+  }
+  .menu-header .navbar-nav {
+    float: none;
+    text-align: center;
+    background: #000;
+    margin-top: 1px;
+  }
+  .overflow-contact {
+    height: 60vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .contact {
+    .address-box {
+      margin: 15px 6px;
+      width: 100%;
+    }
+    .map-holder img {
+      margin: 10px 5px;
+    }
+  }
+  .overflow-scroll {
+    height: 80vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .footer {
+    padding: 5px;
+    li a {
+      font-size: 10px;
+      padding-left: 0;
+    }
+  }
+}

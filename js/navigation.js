@@ -9,16 +9,19 @@ else {
 
 var navigationservice = angular.module('navigationservice', [])
 
+
 .factory('NavigationService', function() {
   var navigation = [{
     name: "Overview",
     classis: "active",
-    anchor: "overview",
+    // anchor: "overview",
+    pagename: "overview",
     subnav: []
   },{
     name: "Brands",
     classis: "active",
-    anchor: "brands",
+    // anchor: "brands",
+    pagename: "brands",
     subnav: []
   },{
     name: "Media Corner",
@@ -28,12 +31,14 @@ var navigationservice = angular.module('navigationservice', [])
   },{
     name: "Careers",
     classis: "active",
-    anchor: "careers",
+    // anchor: "careers",
+    pagename: "careers",
     subnav: []
   },{
     name: "Contact Us",
     classis: "active",
-    anchor: "contact-us",
+    // anchor: "contact-us",
+    pagename: "contact-us",
     subnav: []
   }];
 
