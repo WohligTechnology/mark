@@ -56,12 +56,25 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
+.controller('AboutusCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("aboutus");
+  $scope.menutitle = NavigationService.makeactive("About Us");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+  if (typeof $.fn.fullpage.destroy == 'function') {
+    $.fn.fullpage.destroy('all');
+  }
+})
 .controller('DessangeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("dessange");
   $scope.menutitle = NavigationService.makeactive("Dessange Paris");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+  if (typeof $.fn.fullpage.destroy == 'function') {
+    $.fn.fullpage.destroy('all');
+  }
 })
 
 .controller('AlbaneCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -70,6 +83,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.menutitle = NavigationService.makeactive("Camille Albane Paris");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+  if (typeof $.fn.fullpage.destroy == 'function') {
+    $.fn.fullpage.destroy('all');
+  }
 })
 
 .controller('PhytodessCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -78,6 +94,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.menutitle = NavigationService.makeactive("Phytodess Paris");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+  if (typeof $.fn.fullpage.destroy == 'function') {
+    $.fn.fullpage.destroy('all');
+  }
 })
 
 .controller('MediaCornerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -86,6 +105,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.menutitle = NavigationService.makeactive("Media Corner");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+  if (typeof $.fn.fullpage.destroy == 'function') {
+    $.fn.fullpage.destroy('all');
+  }
 })
 
 .controller('headerctrl', function($scope, TemplateService) {

@@ -21,7 +21,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
               'id': 'home',
             }
         })
-
+    .state('aboutus', {
+        url: "/aboutus",
+        templateUrl: "views/template-home.html",
+        controller: 'AboutusCtrl'
+    })
     .state('dessange', {
         url: "/brands/dessange",
         templateUrl: "views/template.html",
