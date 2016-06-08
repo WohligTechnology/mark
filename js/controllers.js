@@ -14,6 +14,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     four: "views/section/section4.html",
     five: "views/section/section5.html"
   };
+
   $scope.oneAtATime = true;
   $scope.changePage = function(text) {
     console.log(text);
@@ -52,13 +53,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $timeout(function() {
       $scope.changePage($stateParams.id);
     }, 1000);
+
   });
 
 })
 
-.controller('AboutusCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
   //Used to name the .html file
-  $scope.template = TemplateService.changecontent("aboutus");
+  $scope.template = TemplateService.changecontent("about");
   $scope.menutitle = NavigationService.makeactive("About Us");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();

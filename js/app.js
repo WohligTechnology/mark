@@ -14,18 +14,21 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     $httpProvider.defaults.withCredentials = true;
     $stateProvider
         .state('home', {
-            url: "/",
-            templateUrl: "views/template.html",
+            url: "/home",
+            templateUrl: "views/template-home.html",
             controller: 'HomeCtrl',
             params: {
               'id': 'home',
             }
         })
-    .state('aboutus', {
-        url: "/aboutus",
-        templateUrl: "views/template-home.html",
-        controller: 'AboutusCtrl'
+
+    .state('about', {
+        url: "/about",
+        templateUrl: "views/template.html",
+        controller: 'AboutCtrl'
+
     })
+
     .state('dessange', {
         url: "/brands/dessange",
         templateUrl: "views/template.html",
@@ -51,7 +54,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     })
 
     ;
-    $urlRouterProvider.otherwise("/");
+    $urlRouterProvider.otherwise("/home");
     $locationProvider.html5Mode(isproduction);
 });
 

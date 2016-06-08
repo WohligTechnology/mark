@@ -23,377 +23,455 @@ $font-family-sans-serif: "Maven Pro", MavenPro, Arial, sans-serif !default;
 $font-family-serif: "Hammersmith One", Hammersmith, serif !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 body {
-  // padding-top: 70px;
+    // padding-top: 70px;
 }
 img.loading {
-  text-align: center;
-  opacity: 1;
-  width: 32px !important;
-  height: auto;
+    text-align: center;
+    opacity: 1;
+    width: 32px !important;
+    height: auto;
 }
 img {
-  opacity: 0;
-  @include transition(all 300ms ease);
+    opacity: 0;
+    @include transition(all 300ms ease);
 }
 img.doneLoading {
-  opacity: 1;
+    opacity: 1;
 }
 nav li:hover .dropdown-menu {
-  display: block;
+    display: block;
 }
-a,
-.btn {
-  cursor: pointer;
-  @include transition(all ease 300ms);
-  &:hover,
-  &:focus {
-    outline: none;
-  }
+.btn,
+a {
+    cursor: pointer;
+    @include transition(all ease 300ms);
+    &:focus,
+    &:hover {
+        outline: none;
+    }
 }
 .btn {
-  font-family: $font-family-serif;
-  &.btn-primary {
-    color: #000;
-    padding: 8px 20px;
-    position: relative;
-    line-height: 100%;
-    &.btn-outline {
-      background: transparent;
-      border: 1px $brand-primary solid;
-      color: $brand-primary;
-      &:before {
-        content: "";
-        width: 1px;
-        position: absolute;
-        height: 6px;
-        bottom: -1px;
-        left: 50%;
-        background: $brand-primary;
-      }
-      &:hover,
-      &:focus {
-        background: $brand-primary;
+    font-family: $font-family-serif;
+    &.btn-primary {
         color: #000;
-        border-color: #000;
-      }
-      &:hover,
-      &:focus {
-        &:before {
-          background: #000;
+        padding: 8px 20px;
+        position: relative;
+        line-height: 100%;
+        &.btn-outline {
+            background: transparent;
+            border: 1px $brand-primary solid;
+            color: $brand-primary;
+            &:before {
+                content: "";
+                width: 1px;
+                position: absolute;
+                height: 6px;
+                bottom: -1px;
+                left: 50%;
+                background: $brand-primary;
+            }
+            &:focus,
+            &:hover {
+                background: $brand-primary;
+                color: #000;
+                border-color: #000;
+            }
+            &:focus,
+            &:hover {
+                &:before {
+                    background: #000;
+                }
+            }
         }
-      }
     }
-  }
-  &.btn-info {
-    color: #000;
-    &.btn-outline {
-      background: transparent;
-      border: 1px solid $brand-info;
-      color: $brand-info;
-      &:hover,
-      &:focus {
-        background: $brand-info;
+    &.btn-info {
         color: #000;
-      }
+        &.btn-outline {
+            background: transparent;
+            border: 1px solid $brand-info;
+            color: $brand-info;
+            &:focus,
+            &:hover {
+                background: $brand-info;
+                color: #000;
+            }
+        }
     }
-  }
 }
 //bootstrap forms
-.input-lg,
+.btn,
+.form-control,
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
-.btn,
-.form-control {
-  border-radius: 0;
-  @include box-shadow(none);
+.input-lg {
+    border-radius: 0;
+    @include box-shadow(none);
 }
 .form-control:focus {
-  border-color: $brand-primary;
-  outline: 0;
-  @include box-shadow(none);
+    border-color: $brand-primary;
+    outline: 0;
+    @include box-shadow(none);
 }
 //bootstrap forms
 /* Start writing sass here */
 .uppercase {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 .pt12 {
-  padding-top: 12px;
+    padding-top: 12px;
 }
 .social {
-  a {
-    i {
-      color: $brand-info;
-      @include transition(all 300ms ease);
+    a {
+        i {
+            color: $brand-info;
+            @include transition(all 300ms ease);
+        }
+        &:focus,
+        &:hover {
+            .fa-facebook-square {
+                color: $facebook;
+            }
+            .fa-twitter-square {
+                color: $twitter;
+            }
+            .fa-instagram {
+                color: $brand-primary;
+            }
+        }
     }
-    &:hover,
-    &:focus {
-      .fa-facebook-square {
-        color: $facebook;
-      }
-      .fa-twitter-square {
-        color: $twitter;
-      }
-      .fa-instagram {
-        color: $brand-primary;
-      }
-    }
-  }
 }
 .navbar-toggle .icon-bar {
-  background-color: $brand-primary;
+    background-color: $brand-primary;
 }
 .section {
-  padding-top: 100px;
-  position: relative;
-  background-size: cover!important;
+    padding-top: 100px;
+    position: relative;
+    background-size: cover!important;
 }
 .section.one {
-  background: url('../img/home/landing.jpg') no-repeat;
+    background: url('../img/home/landing.jpg') no-repeat;
 }
 .section.two {
-  background: url('../img/home/overview.jpg') no-repeat;
+    background: url('../img/home/overview.jpg') no-repeat;
 }
 .section.three {
-  background: url('../img/home/brands.jpg') no-repeat;
+    background: url('../img/home/brands.jpg') no-repeat;
 }
 .section.four {
-  background: url('../img/home/careers.jpg') no-repeat;
+    background: url('../img/home/careers.jpg') no-repeat;
 }
 .section.five {
-  background: url('../img/home/contact.jpg') no-repeat;
+    background: url('../img/home/contact.jpg') no-repeat;
 }
 .width150 {
-  img {
-    width: 150px;
-  }
+    img {
+        width: 150px;
+    }
 }
 .logo {
-  display: block;
-  img {
-    padding: 15px 20px;
-  }
+    display: block;
+    img {
+        padding: 15px 20px;
+    }
 }
 .brand-primary {
-  color: #fff;
+    color: #fff;
 }
 .menu-header {
-  .navbar-nav {
-    float: right;
-  }
+    .navbar-nav {
+        float: right;
+    }
 }
 .nav {
-  li {
-    a {
-      text-transform: uppercase;
-      font-family: $font-family-serif;
-      font-weight: 400;
-      padding: 10px 0 10px 25px;
-      &:hover,
-      &:focus {
-        color: darken($brand-primary, 30%);
-        background-color: transparent;
-      }
+    li {
+        a {
+            text-transform: uppercase;
+            font-family: $font-family-serif;
+            font-weight: 400;
+            padding: 10px 0 10px 25px;
+            &:focus,
+            &:hover {
+                color: darken($brand-primary, 30%);
+                background-color: transparent;
+            }
+        }
     }
-  }
 }
 .position-center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  @include transform(translate(-50%,-50%));
-  &.top60 {
-    top: 60%;
-    width: 480px;
-  }
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include transform(translate(-50%,-50%));
+    &.top60 {
+        top: 60%;
+        width: 480px;
+    }
 }
 .home-landing {
-  h4 {
-    font-family: $font-family-sans-serif;
-    font-size: 26px;
-    text-transform: uppercase;
-    font-weight: 400;
-  }
-  .logo {
-    padding-bottom: 30px;
-    img {
-      width: 350px;
+    h4 {
+        font-family: $font-family-sans-serif;
+        font-size: 26px;
+        text-transform: uppercase;
+        font-weight: 400;
     }
-  }
+    .logo {
+        padding-bottom: 30px;
+        img {
+            width: 350px;
+        }
+    }
 }
 .fp-viewing-0 header {
-  display: none;
+    display: none;
 }
 .in-middle {
-  height: 70vh;
-  position: relative;
+    height: 70vh;
+    position: relative;
 }
 .spread-head {
-  margin: 0;
-  font-family: $font-family-serif;
-  font-weight: 700;
-  letter-spacing: 30px;
-  font-size: 100px;
-  color: #abaaa9;
+    margin: 0;
+    font-family: $font-family-serif;
+    font-weight: 700;
+    letter-spacing: 30px;
+    font-size: 100px;
+    color: #abaaa9;
 }
 .spread-head-contact {
-  padding: 0 40px;
-  margin: 0;
-  font-family: $font-family-serif;
-  font-weight: 700;
-  letter-spacing: 30px;
-  font-size: 60px;
-  line-height: 65%;
-  color: #000;
+    padding: 0 40px;
+    margin: 0;
+    font-family: $font-family-serif;
+    font-weight: 700;
+    letter-spacing: 30px;
+    font-size: 60px;
+    line-height: 65%;
+    color: #000;
 }
 p {
-  font-family: $font-family-sans-serif;
+    font-family: $font-family-sans-serif;
 }
 .cont-overview {
-  p {
-    margin-bottom: 20px;
-  }
+    p {
+        margin-bottom: 20px;
+    }
 }
 .big-text {
-  font-size: 20px;
-  line-height: 120%;
-  font-family: $font-family-serif;
+    font-size: 20px;
+    line-height: 120%;
+    font-family: $font-family-serif;
 }
 .full-width {
-  width: 100%;
+    width: 100%;
 }
 .brand-holder {
-  width: 80%;
-  padding: 20px;
-  cursor: pointer;
-  background: transparent;
-  @include transition(background 300ms ease,all ease 300ms);
-  img {
-    display: block;
-    padding-bottom: 30px;
-  }
-  button {
-    opacity: 0;
-    @include transition(all ease 300ms);
-  }
-  &:hover {
-    @include background(linear-gradient(rgba(255, 255, 255, 0.40), rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.03),rgba(255, 255, 255, 0)));
-    button {
-      opacity: 1;
+    width: 80%;
+    padding: 20px;
+    cursor: pointer;
+    background: transparent;
+    @include transition(background 300ms ease,all ease 300ms);
+    img {
+        display: block;
+        padding-bottom: 30px;
     }
-  }
+    button {
+        opacity: 0;
+        @include transition(all ease 300ms);
+    }
+    &:hover {
+        @include background(linear-gradient(rgba(255, 255, 255, 0.40), rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.03),rgba(255, 255, 255, 0)));
+        button {
+            opacity: 1;
+        }
+    }
 }
 .overlay-box {
-  @include background(linear-gradient(to left,rgba(37, 37, 37, 0.95), rgba(37, 37, 37, 0.75), rgba(37, 37, 37, 0.5), rgba(37, 37, 37, 0.10)));
-  padding: 10px 40px;
-  margin: 0 -30px;
+    @include background(linear-gradient(to left,rgba(37, 37, 37, 0.95), rgba(37, 37, 37, 0.75), rgba(37, 37, 37, 0.5), rgba(37, 37, 37, 0.10)));
+    padding: 10px 40px;
+    margin: 0 -30px;
 }
 .mb20 {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 .white-accordion {
-  padding: 0 20px 20px;
-  .panel-default {
-    border-color: transparent;
-  }
-  .panel-default {
-    .panel-heading {
-      background-color: transparent;
-      border-bottom: 1px solid $brand-info;
-      color: #fff;
-      padding: 0;
+    padding: 0 20px 20px;
+    .panel-default {
+        border-color: transparent;
     }
-    .panel-title > a {
-      display: block;
-      padding: 10px 15px;
+    .panel-default {
+        .panel-heading {
+            background-color: transparent;
+            border-bottom: 1px solid $brand-info;
+            color: #fff;
+            padding: 0;
+        }
+        .panel-title > a {
+            display: block;
+            padding: 10px 15px;
+        }
     }
-  }
-  .panel-group {
-    .panel {
-      background-color: transparent;
-      border-width: 0;
+    .panel-group {
+        .panel {
+            background-color: transparent;
+            border-width: 0;
+        }
+        .panel + .panel {
+            margin-top: 0;
+        }
     }
-    .panel + .panel {
-      margin-top: 0;
-    }
-  }
 }
 .margin0 {
-  margin: 0;
+    margin: 0;
 }
 .contact {
-  .col-sm-7 {
-    padding-left: 0;
-  }
-  .underline-form {
-    padding: 0 40px;
-    .form-control {
-      background-color: transparent;
-      border: 0;
-      border-bottom: 1px solid $brand-info;
-      margin-bottom: 20px;
-      color: #fff;
+    .col-sm-7 {
+        padding-left: 0;
     }
-    textarea {
-      resize: none;
-      color: #fff;
+    .underline-form {
+        padding: 0 40px;
+        .form-control {
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid $brand-info;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        textarea {
+            resize: none;
+            color: #fff;
+        }
     }
-  }
-  .map-holder {
-    img {
-      cursor: pointer;
+    .map-holder {
+        img {
+            cursor: pointer;
+        }
     }
-  }
-  .address-box {
-    margin: -85px 40px;
-    padding: 20px;
-    background: #000;
-    position: relative;
-    width: 70%;
-    p {
-      line-height: 160%;
-      font-size: 12px;
-      a i {
-        margin-right: 10px;
-      }
+    .address-box {
+        margin: -85px 40px;
+        padding: 20px;
+        background: #000;
+        position: relative;
+        width: 70%;
+        p {
+            line-height: 160%;
+            font-size: 12px;
+            a i {
+                margin-right: 10px;
+            }
+        }
     }
-  }
 }
 .in-width {
-  height: 60vh;
+    height: 60vh;
 }
 .footer {
-  background: #5b5c5e;
-  padding: 15px;
-  font-size: 12px;
-  &.btm-footer {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  li {
-    font-size: 13px;
-    a {
-      font-size: 12px;
-      padding-left: 8px;
+    background: #5b5c5e;
+    padding: 15px;
+    font-size: 12px;
+    &.btm-footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
-  }
-  .ul-head {
-    font-size: 13px!important;
-  }
-
-  .social {
-    a {
-      i {
-        font-size: 18px;
-        margin-left: 8px;
-      }
+    li {
+        font-size: 13px;
+        a {
+            font-size: 12px;
+            padding-left: 8px;
+        }
     }
-  }
+    .ul-head {
+        font-size: 13px!important;
+    }
+    .social {
+        a {
+            i {
+                font-size: 18px;
+                margin-left: 8px;
+            }
+        }
+    }
 }
-
+.aboutus {
+    // .in-middle{
+    //   height:60vh;
+    // }
+    h2 {
+        font-family: $font-family-serif;
+        color: $brand-info;
+        letter-spacing: 6px;
+    }
+    p {
+        font-family: $font-family-sans-serif;
+    }
+    .mission-vision {
+        font-family: $font-family-sans-serif;
+        text-transform: uppercase;
+        p {
+            font-size: 20px;
+            line-height: 1;
+        }
+        .bigest-text {
+            font-size: 32px;
+        }
+        .med-text {
+            font-size: 22px;
+        }
+        .medium-text {
+            font-size: 25px;
+        }
+        .small-text {
+            font-size: 18px;
+        }
+        .sm-text {
+            font-size: 16px;
+        }
+    }
+    .team-pic {
+        max-width: 100%;
+        max-height: 100%;
+        margin: 36px 0;
+        img {
+            border-radius: 50%;
+            width: 100%;
+            height: 176px;
+        }
+    }
+    .team-cont {
+        .name {
+            font-family: $font-family-sans-serif;
+            font-size: 22px;
+        }
+        .direct {
+            font-family: $font-family-sans-serif;
+            font-size: 18px;
+            margin-bottom: 3px;
+        }
+        p {
+            font-family: $font-family-sans-serif;
+            margin-bottom: 5px;
+        }
+        .socials {
+            color: $brand-info;
+            display: inline-block;
+        }
+        .social {
+            display: inline-block;
+            margin: 0 0 0 10px;
+            vertical-align: bottom;
+            font-size: 18px;
+        }
+    }
+    .bg {
+        background-color: #1a1a1a;
+        padding: 60px;
+        margin-bottom: 80px;
+    }
+    .bg-over {
+        background: url('../img/home/overview.jpg');
+        background-size: 100%;
+        background-position: 0;
+    }
+}
 @import "fancybox-override";
 @import "mobile";
