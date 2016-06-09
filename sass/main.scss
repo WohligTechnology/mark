@@ -14,6 +14,7 @@ $brand-danger: #fc483f !default;
 $brand-info: #959595 !default;
 $facebook: #3a579d !default;
 $twitter: #49c8f5 !default;
+$videoicon: #868686 !default;
 $text-color: $brand-primary !default;
 $link-color: $brand-primary !default;
 $link-hover-color: darken($link-color, 15%) !default;
@@ -22,6 +23,10 @@ $body-bg: #000 !default;
 $font-family-sans-serif: "Maven Pro", MavenPro, Arial, sans-serif !default;
 $font-family-serif: "Hammersmith One", Hammersmith, serif !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@font-face {
+    font-family: "Lucida";
+    src: url("../fonts/Lucida Handwriting Italic.ttf");
+}
 body {
     // padding-top: 70px;
 }
@@ -433,7 +438,7 @@ p {
         margin: 36px 0;
         img {
             border-radius: 50%;
-            width: 100%;
+            width: 176px;
             height: 176px;
         }
     }
@@ -472,6 +477,103 @@ p {
         background-size: 100%;
         background-position: 0;
     }
+}
+.dessange {
+    h2 {
+        font-family: $font-family-serif;
+        color: $brand-info;
+        letter-spacing: 6px;
+    }
+    .cont-abt {
+        margin-bottom: 8%;
+    }
+    .cont-about {
+        margin-bottom: 5%;
+    }
+    p {
+        font-family: $font-family-sans-serif;
+    }
+    h3 {
+        font-family: "Lucida";
+        margin-top: 25px;
+        margin-bottom: 12px;
+    }
+    .brand-video {
+        margin-bottom: 30px;
+    }
+    .salon-video {
+        position: relative;
+        .fa {
+            color: $videoicon;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+            border: 5px solid $videoicon;
+            font-size: 28px;
+            padding: 12px 17px;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+        }
+    }
+    .cols{
+      column-count: 2;
+      column-width: 30%;
+      column-gap: none;
+    }
+    .one{
+      background: url('../img/dessange/1.jpg')no-repeat;
+      background-size: 100%;
+      height: 500px;
+    }
+    .two{
+      background: url('../img/dessange/2.jpg')no-repeat;
+      height:600px;
+      background-size: 100%;
+    }
+    .three{
+      background: url('../img/dessange/3.jpg')no-repeat;
+      height:500px;
+      background-size: 100%;
+    }
+    .four{
+      background: url('../img/dessange/4.jpg')no-repeat;
+      height:400px;
+      background-size: 100%;
+    }
+    .salon-image {
+        max-width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+        margin-bottom: 6%;
+    }
+    .bg {
+        background: url('../img/dessange/bg1.jpg') no-repeat;
+        background-size: cover;
+        padding: 60px;
+        margin-bottom: 80px;
+    }
+    .bg-brand {
+        background: url('../img/dessange/bg.jpg') no-repeat;
+        background-size: 100%;
+        background-position: 0 21px;
+    }
+    .position-center {
+    position: absolute;
+    left: 58%;
+    top: 58%;
+    -webkit-transform: translate(-58%, -58%);
+    -moz-transform: translate(-58%, -58%);
+    -ms-transform: translate(-58%, -58%);
+    -o-transform: translate(-58%, -58%);
+    transform: translate(-58%, -58%);
+    width: 32%;
+  }
+  .img-collect{
+        margin-bottom: 65px;
+  }
 }
 @import "fancybox-override";
 @import "mobile";
