@@ -518,30 +518,30 @@ p {
             cursor: pointer;
         }
     }
-    .cols{
-      column-count: 2;
-      column-width: 30%;
-      column-gap: none;
+    .cols {
+        column-count: 2;
+        column-width: 30%;
+        column-gap: none;
     }
-    .one{
-      background: url('../img/dessange/1.jpg')no-repeat;
-      background-size: 100%;
-      height: 500px;
+    .one {
+        background: url('../img/dessange/1.jpg')no-repeat;
+        background-size: 100%;
+        height: 500px;
     }
-    .two{
-      background: url('../img/dessange/2.jpg')no-repeat;
-      height:600px;
-      background-size: 100%;
+    .two {
+        background: url('../img/dessange/2.jpg')no-repeat;
+        height: 600px;
+        background-size: 100%;
     }
-    .three{
-      background: url('../img/dessange/3.jpg')no-repeat;
-      height:500px;
-      background-size: 100%;
+    .three {
+        background: url('../img/dessange/3.jpg')no-repeat;
+        height: 500px;
+        background-size: 100%;
     }
-    .four{
-      background: url('../img/dessange/4.jpg')no-repeat;
-      height:400px;
-      background-size: 100%;
+    .four {
+        background: url('../img/dessange/4.jpg')no-repeat;
+        height: 400px;
+        background-size: 100%;
     }
     .salon-image {
         max-width: 100%;
@@ -561,19 +561,125 @@ p {
         background-position: 0 21px;
     }
     .position-center {
-    position: absolute;
-    left: 58%;
-    top: 58%;
-    -webkit-transform: translate(-58%, -58%);
-    -moz-transform: translate(-58%, -58%);
-    -ms-transform: translate(-58%, -58%);
-    -o-transform: translate(-58%, -58%);
-    transform: translate(-58%, -58%);
-    width: 32%;
-  }
-  .img-collect{
+        position: absolute;
+        left: 58%;
+        top: 58%;
+        -webkit-transform: translate(-58%, -58%);
+        -moz-transform: translate(-58%, -58%);
+        -ms-transform: translate(-58%, -58%);
+        -o-transform: translate(-58%, -58%);
+        transform: translate(-58%, -58%);
+        width: 32%;
+    }
+    .img-collect {
         margin-bottom: 65px;
-  }
+    }
+    .collect{
+      display: inline-block;
+    }
+}
+.albane {
+    .cont-about {
+        p {
+            margin-bottom: 5px;
+        }
+        h4 {
+            font-family: $font-family-sans-serif;
+        }
+    }
+    .bg-brand {
+        background: url('../img/albane/bg.jpg') no-repeat;
+        background-size: cover;
+        background-position: 0;
+    }
+    .position-center {
+        position: absolute;
+        left: 60%;
+        top: 52%;
+        -webkit-transform: translate(-52%, -60%);
+        -moz-transform: translate(-52%, -60%);
+        -ms-transform: translate(-52%, -60%);
+        -o-transform: translate(-52%, -60%);
+        transform: translate(-52%, -60%);
+        width: 30%;
+    }
+    .bg {
+        background: url('../img/albane/bg1.jpg') no-repeat;
+        background-size: cover;
+        padding: 60px;
+        margin: -75px 0 80px;
+    }
+    .salon {
+        max-width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+        margin-bottom: 6%;
+    }
+    .salon-image1 {
+        width: 62%;
+        height: 395px;
+        display: inline-block;
+    }
+    .salon-image2 {
+        width: 37%;
+        height: 395px;
+        display: inline-block;
+    }
+}
+.phytodess {
+    h2 {
+        margin-bottom: 20px;
+    }
+    .bg-brand {
+        background: url('../img/phytodess/bg.jpg') no-repeat;
+        background-size: cover;
+        background-position: 0;
+    }
+    .position-center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 30%;
+    }
+    .bg {
+        background: url('../img/phytodess/bg1.jpg') no-repeat;
+        background-size: cover;
+        padding: 60px;
+        margin: -82px 0 80px;
+    }
+    .salon-video {
+        margin: 15px 0 36px;
+    }
+    .salon-product{
+      margin-bottom: 60px;
+    }
+    .img-product{
+        max-width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+        img{
+          margin: 0 auto;
+        }
+    }
+    .product-detail{
+        h4{
+          margin-top: 15px
+        }
+        h4, p{
+          margin-bottom: 5px;
+        }
+        p{
+          font-size: 15px;
+        }
+      }
+    .cont-abt {
+        margin-bottom: 5%;
+    }
 }
 @import "fancybox-override";
 @import "mobile";
