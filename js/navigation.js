@@ -38,7 +38,7 @@ var navigationservice = angular.module('navigationservice', [])
     name: "Contact Us",
     classis: "active",
     // anchor: "contact-us",
-    pagename: "contact-us",
+    pagename: "contact",
     subnav: []
   }];
 

@@ -22,6 +22,42 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             }
         })
 
+        .state('contact-us', {
+          url: "/contact-us",
+          templateUrl: "views/template-home.html",
+          controller: 'HomeCtrl',
+          params: {
+            'id': 'contact',
+          }
+        })
+
+        .state('brand', {
+          url: "/brand",
+          templateUrl: "views/template-home.html",
+          controller: 'HomeCtrl',
+          params: {
+            'id': 'brands',
+          }
+        })
+
+        .state('overviews', {
+          url: "/overviews",
+          templateUrl: "views/template-home.html",
+          controller: 'HomeCtrl',
+          params: {
+            'id': 'overview',
+          }
+        })
+
+        .state('career', {
+          url: "/career",
+          templateUrl: "views/template-home.html",
+          controller: 'HomeCtrl',
+          params: {
+            'id': 'careers',
+          }
+        })
+
     .state('about', {
         url: "/about",
         templateUrl: "views/template.html",

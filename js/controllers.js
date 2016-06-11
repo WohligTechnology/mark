@@ -30,7 +30,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.homeval = text;
     switch (text) {
       case "contact":
-        $.fn.fullpage.moveTo(5);
+        $.fn.fullpage.moveTo(section5);
         break;
       case "careers":
         $.fn.fullpage.moveTo(4);
@@ -51,6 +51,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   };
   $scope.$on('$viewContentLoaded', function() {
     $timeout(function() {
+      $('body').addClass('fp-');
       $scope.changePage($stateParams.id);
     }, 1000);
 
@@ -107,6 +108,53 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.menutitle = NavigationService.makeactive("Media Corner");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+  $scope.wallpaper = [{
+    img: "img/media/1.jpg",
+  }, {
+    img: "img/media/2.jpg",
+  }, {
+    img: "img/media/3.jpg",
+  }, {
+    img: "img/media/4.jpg",
+  }, {
+    img: "img/media/5.jpg",
+  }, {
+    img: "img/media/6.jpg",
+  }, {
+    img: "img/media/7.jpg",
+    icon:"fa-play-circle-o"
+  }, {
+    img: "img/media/8.jpg",
+    icon:"fa-play-circle-o"
+  }, {
+    img: "img/media/9.jpg",
+    icon:"fa-play-circle-o"
+  },{
+    img: "img/media/1.jpg",
+  }, {
+    img: "img/media/2.jpg",
+  }, {
+    img: "img/media/3.jpg",
+  }, {
+    img: "img/media/4.jpg",
+  }, {
+    img: "img/media/5.jpg",
+  }, {
+    img: "img/media/6.jpg",
+  }, {
+    img: "img/media/7.jpg",
+    icon:"fa-play-circle-o"
+  }, {
+    img: "img/media/8.jpg",
+    icon:"fa-play-circle-o"
+  }, {
+    img: "img/media/9.jpg",
+    icon:"fa-play-circle-o"
+  }];
+  $scope.wallpaper = _.chunk($scope.wallpaper, 9);
+  for (var i = 0; i < $scope.wallpaper.length; i++) {
+    $scope.wallpaper[i] = _.chunk($scope.wallpaper[i], 3);
+  }
   if (typeof $.fn.fullpage.destroy == 'function') {
     $.fn.fullpage.destroy('all');
   }
