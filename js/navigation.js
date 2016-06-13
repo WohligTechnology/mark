@@ -14,30 +14,31 @@ var navigationservice = angular.module('navigationservice', [])
   var navigation = [{
     name: "Overview",
     classis: "active",
-    // anchor: "overview",
+    anchor: "overview",
     pagename: "overview",
     subnav: []
   },{
     name: "Brands",
     classis: "active",
-    // anchor: "brands",
+    anchor: "brands",
     pagename: "brands",
     subnav: []
   },{
     name: "Media Corner",
     classis: "active",
     anchor: "media-corner",
+    pagename: "media",
     subnav: []
   },{
     name: "Careers",
     classis: "active",
-    // anchor: "careers",
+    anchor: "careers",
     pagename: "careers",
     subnav: []
   },{
     name: "Contact Us",
     classis: "active",
-    // anchor: "contact-us",
+    anchor: "contact",
     pagename: "contact",
     subnav: []
   }];

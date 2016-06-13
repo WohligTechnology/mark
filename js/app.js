@@ -14,7 +14,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     $httpProvider.defaults.withCredentials = true;
     $stateProvider
         .state('home', {
-            url: "/home",
+            url: "/",
             templateUrl: "views/template-home.html",
             controller: 'HomeCtrl',
             params: {
@@ -22,8 +22,8 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             }
         })
 
-        .state('contact-us', {
-          url: "/contact-us",
+        .state('contact', {
+          url: "/contact",
           templateUrl: "views/template-home.html",
           controller: 'HomeCtrl',
           params: {
@@ -31,8 +31,8 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
           }
         })
 
-        .state('brand', {
-          url: "/brand",
+        .state('brands', {
+          url: "/brands",
           templateUrl: "views/template-home.html",
           controller: 'HomeCtrl',
           params: {
@@ -40,8 +40,8 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
           }
         })
 
-        .state('overviews', {
-          url: "/overviews",
+        .state('overview', {
+          url: "/overview",
           templateUrl: "views/template-home.html",
           controller: 'HomeCtrl',
           params: {
@@ -49,8 +49,8 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
           }
         })
 
-        .state('career', {
-          url: "/career",
+        .state('careers', {
+          url: "/careers",
           templateUrl: "views/template-home.html",
           controller: 'HomeCtrl',
           params: {
@@ -90,7 +90,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     })
 
     ;
-    $urlRouterProvider.otherwise("/home");
+    $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(isproduction);
 });
 
