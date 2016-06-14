@@ -51,8 +51,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }
     };
     $scope.$on('$viewContentLoaded', function() {
+      $('body').addClass('fp-viewing-0');
+      $( window ).scroll(function() {
+        console.log("Scrolling");
+        var scroller = $(document).scrollTop();
+        var height = $(window).height();
+        console.log(height);
+        console.log(scroller);
+        if (height <= scroller) {
+          $('body').removeClass('fp-viewing-0');
+        }
+        else {
+          $('body').addClass('fp-viewing-0');
+        }
+      });
         $timeout(function() {
-            $('body').addClass('fp-');
             console.log($stateParams.id);
             $scope.changePage($stateParams.id);
             console.log($stateParams.id);

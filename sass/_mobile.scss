@@ -66,9 +66,7 @@
     margin-top: 1px;
   }
   .overflow-contact {
-    height: 60vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    padding-bottom: 50px;
   }
   .contact {
     .address-box {
@@ -80,15 +78,19 @@
     }
   }
   .overflow-scroll {
-    height: 80vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
+      padding-bottom: 20px;
   }
   .footer {
     padding: 5px;
     li a {
       font-size: 10px;
       padding-left: 0;
+    }
+  }
+  .mediacorner {
+    h1 {
+      font-size: 30px;
+      letter-spacing: 10px;
     }
   }
 }

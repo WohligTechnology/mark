@@ -139,6 +139,17 @@ firstapp.directive('fancyboxBox', function($document) {
         }
     };
 });
+firstapp.directive('fuller', function($document) {
+    return {
+        restrict: 'EA',
+        replace: false,
+        link: function(scope, element, attr) {
+            var $element = $(element);
+            var height = $(window).height();
+            $(element).css({"min-height": height+'px'});
+        }
+    };
+});
 
 
 firstapp.config(function($translateProvider) {

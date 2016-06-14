@@ -46,6 +46,15 @@ img.doneLoading {
 nav li:hover .dropdown-menu {
     display: block;
 }
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar {
+  @include background-image(linear-gradient(rgba(0, 0, 0, 0.45) 50%, transparent));
+  border: none;
+}
+
 .btn,
 a {
     cursor: pointer;
@@ -188,6 +197,9 @@ a {
         float: right;
     }
 }
+.navbar-nav {
+    margin: 7.5px 0px;
+}
 .nav {
     li {
         a {
@@ -299,6 +311,9 @@ p {
 }
 .white-accordion {
     padding: 0 20px 20px;
+    .panel-body {
+        border: 0px !important;
+    }
     .panel-default {
         border-color: transparent;
     }
@@ -770,13 +785,16 @@ p {
             cursor: pointer;
           }
             .flex-prev {
-                left: 89% !important;
-                top: 105%;
-                opacity: 1;
+              right: 24px;
+              bottom: -43px;
+              opacity: 1;
+              left: auto !important;
+              top: auto;
             }
             .flex-next {
               right: 0 !important;
-              top: 108%;
+              bottom: -58px;
+              top: auto;
               opacity: 1;
             }
         }
