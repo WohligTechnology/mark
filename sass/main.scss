@@ -830,5 +830,9 @@ p {
       margin: 0;
     }
 }
+.product-detail {
+    height: 110px;
+    overflow: hidden;
+}
 @import "fancybox-override";
 @import "mobile";
