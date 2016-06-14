@@ -518,31 +518,7 @@ p {
             cursor: pointer;
         }
     }
-    .cols {
-        column-count: 2;
-        column-width: 30%;
-        column-gap: none;
-    }
-    .one {
-        background: url('../img/dessange/1.jpg')no-repeat;
-        background-size: 100%;
-        height: 500px;
-    }
-    .two {
-        background: url('../img/dessange/2.jpg')no-repeat;
-        height: 600px;
-        background-size: 100%;
-    }
-    .three {
-        background: url('../img/dessange/3.jpg')no-repeat;
-        height: 500px;
-        background-size: 100%;
-    }
-    .four {
-        background: url('../img/dessange/4.jpg')no-repeat;
-        height: 400px;
-        background-size: 100%;
-    }
+
     .salon-image {
         max-width: 100%;
         max-height: 100%;
@@ -577,34 +553,81 @@ p {
     .collect {
         width: 39%;
         height: 100%;
-        display: inline-block;
-        .collect1 {
-            height: 335px;
-        }
+        float: left;
+        margin-left: 7px;
     }
     .collects {
-        display: inline-block;
+        float: left;
         width: 60%;
-        margin-left: -6px;
         height: 100%;
-        .collects1 {
-            height: 410px;
-        }
     }
+    // .collect {
+    //     width: 39%;
+    //     height: 100%;
+    //     display: inline-block;
+    //     .collect1 {
+    //         height: 335px;
+    //     }
+    // }
+    // .collects {
+    //     display: inline-block;
+    //     width: 60%;
+    //     margin-left: -6px;
+    //     height: 100%;
+    //     .collects1 {
+    //         height: 410px;
+    //     }
+    // }
     .together {
-        width: 715px;
-        height: 726px;
+        max-width: 715px;
         // text-align: center;
     }
 }
 .albane {
+  h2 {
+      font-family: $font-family-serif;
+      color: $brand-info;
+      letter-spacing: 6px;
+  }
+  .cont-abt {
+      margin-bottom: 8%;
+  }
+  .brand-video {
+      margin-bottom: 30px;
+  }
+  .salon-video {
+      position: relative;
+      .fa {
+          color: $videoicon;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          border-radius: 50%;
+          border: 5px solid $videoicon;
+          font-size: 28px;
+          padding: 12px 17px;
+          width: 60px;
+          height: 60px;
+          cursor: pointer;
+      }
+  }
     .cont-about {
+      margin-bottom: 5%;
         p {
             margin-bottom: 5px;
         }
         h4 {
             font-family: $font-family-sans-serif;
         }
+    }
+    p {
+        font-family: $font-family-sans-serif;
+    }
+    h3 {
+        font-family: "Lucida";
+        margin-top: 25px;
+        margin-bottom: 12px;
     }
     .bg-brand {
         background: url('../img/albane/bg.jpg') no-repeat;
@@ -643,6 +666,32 @@ p {
         width: 37%;
         height: 395px;
         display: inline-block;
+    }
+    .img-collect {
+        margin-bottom: 50px;
+    }
+    .collect {
+        width: 39%;
+        height: 100%;
+        float: left;
+        margin-left: 3px;
+    }
+    .collects {
+        float: left;
+        width: 60%;
+        height: 100%;
+        margin-left: 2px;
+    }
+    .collect2 {
+        margin-top: 2px;
+    }
+
+    .collects2 {
+        margin-top: 2px;
+    }
+    .together {
+        max-width: 704px;
+        // text-align: center;
     }
 }
 .phytodess {
