@@ -239,7 +239,7 @@ a {
         }
     }
 }
-.fp-viewing-0 header {
+.fp-viewing-0 .homie {
     display: none;
 }
 .in-middle {
@@ -426,26 +426,6 @@ p {
     }
     .mission-vision {
         font-family: $font-family-sans-serif;
-        text-transform: uppercase;
-        p {
-            font-size: 20px;
-            line-height: 1;
-        }
-        .bigest-text {
-            font-size: 32px;
-        }
-        .med-text {
-            font-size: 22px;
-        }
-        .medium-text {
-            font-size: 25px;
-        }
-        .small-text {
-            font-size: 18px;
-        }
-        .sm-text {
-            font-size: 16px;
-        }
     }
     .team-pic {
         max-width: 100%;
