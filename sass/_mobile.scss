@@ -42,6 +42,9 @@
   }
   .in-middle {
     height: auto;
+    &.head-title {
+      height: 30vh;
+    }
   }
   .big-text {
     font-size: 16px;
@@ -93,4 +96,9 @@
       letter-spacing: 10px;
     }
   }
+
+    .bg {
+      padding: 60px 10px !important;
+    }
+
 }

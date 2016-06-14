@@ -569,13 +569,13 @@ p {
         width: 39%;
         height: 100%;
         float: left;
-        margin-left: 5px;
+        // margin-left: 5px;
     }
     .collects {
         float: left;
         width: 60%;
         height: 100%;
-        margin-left: -1px
+        margin-left: 2px
     }
     .together {
         max-width: 715px;
@@ -630,7 +630,7 @@ p {
     .bg-brand {
         background: url('../img/albane/bg.jpg') no-repeat;
         background-size: cover;
-        background-position: 0;
+        background-position: center center;
     }
     .position-center {
         position: absolute;
@@ -656,14 +656,13 @@ p {
         margin-bottom: 6%;
     }
     .salon-image1 {
-        width: 62%;
-        height: 395px;
-        display: inline-block;
+        width: 60%;
+        float: left;
     }
     .salon-image2 {
-        width: 37%;
-        height: 395px;
-        display: inline-block;
+        width: 39%;
+        float: left;
+        margin-left: 2px;
     }
     .img-collect {
         margin-bottom: 50px;
@@ -672,7 +671,7 @@ p {
         width: 39%;
         height: 100%;
         float: left;
-        margin-left: 3px;
+        // margin-left: 3px;
     }
     .collects {
         float: left;
@@ -699,7 +698,7 @@ p {
     .bg-brand {
         background: url('../img/phytodess/bg.jpg') no-repeat;
         background-size: cover;
-        background-position: 0;
+        background-position: center center;
     }
     .position-center {
         position: absolute;
