@@ -18,53 +18,53 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             templateUrl: "views/template-home.html",
             controller: 'HomeCtrl',
             params: {
-              'id': 'home',
+                'id': 'home',
             }
         })
 
 
-        .state('contact', {
-          url: "/contact",
-          templateUrl: "views/template-home.html",
-          controller: 'HomeCtrl',
-          params: {
+    .state('contact', {
+        url: "/contact",
+        templateUrl: "views/template-home.html",
+        controller: 'HomeCtrl',
+        params: {
             'id': 'contact',
-          }
-        })
+        }
+    })
 
-        .state('brands', {
-          url: "/brands",
-          templateUrl: "views/template-home.html",
-          controller: 'HomeCtrl',
-          params: {
+    .state('brands', {
+        url: "/brands",
+        templateUrl: "views/template-home.html",
+        controller: 'HomeCtrl',
+        params: {
             'id': 'brands',
-          }
-        })
+        }
+    })
 
-        .state('overview', {
-          url: "/overview",
-          templateUrl: "views/template-home.html",
-          controller: 'HomeCtrl',
-          params: {
+    .state('overview', {
+        url: "/overview",
+        templateUrl: "views/template-home.html",
+        controller: 'HomeCtrl',
+        params: {
             'id': 'overview',
-          }
-        })
+        }
+    })
 
-        .state('careers', {
-          url: "/careers",
-          templateUrl: "views/template-home.html",
-          controller: 'HomeCtrl',
-          params: {
+    .state('careers', {
+        url: "/careers",
+        templateUrl: "views/template-home.html",
+        controller: 'HomeCtrl',
+        params: {
             'id': 'careers',
-          }
-        })
+        }
+    })
 
     .state('about', {
         url: "/about",
         templateUrl: "views/template.html",
         controller: 'AboutCtrl',
         params: {
-          'id': 'about',
+            'id': 'about',
         }
 
     })
@@ -156,7 +156,9 @@ firstapp.directive('fuller', function($document) {
         link: function(scope, element, attr) {
             var $element = $(element);
             var height = $(window).height();
-            $(element).css({"min-height": height+'px'});
+            $(element).css({
+                "min-height": height + 'px'
+            });
         }
     };
 });

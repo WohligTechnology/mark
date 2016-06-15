@@ -2,7 +2,6 @@
   <li ng-repeat="menu in navigation" class="{{menu.classis}}">
     <a ui-sref="{{menu.anchor}}" ng-if="uiSref">{{menu.name}}</a>
     <a ui-sref="{{menu.anchor}}" ng-if="!uiSref && menu.pagename=='media'">{{menu.name}}</a>
-    <!-- <a href="{{menu.link}}" ng-if="menu.link">{{menu.name}}</a> -->
     <a ng-click="changePage(menu.pagename)" ng-if="!uiSref && menu.pagename!='media'">{{menu.name}}</a>
   </li>
 </ul>

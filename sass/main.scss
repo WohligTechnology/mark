@@ -221,8 +221,8 @@ a {
     top: 50%;
     @include transform(translate(-50%,-50%));
     &.top60 {
-        top: 60%;
-        width: 480px;
+      top: 50%;
+      width: 580px;
     }
 }
 .home-landing {

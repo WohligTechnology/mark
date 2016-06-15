@@ -6,6 +6,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Home");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    TemplateService.footer = "views/footer2.html";
+
 
     $scope.section = {
         one: "views/section/section1.html",
@@ -16,6 +18,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
 
     $scope.oneAtATime = true;
+
+    $scope.$on('$viewContentLoaded', function() {
+        $('body').addClass('fp-viewing-0');
+        $(window).scroll(function() {
+            var scroller = $(document).scrollTop();
+            var height = $(window).height();
+            if (height <= scroller) {
+                $('body').removeClass('fp-viewing-0');
+            } else {
+                $('body').addClass('fp-viewing-0');
+            }
+        });
+    });
 
     function makeAnimation(id) {
         if (_.isEmpty(id)) {
@@ -42,19 +57,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         makeAnimation(id);
         $location.replace();
     };
-
-    $scope.$on('$viewContentLoaded', function() {
-        $('body').addClass('fp-viewing-0');
-        $(window).scroll(function() {
-            var scroller = $(document).scrollTop();
-            var height = $(window).height();
-            if (height <= scroller) {
-                $('body').removeClass('fp-viewing-0');
-            } else {
-                $('body').addClass('fp-viewing-0');
-            }
-        });
-    });
 
 })
 
@@ -218,5 +220,4 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
 })
-
 ;

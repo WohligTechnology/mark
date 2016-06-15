@@ -41,6 +41,12 @@ var navigationservice = angular.module('navigationservice', [])
     anchor: "contact",
     pagename: "contact",
     subnav: []
+  },{
+    name: "Franchise",
+    classis: "active",
+    anchor: "franchise",
+    pagename: "media",
+    subnav: []
   }];
 
   return {
