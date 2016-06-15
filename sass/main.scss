@@ -814,5 +814,18 @@ p {
     height: 110px;
     overflow: hidden;
 }
+.content {
+    min-height: 450px;
+}
+.greyish {
+  color: #585858;
+  padding: 30px 0 50px;
+}
+.menu-pad {
+  padding-top: 90px;
+}
+.padding-bottom {
+  padding-bottom: 60px;
+}
 @import "fancybox-override";
 @import "mobile";
