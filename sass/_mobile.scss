@@ -14,6 +14,9 @@
   }
 }
 @media (max-width: $screen-xs-max) {
+  .overlay-box {
+    margin: 0;
+  }
   .section {
     padding-top: 75px;
   }
@@ -60,7 +63,7 @@
     right: 14px;
   }
   .navbar-toggle {
-    margin-top: 30px;
+    margin-top: 20px;
   }
   .menu-header .navbar-nav {
     float: none;

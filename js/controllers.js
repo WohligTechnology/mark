@@ -1,12 +1,13 @@
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider','duScroll'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $state) {
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $state, $document, $location){
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("home");
     $scope.menutitle = NavigationService.makeactive("Home");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-
+    console.log($stateParams.id);
+    $scope.menutitle = NavigationService.makeactive($stateParams.id);
 
     $scope.section = {
         one: "views/section/section1.html",
@@ -17,47 +18,93 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
 
     $scope.oneAtATime = true;
-    $scope.changePage = function(text) {
-        console.log(text);
-        var length = $(".fp-section").length;
-        console.log(length);
-        console.log($(".fp-section"));
-        // if (typeof $.fn.fullpage.destroy == 'function') {
-        //   $.fn.fullpage.destroy('all');
-        // }
-        if (length === 0) {
-            $('.fullpage').fullpage();
-        }
-        $scope.homeval = text;
-        switch (text) {
-            case "contact":
-                $.fn.fullpage.moveTo(5);
-                break;
-            case "careers":
-                $.fn.fullpage.moveTo(4);
-                break;
-            case "brands":
-                $.fn.fullpage.moveTo(3);
-                break;
-            case "overview":
-                $.fn.fullpage.moveTo(2);
-                break;
-            case "home":
-                $.fn.fullpage.moveTo(1);
-                break;
-            default:
-                $.fn.fullpage.moveTo(1);
-                break;
-        }
+
+    function makeAnimation(id) {
+      if (_.isEmpty(id)) {
+        id = "home";
+      }
+      var someElement = angular.element(document.getElementById(id));
+      $document.scrollToElement(someElement, 0, 1400);
+    }
+
+    $scope.$on('$viewContentLoaded', function(event) {
+      setTimeout(function() {
+        makeAnimation($stateParams.id);
+      }, 1000);
+    });
+
+
+    $scope.changePage = function(id) {
+      $scope.menutitle = NavigationService.makeactive(id);
+      $state.transitionTo('homeid', {
+        id: id
+      }, {
+        notify: false
+      });
+      makeAnimation(id);
+      $location.replace();
     };
+    // $scope.changePage = function(text) {
+    //     console.log(text);
+    //     var length = $(".fp-section").length;
+    //     console.log(length);
+    //     console.log($(".fp-section"));
+    //     if (typeof $.fn.fullpage.destroy == 'function') {
+    //       $.fn.fullpage.destroy('all');
+    //     }
+    //     if (length === 0) {
+    //         $('.fullpage').fullpage();
+    //     }
+    //     $scope.homeval = text;
+    //     switch (text) {
+    //         case "contact":
+    //             $.fn.fullpage.moveTo(5);
+    //             break;
+    //         case "careers":
+    //             $.fn.fullpage.moveTo(4);
+    //             break;
+    //         case "brands":
+    //             $.fn.fullpage.moveTo(3);
+    //             break;
+    //         case "overview":
+    //             $.fn.fullpage.moveTo(2);
+    //             break;
+    //         case "home":
+    //             $.fn.fullpage.moveTo(1);
+    //             break;
+    //         default:
+    //             $.fn.fullpage.moveTo(1);
+    //             break;
+    //     }
+    // };
+    // $scope.$on('$viewContentLoaded', function() {
+    //   $('body').addClass('fp-viewing-0');
+    //   $( window ).scroll(function() {
+    //     console.log("Scrolling");
+    //     var scroller = $(document).scrollTop();
+    //     var height = $(window).height();
+    //     console.log(height);
+    //     console.log(scroller);
+    //     if (height <= scroller) {
+    //       $('body').removeClass('fp-viewing-0');
+    //     }
+    //     else {
+    //       $('body').addClass('fp-viewing-0');
+    //     }
+    //   });
+    //     $timeout(function() {
+    //         console.log($stateParams.id);
+    //         $scope.changePage($stateParams.id);
+    //         console.log($stateParams.id);
+    //     }, 1000);
+    //
+    // });
+
     $scope.$on('$viewContentLoaded', function() {
       $('body').addClass('fp-viewing-0');
       $( window ).scroll(function() {
-        console.log("Scrolling");
         var scroller = $(document).scrollTop();
         var height = $(window).height();
-        console.log(height);
-        console.log(scroller);
         if (height <= scroller) {
           $('body').removeClass('fp-viewing-0');
         }
@@ -65,12 +112,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
           $('body').addClass('fp-viewing-0');
         }
       });
-        $timeout(function() {
-            console.log($stateParams.id);
-            $scope.changePage($stateParams.id);
-            console.log($stateParams.id);
-        }, 1000);
-
     });
 
 })
