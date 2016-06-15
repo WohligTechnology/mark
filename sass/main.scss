@@ -827,5 +827,10 @@ p {
 .padding-bottom {
   padding-bottom: 60px;
 }
+.franchise-bg {
+    background-image: url('../img/franchise.jpg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
 @import "fancybox-override";
 @import "mobile";
