@@ -67,7 +67,10 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     .state('about', {
         url: "/about",
         templateUrl: "views/template.html",
-        controller: 'AboutCtrl'
+        controller: 'AboutCtrl',
+        params: {
+          'id': 'about',
+        }
 
     })
 
