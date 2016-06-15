@@ -95,6 +95,12 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
         controller: 'MediaCornerCtrl'
     })
 
+    .state('franchise', {
+        url: "/franchise",
+        templateUrl: "views/template.html",
+        controller: 'FranchiseCtrl'
+    })
+
     ;
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(isproduction);

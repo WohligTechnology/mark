@@ -1,13 +1,11 @@
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider','duScroll'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'duScroll'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $state, $document, $location){
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $state, $document, $location) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("home");
     $scope.menutitle = NavigationService.makeactive("Home");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-    console.log($stateParams.id);
-    $scope.menutitle = NavigationService.makeactive($stateParams.id);
 
     $scope.section = {
         one: "views/section/section1.html",
@@ -20,124 +18,63 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.oneAtATime = true;
 
     function makeAnimation(id) {
-      if (_.isEmpty(id)) {
-        id = "home";
-      }
-      var someElement = angular.element(document.getElementById(id));
-      $document.scrollToElement(someElement, 0, 1400);
+        if (_.isEmpty(id)) {
+            id = "home";
+        }
+        var someElement = angular.element(document.getElementById(id));
+        $document.scrollToElement(someElement, 0, 1400);
     }
 
     $scope.$on('$viewContentLoaded', function(event) {
-      setTimeout(function() {
-        makeAnimation($stateParams.id);
-      }, 1000);
+        setTimeout(function() {
+            makeAnimation($stateParams.id);
+        }, 1000);
     });
 
 
     $scope.changePage = function(id) {
-      $scope.menutitle = NavigationService.makeactive(id);
-      $state.transitionTo('homeid', {
-        id: id
-      }, {
-        notify: false
-      });
-      makeAnimation(id);
-      $location.replace();
+        $scope.menutitle = NavigationService.makeactive(id);
+        $state.transitionTo('homeid', {
+            id: id
+        }, {
+            notify: false
+        });
+        makeAnimation(id);
+        $location.replace();
     };
-    // $scope.changePage = function(text) {
-    //     console.log(text);
-    //     var length = $(".fp-section").length;
-    //     console.log(length);
-    //     console.log($(".fp-section"));
-    //     if (typeof $.fn.fullpage.destroy == 'function') {
-    //       $.fn.fullpage.destroy('all');
-    //     }
-    //     if (length === 0) {
-    //         $('.fullpage').fullpage();
-    //     }
-    //     $scope.homeval = text;
-    //     switch (text) {
-    //         case "contact":
-    //             $.fn.fullpage.moveTo(5);
-    //             break;
-    //         case "careers":
-    //             $.fn.fullpage.moveTo(4);
-    //             break;
-    //         case "brands":
-    //             $.fn.fullpage.moveTo(3);
-    //             break;
-    //         case "overview":
-    //             $.fn.fullpage.moveTo(2);
-    //             break;
-    //         case "home":
-    //             $.fn.fullpage.moveTo(1);
-    //             break;
-    //         default:
-    //             $.fn.fullpage.moveTo(1);
-    //             break;
-    //     }
-    // };
-    // $scope.$on('$viewContentLoaded', function() {
-    //   $('body').addClass('fp-viewing-0');
-    //   $( window ).scroll(function() {
-    //     console.log("Scrolling");
-    //     var scroller = $(document).scrollTop();
-    //     var height = $(window).height();
-    //     console.log(height);
-    //     console.log(scroller);
-    //     if (height <= scroller) {
-    //       $('body').removeClass('fp-viewing-0');
-    //     }
-    //     else {
-    //       $('body').addClass('fp-viewing-0');
-    //     }
-    //   });
-    //     $timeout(function() {
-    //         console.log($stateParams.id);
-    //         $scope.changePage($stateParams.id);
-    //         console.log($stateParams.id);
-    //     }, 1000);
-    //
-    // });
 
     $scope.$on('$viewContentLoaded', function() {
-      $('body').addClass('fp-viewing-0');
-      $( window ).scroll(function() {
-        var scroller = $(document).scrollTop();
-        var height = $(window).height();
-        if (height <= scroller) {
-          $('body').removeClass('fp-viewing-0');
-        }
-        else {
-          $('body').addClass('fp-viewing-0');
-        }
-      });
+        $('body').addClass('fp-viewing-0');
+        $(window).scroll(function() {
+            var scroller = $(document).scrollTop();
+            var height = $(window).height();
+            if (height <= scroller) {
+                $('body').removeClass('fp-viewing-0');
+            } else {
+                $('body').addClass('fp-viewing-0');
+            }
+        });
     });
 
 })
 
 .controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("about");
-        $scope.menutitle = NavigationService.makeactive("About Us");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-        TemplateService.header = "views/header2.html";
-        if (typeof $.fn.fullpage.destroy == 'function') {
-            $.fn.fullpage.destroy('all');
-        }
-    })
-    .controller('DessangeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("dessange");
-        $scope.menutitle = NavigationService.makeactive("Dessange Paris");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-        TemplateService.header = "views/header2.html";
-        // if (typeof $.fn.fullpage.destroy == 'function') {
-        //     $.fn.fullpage.destroy('all');
-        // }
-    })
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("about");
+    $scope.menutitle = NavigationService.makeactive("About Us");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    TemplateService.header = "views/header2.html";
+})
+
+.controller('DessangeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("dessange");
+    $scope.menutitle = NavigationService.makeactive("Dessange Paris");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    TemplateService.header = "views/header2.html";
+})
 
 .controller('AlbaneCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
@@ -146,9 +83,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = "views/header2.html";
-    // if (typeof $.fn.fullpage.destroy == 'function') {
-    //     $.fn.fullpage.destroy('all');
-    // }
 })
 
 .controller('PhytodessCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -158,9 +92,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = "views/header2.html";
-    // if (typeof $.fn.fullpage.destroy == 'function') {
-    //     $.fn.fullpage.destroy('all');
-    // }
+})
+
+.controller('FranchiseCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("franchise");
+    $scope.menutitle = NavigationService.makeactive("Franchise");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    TemplateService.header = "views/header2.html";
 })
 
 .controller('MediaCornerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -217,9 +157,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     for (var i = 0; i < $scope.wallpaper.length; i++) {
         $scope.wallpaper[i] = _.chunk($scope.wallpaper[i], 3);
     }
-    // if (typeof $.fn.fullpage.destroy == 'function') {
-    //     $.fn.fullpage.destroy('all');
-    // }
 })
 
 .controller('headerctrl', function($scope, TemplateService, $state) {
@@ -253,7 +190,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 $.jStorage.set("language", "en");
             }
         }
-        //  $rootScope.$apply();
     };
 
 
