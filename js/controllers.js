@@ -34,7 +34,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     $scope.changePage = function(id) {
         $scope.menutitle = NavigationService.makeactive(id);
-        $state.transitionTo('homeid', {
+        $state.transitionTo('home', {
             id: id
         }, {
             notify: false
@@ -65,6 +65,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = "views/header2.html";
+    $scope.changePage = function(id) {
+      console.log(id);
+      $location.path("" + id);
+    };
 })
 
 .controller('DessangeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -74,6 +78,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = "views/header2.html";
+    $scope.changePage = function(id) {
+      console.log(id);
+      $location.path("" + id);
+    };
 })
 
 .controller('AlbaneCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -83,6 +91,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = "views/header2.html";
+    $scope.changePage = function(id) {
+      console.log(id);
+      $location.path("" + id);
+    };
 })
 
 .controller('PhytodessCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -92,6 +104,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = "views/header2.html";
+    $scope.changePage = function(id) {
+      console.log(id);
+      $location.path("" + id);
+    };
 })
 
 .controller('FranchiseCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -101,6 +117,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = "views/header2.html";
+    $scope.changePage = function(id) {
+      console.log(id);
+      $location.path("" + id);
+    };
 })
 
 .controller('MediaCornerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -110,6 +130,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = "views/header2.html";
+    $scope.changePage = function(id) {
+      console.log(id);
+      $location.path("" + id);
+    };
     $scope.wallpaper = [{
         img: "img/media/1.jpg",
     }, {
