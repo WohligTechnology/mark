@@ -217,9 +217,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     for (var i = 0; i < $scope.wallpaper.length; i++) {
         $scope.wallpaper[i] = _.chunk($scope.wallpaper[i], 3);
     }
-    if (typeof $.fn.fullpage.destroy == 'function') {
-        $.fn.fullpage.destroy('all');
-    }
+    // if (typeof $.fn.fullpage.destroy == 'function') {
+    //     $.fn.fullpage.destroy('all');
+    // }
 })
 
 .controller('headerctrl', function($scope, TemplateService, $state) {
