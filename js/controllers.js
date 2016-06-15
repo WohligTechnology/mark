@@ -134,9 +134,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         TemplateService.header = "views/header2.html";
-        if (typeof $.fn.fullpage.destroy == 'function') {
-            $.fn.fullpage.destroy('all');
-        }
+        // if (typeof $.fn.fullpage.destroy == 'function') {
+        //     $.fn.fullpage.destroy('all');
+        // }
     })
 
 .controller('AlbaneCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -146,9 +146,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = "views/header2.html";
-    if (typeof $.fn.fullpage.destroy == 'function') {
-        $.fn.fullpage.destroy('all');
-    }
+    // if (typeof $.fn.fullpage.destroy == 'function') {
+    //     $.fn.fullpage.destroy('all');
+    // }
 })
 
 .controller('PhytodessCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -158,9 +158,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = "views/header2.html";
-    if (typeof $.fn.fullpage.destroy == 'function') {
-        $.fn.fullpage.destroy('all');
-    }
+    // if (typeof $.fn.fullpage.destroy == 'function') {
+    //     $.fn.fullpage.destroy('all');
+    // }
 })
 
 .controller('MediaCornerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
