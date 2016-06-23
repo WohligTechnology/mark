@@ -21,10 +21,10 @@
             </div>
             <div class="col-md-5">
               <div class="slider-client">
-                <flex-slider flex-slide="slide in editorails track by $index" animation="slide" animation-loop="false" slideshow="false" prev-text="" next-text="" ng-if="showSlider == 1">
+                <flex-slider flex-slide="slide in hairmakeup track by $index" animation="slide" animation-loop="false" slideshow="false" prev-text="" next-text="" ng-if="showSlider == 1">
                   <li class="">
                     <div class="row" ng-repeat="row in slide track by $index">
-                      <div class="col-md-4 col-xs-4" ng-repeat="wall in row track by $index">
+                      <div class="col-md-4 col-xs-4" ng-repeat="wall in row">
                         <a fancybox href="{{wall.img}}">
                           <div class="media-image">
                             <img ng-src="{{wall.img}}" alt="" class="img-responsive">
@@ -35,10 +35,10 @@
                     </div>
                   </li>
                 </flex-slider>
-                <flex-slider flex-slide="slide in hairmakeup track by $index" animation="slide" animation-loop="false" slideshow="false" prev-text="" next-text="" ng-if="showSlider == 2">
+                <flex-slider flex-slide="slide in editorails track by $index" animation="slide" animation-loop="false" slideshow="false" prev-text="" next-text="" ng-if="showSlider == 2">
                   <li class="">
                     <div class="row" ng-repeat="row in slide track by $index">
-                      <div class="col-md-4 col-xs-4" ng-repeat="wall in row">
+                      <div class="col-md-4 col-xs-4" ng-repeat="wall in row track by $index">
                         <a fancybox href="{{wall.img}}">
                           <div class="media-image">
                             <img ng-src="{{wall.img}}" alt="" class="img-responsive">
