@@ -125,7 +125,7 @@ firstapp.directive('img', function($compile, $parse) {
     };
 });
 
-firstapp.directive('fancyboxBox', function($document) {
+firstapp.directive('fancybox', function($document) {
     return {
         restrict: 'EA',
         replace: false,
