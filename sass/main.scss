@@ -162,7 +162,10 @@ a {
   background-size: cover!important;
 }
 .section.one {
-  background: url('../img/home/landing.jpg') no-repeat;
+  margin-top: -110px;
+  video {
+    width: 100%;
+  }
 }
 .section.two {
   background: url('../img/home/overview.jpg') no-repeat;
@@ -724,7 +727,7 @@ p {
   }
 }
 .mediacorner {
-  .bg-brand {
+  &.bg-brand {
     background: url('../img/media/bg.jpg') no-repeat;
     background-size: 100% 100%;
   }
@@ -857,6 +860,11 @@ p {
 }
 .slider-client {
   height: 540px;
+}
+.btm-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 @import "fancybox-override";
 @import "mobile";

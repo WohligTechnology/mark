@@ -1,60 +1,57 @@
-<section class="section">
-  <div class="mediacorner">
-    <div class="overview">
-      <div class="bg-brand">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-7">
-              <div class="in-middle-media">
-                <div class="sub-title position-center">
-                  <h1 class="uppercase text-center">Media</h1>
-                  <h1 class="uppercase text-center">Corner</h1>
-                </div>
-              </div>
-              <div class="link-made" ng-init="showSlider = 1">
-                <ul class="links list-inline text-center">
-                  <li><a class="uppercase" ng-click="showSlider = 1" ng-class="{'active-link' : showSlider=='1'}">HAIR &amp; MAKEUP </a></li>
-                  <li><a class="uppercase" ng-click="showSlider = 2" ng-class="{'active-link' : showSlider=='2'}">EDITORIALS</a></li>
-                  <!-- <li><a class="uppercase" ng-click="showSlider = 3">VIDEOS</a></li> -->
-                </ul>
+<section class="section mediacorner bg-brand">
+  <div class="overview">
+    <div class="">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="in-middle-media">
+              <div class="sub-title position-center">
+                <h1 class="uppercase text-center">Media</h1>
+                <h1 class="uppercase text-center">Corner</h1>
               </div>
             </div>
-            <div class="col-md-5">
-              <div class="slider-client">
-                <flex-slider flex-slide="slide in hairmakeup track by $index" animation="slide" animation-loop="false" slideshow="false" prev-text="" next-text="" ng-if="showSlider == 1">
-                  <li class="">
-                    <div class="row" ng-repeat="row in slide track by $index">
-                      <div class="col-md-4 col-xs-4" ng-repeat="wall in row">
-                        <a fancybox href="{{wall.img}}">
-                          <div class="media-image">
-                            <img ng-src="{{wall.img}}" alt="" class="img-responsive">
-                            <i class="fa {{wall.icon}}"></i>
-                          </div>
-                        </a>
-                      </div>
+            <div class="link-made" ng-init="showSlider = 1">
+              <ul class="links list-inline text-center">
+                <li><a class="uppercase" ng-click="showSlider = 1" ng-class="{'active-link' : showSlider=='1'}">HAIR &amp; MAKEUP </a></li>
+                <li><a class="uppercase" ng-click="showSlider = 2" ng-class="{'active-link' : showSlider=='2'}">EDITORIALS</a></li>
+                <!-- <li><a class="uppercase" ng-click="showSlider = 3">VIDEOS</a></li> -->
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="slider-client">
+              <flex-slider flex-slide="slide in hairmakeup track by $index" animation="slide" animation-loop="false" slideshow="false" prev-text="" next-text="" ng-if="showSlider == 1">
+                <li class="">
+                  <div class="row" ng-repeat="row in slide track by $index">
+                    <div class="col-md-4 col-xs-4" ng-repeat="wall in row">
+                      <a fancybox href="{{wall.img}}">
+                        <div class="media-image">
+                          <img ng-src="{{wall.img}}" alt="" class="img-responsive">
+                          <i class="fa {{wall.icon}}"></i>
+                        </div>
+                      </a>
                     </div>
-                  </li>
-                </flex-slider>
-                <flex-slider flex-slide="slide in editorails track by $index" animation="slide" animation-loop="false" slideshow="false" prev-text="" next-text="" ng-if="showSlider == 2">
-                  <li class="">
-                    <div class="row" ng-repeat="row in slide track by $index">
-                      <div class="col-md-4 col-xs-4" ng-repeat="wall in row track by $index">
-                        <a fancybox href="{{wall.img}}">
-                          <div class="media-image">
-                            <img ng-src="{{wall.img}}" alt="" class="img-responsive">
-                            <i class="fa {{wall.icon}}"></i>
-                          </div>
-                        </a>
-                      </div>
+                  </div>
+                </li>
+              </flex-slider>
+              <flex-slider flex-slide="slide in editorails track by $index" animation="slide" animation-loop="false" slideshow="false" prev-text="" next-text="" ng-if="showSlider == 2">
+                <li class="">
+                  <div class="row" ng-repeat="row in slide track by $index">
+                    <div class="col-md-4 col-xs-4" ng-repeat="wall in row track by $index">
+                      <a fancybox href="{{wall.img}}">
+                        <div class="media-image">
+                          <img ng-src="{{wall.img}}" alt="" class="img-responsive">
+                          <i class="fa {{wall.icon}}"></i>
+                        </div>
+                      </a>
                     </div>
-                  </li>
-                </flex-slider>
-              </div>
+                  </div>
+                </li>
+              </flex-slider>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
 </section>
