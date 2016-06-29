@@ -32,7 +32,10 @@
     "angulartics-google-analytics": "^0.1.4",
     "fullpage.js": "^2.8.0",
     "angular-ui-router": "ui-router#^0.3.0",
-    "angular-scroll": "^1.0.0"
+    "angular-scroll": "^1.0.0",
+    "ScrollMagic": "~2.0.5",
+    "gsap": "https://github.com/greensock/GreenSock-JS.git#~1.18.0",
+    "jquery.smoothwheel": "https://github.com/fatlinesofcode/jquery.smoothwheel.git"
   },
   "devDependencies": {
     "angular-translate": "^2.11.0"

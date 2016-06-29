@@ -20,7 +20,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.oneAtATime = true;
 
   $scope.$on('$viewContentLoaded', function() {
-    $('body').addClass('fp-viewing-0');
+    $('body').addClass('fp-viewing-3');
     $(window).scroll(function() {
       var scroller = $(document).scrollTop();
       var height = $(window).height();
@@ -212,6 +212,118 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     img: "img/media/editorial/18.jpg",
     video: "",
     // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/19.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/20.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/21.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/22.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/23.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/24.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/25.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/26.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/27.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/28.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/29.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/30.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/31.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/32.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/33.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/34.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/35.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/36.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/37.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/38.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/39.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/40.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/41.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/42.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/43.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/44.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/45.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
+  }, {
+    img: "img/media/editorial/46.jpg",
+    video: "",
+    // icon: "fa-play-circle-o"
   }];
   $scope.hairmakeup = [{
     img: "img/media/HairMakeUp/1.jpg",
@@ -266,6 +378,210 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     video: "",
   }, {
     img: "img/media/HairMakeUp/17.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
+    video: "",
+  }, {
+    img: "img/media/HairMakeUp/18.jpg",
     video: "",
   }, {
     img: "img/media/HairMakeUp/18.jpg",
