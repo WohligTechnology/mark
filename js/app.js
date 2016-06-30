@@ -165,73 +165,48 @@ firstapp.directive('fuller', function($document) {
     }
   };
 });
-firstapp.directive('ngScrollDuration', function($compile, $parse) {
-  return {
-    restrict: 'EA',
-    replace: false,
-    link: function($scope, element, attrs) {
-      var $element = $(element);
-      var animation = {};
-      var animationSceneFrom = eval("(" + attrs.ngScrollAnimationFrom + ")");
-      var animationSceneTo = eval("(" + attrs.ngScrollAnimationTo + ")");
-      var id = attrs.id;
-      var pin = attrs.pin;
-      var toggleClass = attrs.toggleClass;
-      if (attrs.ngScrollTrigger) {
-        animation.triggerElement = attrs.ngScrollTrigger;
-      }
-      animation.duration = attrs.ngScrollDuration * ZoomValue;
-      animation.offset = attrs.ngScrollOffset * ZoomValue;
-      // build tween
-      var tween = TweenMax.fromTo($element, 1, animationSceneFrom, animationSceneTo);
-
-      // build scene
-      if (pin) {
-        var scene = new ScrollMagic.Scene(animation)
-          .setTween(tween)
-          .setPin(pin, {
-            pushFollowers: false
-          })
-          // .addIndicators() // add indicators (requires plugin)
-          .addTo(controller);
+firstapp.directive("scroll", function($window) {
+  return function(scope, element, attrs) {
+    angular.element($window).bind("scroll", function() {
+      var windowHeight = $(window).height();
+      if (this.pageYOffset >= windowHeight) {
+        // console.log(windowHeight);
+        element.addClass('affix');
       } else {
-        var scene = new ScrollMagic.Scene(animation)
-          .setTween(tween)
-          // .addIndicators() // add indicators (requires plugin)
-          .addTo(controller);
+        element.removeClass('affix');
       }
-    }
+    });
   };
 });
 
-
-var taxiAni = true;
-firstapp.directive('animationfade', function($compile, $parse) {
+var markAni = true;
+var markAni2 = true;
+firstapp.directive('markanimation', function($compile, $parse) {
   return {
     restrict: 'EA',
     replace: false,
     link: function($scope, element, attrs) {
       new ScrollMagic.Scene({
-          triggerElement: ".animationfade",
+          triggerElement: ".markani2",
+          duration: 200
         })
-        .setClassToggle("#high1", "active")
-        .addIndicators() // add indicators (requires plugin)
         .addTo(controller)
-        //.addIndicators() // add indicators (requires plugin)
+        // .addIndicators() // add indicators (requires plugin)
         .on("enter", function(e) {
-          console.log("Taxi Enter");
+          // console.log("shark and snail Enter");
           setTimeout(function() {
-            taxiAni = true;
-          });
-          if (taxiAni == true) {
-            $(".taxiAnimation").attr("src", "img/gif/taxianimation.gif");
+            markAni2 = true;
+            // console.log("done");
+          }, 5000);
+
+          if (markAni2 == true) {
+            $(".markAni2 .plane").attr("src", "img/home/Shark-Snail1.gif");
+            nguAni2 = false;
           }
-          taxiAni = false;
         })
     }
   };
 });
-
 
 firstapp.config(function($translateProvider) {
   $translateProvider.translations('en', LanguageEnglish);

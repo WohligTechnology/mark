@@ -384,15 +384,17 @@ p {
 .in-width {
   height: 60vh;
 }
-.footer {
+footer {
   background: #5b5c5e;
-  padding: 15px;
   font-size: 12px;
   &.btm-footer {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
+  }
+  .footer-back {
+    padding: 15px;
   }
   li {
     font-size: 13px;

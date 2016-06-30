@@ -60,7 +60,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
+.controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $location) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("about");
   $scope.menutitle = NavigationService.makeactive("About Us");
@@ -86,7 +86,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   };
 })
 
-.controller('AlbaneCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('AlbaneCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("camille");
   $scope.menutitle = NavigationService.makeactive("Camille Albane Paris");
@@ -99,7 +99,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   };
 })
 
-.controller('PhytodessCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('PhytodessCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("phytodess");
   $scope.menutitle = NavigationService.makeactive("Phytodess Paris");
@@ -112,7 +112,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   };
 })
 
-.controller('FranchiseCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('FranchiseCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("franchise");
   $scope.menutitle = NavigationService.makeactive("Franchise");
@@ -125,7 +125,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   };
 })
 
-.controller('MediaCornerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('MediaCornerCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("media-corner");
   $scope.menutitle = NavigationService.makeactive("Media Corner");
