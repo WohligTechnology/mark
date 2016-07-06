@@ -188,7 +188,7 @@ firstapp.directive('markanimation', function($compile, $parse) {
     link: function($scope, element, attrs) {
       new ScrollMagic.Scene({
           triggerElement: ".markani2",
-          duration: 200
+          duration: 400
         })
         .addTo(controller)
         // .addIndicators() // add indicators (requires plugin)
@@ -196,12 +196,32 @@ firstapp.directive('markanimation', function($compile, $parse) {
           // console.log("shark and snail Enter");
           setTimeout(function() {
             markAni2 = true;
-            // console.log("done");
+            console.log("done");
           }, 5000);
 
           if (markAni2 == true) {
-            $(".markAni2 .plane").attr("src", "img/home/Shark-Snail1.gif");
-            nguAni2 = false;
+            $(".markani3").attr("src", "img/overview.gif");
+            markAni2 = false;
+          }
+        })
+      new ScrollMagic.Scene({
+          triggerElement: ".markani4",
+          duration: 550
+        })
+        .addTo(controller)
+        // .addIndicators() // add indicators (requires plugin))
+        .setClassToggle(".markani4", "fadein")
+        .on("enter", function(e) {
+          // console.log("Flying plane");
+          setTimeout(function() {
+            markAni = true;
+            console.log("done23");
+          }, 1000);
+
+          if (markAni == true) {
+            // $(".markani4").addClass("fadein")
+            // $(".markani5").addClass("fadein");
+            markAni = false;
           }
         })
     }

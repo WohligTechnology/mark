@@ -1,5 +1,5 @@
 @media (max-width: 1200px) {
-.spread-head {
+  .spread-head {
     letter-spacing: 8px;
   }
 }
@@ -17,6 +17,15 @@
   .contact .underline-form {
     padding: 0 10px;
   }
+  .section.one {
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+  }
+  .section.one video {
+    width: auto;
+    height: 100%;
+  }
 }
 @media (max-width: $screen-xs-max) {
   .overlay-box {
@@ -28,7 +37,7 @@
   .home-landing .logo {
     padding: 0;
     img {
-      width: 250px;
+      width: 200px;
     }
   }
   .nav li a {
@@ -44,7 +53,7 @@
     text-align: center;
     line-height: 110%;
   }
-  .position-center {
+  .position-center.staticmobile {
     position: static;
     transform: translate(0);
   }
@@ -89,7 +98,7 @@
     }
   }
   .overflow-scroll {
-      padding-bottom: 20px;
+    padding-bottom: 20px;
   }
   .footer {
     padding: 5px;
@@ -104,9 +113,10 @@
       letter-spacing: 10px;
     }
   }
-
-    .bg {
-      padding: 60px 10px !important;
-    }
-
+  .bg {
+    padding: 60px 10px !important;
+  }
+  .mark-gif {
+    opacity: 0;
+  }
 }

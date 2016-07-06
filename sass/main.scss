@@ -167,8 +167,11 @@ a {
     width: 100%;
   }
 }
-.section.two {
-  background: url('../img/home/overview.jpg') no-repeat;
+// .section.two {
+//   background: url('../img/overview.gif') no-repeat;
+// }
+.section.two .gifani {
+  background: url('../img/overview.gif') no-repeat;
 }
 .section.three {
   background: url('../img/home/brands.jpg') no-repeat;
@@ -863,10 +866,23 @@ footer {
 .slider-client {
   height: 540px;
 }
+.width100 {
+  width: 100%;
+}
+.overview {
+  margin-top: -100px;
+}
 .btm-footer {
   position: absolute;
   width: 100%;
   bottom: 0;
+}
+.markani4 {
+  opacity: 0;
+  @include transition(all ease 300ms);
+}
+.fadein{
+  opacity: 1;
 }
 @import "fancybox-override";
 @import "mobile";

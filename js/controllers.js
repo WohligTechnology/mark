@@ -383,209 +383,521 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     img: "img/media/HairMakeUp/18.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/19.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/20.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/21.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/22.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/23.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/24.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/25.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/26.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/27.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/28.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/29.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/30.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/31.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/32.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/33.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/34.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/35.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/36.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/36.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/37.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/38.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/39.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/40.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/41.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/42.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/43.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/44.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/45.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/46.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/47.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/48.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/49.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/50.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/51.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/52.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/53.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/54.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/55.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/56.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/57.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/58.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/59.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/60.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/61.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/62.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/63.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/64.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/65.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/66.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/67.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/68.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/69.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/70.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/71.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/72.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/73.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/74.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/75.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/76.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/77.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/78.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/79.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/80.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/81.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/81.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/82.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/83.jpg",
     video: "",
   }, {
-    img: "img/media/HairMakeUp/18.jpg",
+    img: "img/media/HairMakeUp/84.jpg",
     video: "",
+  }, {
+    img: "img/media/HairMakeUp/85.jpg",
+    video: "",
+  }, {
+      img: "img/media/HairMakeUp/86.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/87.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/88.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/89.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/90.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/91.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/92.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/93.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/94.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/95.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/96.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/97.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/98.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/99.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/100.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/101.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/102.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/103.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/104.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/105.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/106.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/107.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/108.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/109.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/110.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/111.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/112.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/113.jpg",
+      video: "",
+    }
+    , {
+      img: "img/media/HairMakeUp/114.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/115.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/116.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/117.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/118.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/119.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/120.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/121.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/122.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/123.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/124.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/125.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/126.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/127.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/128.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/129.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/130.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/131.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/132.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/132.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/133.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/134.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/135.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/136.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/137.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/138.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/139.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/140.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/141.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/142.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/143.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/144.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/145.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/146.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/147.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/148.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/149.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/150.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/151.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/152.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/153.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/154.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/155.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/156.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/157.jpg",
+      video: "",
+    }
+    , {
+      img: "img/media/HairMakeUp/158.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/159.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/160.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/161.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/162.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/163.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/164.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/165.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/166.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/167.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/168.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/169.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/170.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/171.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/172.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/173.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/174.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/175.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/176.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/177.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/178.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/179.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/180.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/181.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/182.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/183.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/184.jpg",
+      video: "",
+    }
+    , {
+      img: "img/media/HairMakeUp/185.jpg",
+      video: "",
+    }, {
+      img: "img/media/HairMakeUp/186.jpg",
+      video: "",
   }];
   $scope.editorails = _.chunk($scope.editorails, 9);
   for (var i = 0; i < $scope.editorails.length; i++) {
