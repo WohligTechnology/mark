@@ -186,24 +186,24 @@ firstapp.directive('markanimation', function($compile, $parse) {
     restrict: 'EA',
     replace: false,
     link: function($scope, element, attrs) {
-      new ScrollMagic.Scene({
-          triggerElement: ".markani2",
-          duration: 400
-        })
-        .addTo(controller)
-        // .addIndicators() // add indicators (requires plugin)
-        .on("enter", function(e) {
-          // console.log("shark and snail Enter");
-          setTimeout(function() {
-            markAni2 = true;
-            console.log("done");
-          }, 5000);
-
-          if (markAni2 == true) {
-            $(".markani3").attr("src", "img/overview.gif");
-            markAni2 = false;
-          }
-        })
+      // new ScrollMagic.Scene({
+      //     triggerElement: ".markani2",
+      //     duration: 400
+      //   })
+      //   .addTo(controller)
+      //   // .addIndicators() // add indicators (requires plugin)
+      //   .on("enter", function(e) {
+      //     // console.log("shark and snail Enter");
+      //     setTimeout(function() {
+      //       markAni2 = true;
+      //       console.log("done");
+      //     }, 5000);
+      //
+      //     if (markAni2 == true) {
+      //       $(".markani3").attr("src", "img/overview.gif");
+      //       markAni2 = false;
+      //     }
+      //   })
       new ScrollMagic.Scene({
           triggerElement: ".markani4",
           duration: 550
