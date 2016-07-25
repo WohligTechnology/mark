@@ -84,6 +84,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     console.log(id);
     $location.path("" + id);
   };
+  $scope.showMe = false;
+  $scope.myFunc = function() {
+      $scope.showMe = !$scope.showMe;
+  }
 })
 
 .controller('AlbaneCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
