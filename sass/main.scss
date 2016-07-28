@@ -488,6 +488,9 @@ footer {
     .cont-abt {
         margin-bottom: 8%;
     }
+    .btn-location {
+        margin-bottom: 3%;
+    }
     .cont-about {
         margin-bottom: 5%;
     }
@@ -564,6 +567,60 @@ footer {
     }
     .together {
         max-width: 715px;
+    }
+    .flexslider {
+        background: transparent;
+        border-color: transparent;
+        .flex-direction-nav {
+            .flex-disabled {
+                opacity: 1 !important;
+                z-index: 0;
+                cursor: pointer;
+            }
+            .flex-prev {
+                right: 24px;
+                bottom: -43px;
+                opacity: 1;
+                left: auto !important;
+                top: auto;
+            }
+            .flex-next {
+                right: 0 !important;
+                bottom: -58px;
+                top: auto;
+                opacity: 1;
+            }
+        }
+        &:hover {
+            .flex-direction-nav {
+                .flex-prev {
+                    left: -50px;
+                }
+                .flex-next {
+                    right: -50px;
+                }
+            }
+        }
+        .flex-viewport {
+            max-height: 484px;
+        }
+    }
+    ol.flex-control-nav.flex-control-paging {
+        display: none;
+    }
+    .flex-direction-nav {
+        a {
+            width: 20px;
+            opacity: 1 !important;
+            &.flex-prev:before {
+                content: url('../img/media/prev.png');
+                transform: scale(0.7,0.7);
+            }
+            &.flex-next:before {
+                content: url('../img/media/next.png');
+                transform: scale(0.7,0.7);
+            }
+        }
     }
 }
 .albane {
@@ -904,13 +961,13 @@ footer {
 .animate-if.ng-leave {
     opacity: 1;
 }
-.brd-right{
-  border-right: 1px solid #fff;
+.brd-right {
+    border-right: 1px solid #fff;
 }
 .store-locator {
     margin: 25px 0;
     address {
-      min-height: 100px;
+        min-height: 100px;
         p {
             margin: 0;
             font-size: 12px;
@@ -925,6 +982,9 @@ footer {
     letter-spacing: 3px;
     font-size: 16px;
     color: #a8a5a6;
+}
+.btn-med {
+    width: 100%;
 }
 @import "fancybox-override";
 @import "mobile";

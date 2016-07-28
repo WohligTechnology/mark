@@ -37,7 +37,7 @@
                             <div class="sub-title">
                                 <h2 class="uppercase text-center">The SALON EXPERIENCE</h2>
                             </div>
-                            <div class="cont-abt">
+                            <div class="cont-abt btn-location">
                                 <p class="text-justify">
                                     Finally, it is time for you to open the door to this intimate beauty parlor, a subtle incarnation of French art de vivre where you will experience a luxury that suits your style. Every time, you have the same impression: it is as if you were
                                     returning home. A face lights up over there as it sees you, and is followed by another. Your hostesses smile and walk over to you, carrying the elegance of the environment with them.
@@ -56,11 +56,56 @@
                                     door for a moment, breathing in the healthy air of the salon one last time, and then you head out in your excellence, ready to conquer the world.
                                 </p>
                             </div>
+                            <div class="btn-location" ng-init="showSlider = 1">
+                              <div class="row">
+                                <div class="col-md-4">
+                                  <a class="btn btn-primary btn-med btn-outline uppercase" ng-click="showSlider = 1" ng-class="{'active-link' : showSlider=='1'}">Kemps Corner</a>
+                                </div>
+                                <div class="col-md-4">
+                                  <a class="btn btn-primary btn-med btn-outline uppercase" ng-click="showSlider = 2" ng-class="{'active-link' : showSlider=='2'}">Lower Parel</a>
+                                </div>
+                                <div class="col-md-4">
+                                  <a class="btn btn-primary btn-med btn-outline uppercase" ng-click="showSlider = 3" ng-class="{'active-link' : showSlider=='3'}">Bandra</a>
+                                </div>
+                              </div>
+                            </div>
                             <div class="salon">
                                 <div class="row">
-                                    <div class="salon-image">
+                                  <div class="slider-location">
+                                    <flex-slider flex-slide="slide in kemps track by $index" animation="slide" animation-loop="false" slideshow="false" prev-text="" next-text="" ng-if="showSlider == 1">
+                                      <li class="">
+                                            <!-- <a fancybox href="{{wall.img}}"> -->
+                                              <div class="salon-image">
+                                                  <img ng-src="{{slide.img}}" class="img-responsive" alt="Salon">
+                                                  <!-- <img src="img/dessange/experience.jpg" class="img-responsive" alt="Salon"> -->
+                                              </div>
+                                            <!-- </a> -->
+                                      </li>
+                                    </flex-slider>
+                                    <flex-slider flex-slide="slide in parel track by $index" animation="slide" animation-loop="false" slideshow="false" prev-text="" next-text="" ng-if="showSlider == 2">
+                                      <li class="">
+                                            <!-- <a fancybox href="{{wall.img}}"> -->
+                                              <div class="salon-image">
+                                                  <img ng-src="{{slide.img}}" class="img-responsive" alt="Salon">
+                                                  <!-- <img src="img/dessange/experience.jpg" class="img-responsive" alt="Salon"> -->
+                                              </div>
+                                            <!-- </a> -->
+                                      </li>
+                                    </flex-slider>
+                                    <flex-slider flex-slide="slide in bandra track by $index" animation="slide" animation-loop="false" slideshow="false" prev-text="" next-text="" ng-if="showSlider == 3">
+                                      <li class="">
+                                            <!-- <a fancybox href="{{wall.img}}"> -->
+                                              <div class="salon-image">
+                                                  <img ng-src="{{slide.img}}" class="img-responsive" alt="Salon">
+                                                  <!-- <img src="img/dessange/experience.jpg" class="img-responsive" alt="Salon"> -->
+                                              </div>
+                                            <!-- </a> -->
+                                      </li>
+                                    </flex-slider>
+                                  </div>
+                                    <!-- <div class="salon-image">
                                         <img src="img/dessange/experience.jpg" class="img-responsive" alt="Salon">
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="row">

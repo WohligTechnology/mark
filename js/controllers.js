@@ -87,7 +87,38 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.showMe = false;
   $scope.myFunc = function() {
       $scope.showMe = !$scope.showMe;
-  }
+  };
+  $scope.kemps = [{
+    img: "img/dessange/experience.jpg",
+    video: ""
+  }, {
+    img: "img/dessange/experience.jpg",
+    video: ""
+  }, {
+    img: "img/dessange/experience.jpg",
+    video: ""
+  }];
+  $scope.parel = [{
+    img: "img/dessange/experience.jpg",
+    video: ""
+  }, {
+    img: "img/dessange/experience.jpg",
+    video: ""
+  }, {
+    img: "img/dessange/experience.jpg",
+    video: ""
+  }];
+  $scope.bandra = [{
+    img: "img/dessange/experience.jpg",
+    video: ""
+  }, {
+    img: "img/dessange/experience.jpg",
+    video: ""
+  }, {
+    img: "img/dessange/experience.jpg",
+    video: ""
+  }];
+
 })
 
 .controller('AlbaneCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
@@ -677,8 +708,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }, {
       img: "img/media/HairMakeUp/113.jpg",
       video: "",
-    }
-    , {
+    }, {
       img: "img/media/HairMakeUp/114.jpg",
       video: "",
     }, {
@@ -895,8 +925,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }, {
       img: "img/media/HairMakeUp/184.jpg",
       video: "",
-    }
-    , {
+    }, {
       img: "img/media/HairMakeUp/185.jpg",
       video: "",
     }, {
