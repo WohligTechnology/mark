@@ -57,160 +57,142 @@
                                 </p>
                             </div>
                             <div class="btn-location" ng-init="showSlider = 1">
-                              <div class="row">
-                                <div class="col-md-4 col-sm-4">
-                                  <a class="btn btn-primary btn-med btn-outline uppercase" ng-click="showSlider = 1" ng-class="{'active-links' : showSlider=='1'}">Kemps Corner</a>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <a class="btn btn-primary btn-med btn-outline uppercase" ng-click="showSlider = 1" ng-class="{'active-links' : showSlider=='1'}">Kemps Corner</a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <a class="btn btn-primary btn-med btn-outline uppercase" ng-click="showSlider = 2" ng-class="{'active-links' : showSlider=='2'}">Lower Parel</a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <a class="btn btn-primary btn-med btn-outline uppercase" ng-click="showSlider = 3" ng-class="{'active-links' : showSlider=='3'}">Bandra</a>
+                                    </div>
                                 </div>
-                                <div class="col-md-4 col-sm-4">
-                                  <a class="btn btn-primary btn-med btn-outline uppercase" ng-click="showSlider = 2" ng-class="{'active-links' : showSlider=='2'}">Lower Parel</a>
-                                </div>
-                                <div class="col-md-4 col-sm-4">
-                                  <a class="btn btn-primary btn-med btn-outline uppercase" ng-click="showSlider = 3" ng-class="{'active-links' : showSlider=='3'}">Bandra</a>
-                                </div>
-                              </div>
                             </div>
                             <div class="salon">
                                 <div class="row">
-                                  <div class="slider-location">
-                                    <flex-slider flex-slide="slide in kemps track by $index" animation="slide" animation-loop="false" slideshow="false" prev-text="" next-text="" ng-if="showSlider == 1">
-                                      <li class="">
-                                            <!-- <a fancybox href="{{wall.img}}"> -->
-                                              <div class="salon-image">
-                                                  <img ng-src="{{slide.img}}" class="img-responsive" alt="Salon">
-                                                  <!-- <img src="img/dessange/experience.jpg" class="img-responsive" alt="Salon"> -->
-                                              </div>
-                                            <!-- </a> -->
-                                      </li>
+                                    <div class="slider-location">
+                                        <flex-slider flex-slide="slide in kemps track by $index" animation="slide" prev-text="" next-text="" ng-if="showSlider == 1" animationSpeed="300" ,>
+                                        <li class="">
+                                            <div class="salon-image">
+                                                <img ng-src="{{slide.img}}" class="img-responsive" alt="Salon">
+                                            </div>
+                                        </li>
                                     </flex-slider>
-                                    <flex-slider flex-slide="slide in parel track by $index" animation="slide" animation-loop="false" slideshow="false" prev-text="" next-text="" ng-if="showSlider == 2">
-                                      <li class="">
-                                            <!-- <a fancybox href="{{wall.img}}"> -->
-                                              <div class="salon-image">
-                                                  <img ng-src="{{slide.img}}" class="img-responsive" alt="Salon">
-                                                  <!-- <img src="img/dessange/experience.jpg" class="img-responsive" alt="Salon"> -->
-                                              </div>
-                                            <!-- </a> -->
-                                      </li>
+                                    <flex-slider flex-slide="slide in parel track by $index" animation="slide" prev-text="" next-text="" ng-if="showSlider == 2" animationSpeed="300" ,>
+                                        <li class="">
+                                            <div class="salon-image">
+                                                <img ng-src="{{slide.img}}" class="img-responsive" alt="Salon">
+                                            </div>
+                                        </li>
                                     </flex-slider>
-                                    <flex-slider flex-slide="slide in bandra track by $index" animation="slide" animation-loop="false" slideshow="false" prev-text="" next-text="" ng-if="showSlider == 3">
-                                      <li class="">
-                                            <!-- <a fancybox href="{{wall.img}}"> -->
-                                              <div class="salon-image">
-                                                  <img ng-src="{{slide.img}}" class="img-responsive" alt="Salon">
-                                                  <!-- <img src="img/dessange/experience.jpg" class="img-responsive" alt="Salon"> -->
-                                              </div>
-                                            <!-- </a> -->
-                                      </li>
+                                    <flex-slider flex-slide="slide in bandra track by $index" animation="slide" prev-text="" next-text="" ng-if="showSlider == 3" animationSpeed="300" ,>
+                                        <li class="">
+                                            <div class="salon-image">
+                                                <img ng-src="{{slide.img}}" class="img-responsive" alt="Salon">
+                                            </div>
+                                        </li>
                                     </flex-slider>
-                                  </div>
-                                    <!-- <div class="salon-image">
-                                        <img src="img/dessange/experience.jpg" class="img-responsive" alt="Salon">
-                                    </div> -->
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-offset-2 col-md-8">
-                                    <div class="sub-title">
-                                        <h2 class="uppercase text-center">Collection</h2>
-                                    </div>
-                                    <div class="cont-about">
-                                        <h3 class="text-center">Eclipse</h3>
-                                        <p class="text-center">
-                                            Light and colors emerge from a velvety black background as symbols of irresistible femininity. The graphic lines of the accessories and styling with an Eighties inspiration match the acid and translucent colors that are hot news this season. Visibly
-                                            layered cuts with wispy ends brighten up faces. The misleading simplicity of texture and styling and the flowing movements of the cuts evoke a feeling of freedom and natural sophistication. Colors have their word to say with intensity and candor.
-                                        </p>
-                                    </div>
-                                    <div class="brand-video">
-                                        <div class="row">
-                                            <div class="salon-video fancybox.iframe" fancybox href="http://www.youtube.com/embed/w_F829NgXx4?autoplay=1&modestbranding=0&showinfo=0&rel=0&loop=1">
-                                                <img src="img/dessange/video.jpg" class="img-responsive" alt="Video">
-                                                <i class="fa fa-play"></i>
-                                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-offset-2 col-md-8">
+                                <div class="sub-title">
+                                    <h2 class="uppercase text-center">Collection</h2>
+                                </div>
+                                <div class="cont-about">
+                                    <h3 class="text-center">Eclipse</h3>
+                                    <p class="text-center">
+                                        Light and colors emerge from a velvety black background as symbols of irresistible femininity. The graphic lines of the accessories and styling with an Eighties inspiration match the acid and translucent colors that are hot news this season. Visibly
+                                        layered cuts with wispy ends brighten up faces. The misleading simplicity of texture and styling and the flowing movements of the cuts evoke a feeling of freedom and natural sophistication. Colors have their word to say with intensity and candor.
+                                    </p>
+                                </div>
+                                <div class="brand-video">
+                                    <div class="row">
+                                        <div class="salon-video fancybox.iframe" fancybox href="http://www.youtube.com/embed/w_F829NgXx4?autoplay=1&modestbranding=0&showinfo=0&rel=0&loop=1">
+                                            <img src="img/dessange/video.jpg" class="img-responsive" alt="Video">
+                                            <i class="fa fa-play"></i>
                                         </div>
-                                    </div>
-                                    <div class="img-collect">
-                                        <!-- <div class="row">
-                                              <div class="collection">
-                                                <img src="img/dessange/collection.jpg" class="img-responsive" alt="" />
-                                              </div>
-                                            </div> -->
-                                        <div class="row">
-                                            <div class="together">
-                                                <div class="collect">
-                                                    <div class="collect1">
-                                                        <img src="img/dessange/01.jpg" class="img-responsive" alt="">
-                                                    </div>
-                                                    <div class="collect2">
-                                                        <img src="img/dessange/03.jpg" class="img-responsive" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="collects">
-                                                    <div class="collects1">
-                                                        <img src="img/dessange/02.jpg" class="img-responsive" alt="">
-                                                    </div>
-                                                    <div class="collects2">
-                                                        <img src="img/dessange/04.jpg" class="img-responsive" alt="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="">
-                                        <a class="btn btn-primary btn-big btn-outline uppercase" href="http://www.dessange.com/en/" target="_blank">Visit Website</a>
-                                        <a class="btn btn-primary btn-big btn-outline uppercase pull-right" ng-click="myFunc()">Locate Store</a>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="store-locator" ng-show="showMe" class="animate-if">
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-4 brd-right">
-                                                <address class="text-center">
-                                                    <h5>Kemps Corner :</h5>
-                                                    <p>
-                                                        Chinoy Mansion, 162, Warden Road, Kemps Corner,
-                                                        <br>Mumbai - 400 036.
-                                                    </p>
-                                                    <p>
-                                                        Call Us : +91 22 23630100 / 23630200,
-                                                    </p>
-                                                    <p>
-                                                        +91 9819925359
-                                                    </p>
-                                                </address>
+                                <div class="img-collect">
+                                    <div class="row">
+                                        <div class="together">
+                                            <div class="collect">
+                                                <div class="collect1">
+                                                    <img src="img/dessange/01.jpg" class="img-responsive" alt="">
+                                                </div>
+                                                <div class="collect2">
+                                                    <img src="img/dessange/03.jpg" class="img-responsive" alt="">
+                                                </div>
                                             </div>
-                                            <div class="col-md-4 col-sm-4 brd-right">
-                                                <address class="text-center">
-                                                    <h5>Lower Parel :</h5>
-                                                    <p>
-                                                        Unit No. F-08, First Floor, High Street Phoenix 462, Senapati Bapat Marg, Lower Parel (West),
-                                                        <br>
-                                                        Mumbai - 400 013.
+                                            <div class="collects">
+                                                <div class="collects1">
+                                                    <img src="img/dessange/02.jpg" class="img-responsive" alt="">
+                                                </div>
+                                                <div class="collects2">
+                                                    <img src="img/dessange/04.jpg" class="img-responsive" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <a class="btn btn-primary btn-big btn-outline uppercase" href="http://www.dessange.com/en/" target="_blank">Visit Website</a>
+                                    <a class="btn btn-primary btn-big btn-outline uppercase pull-right" ng-click="myFunc()">Locate Store</a>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="store-locator" ng-show="showMe" class="animate-if">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4 brd-right">
+                                            <address class="text-center">
+                                                <h5>Kemps Corner :</h5>
+                                                <p>
+                                                    Chinoy Mansion, 162, Warden Road, Kemps Corner,
+                                                    <br>Mumbai - 400 036.
+                                                </p>
+                                                <p>
+                                                    Call Us : +91 22 23630100 / 23630200,
+                                                </p>
+                                                <p>
+                                                    +91 9819925359
+                                                </p>
+                                            </address>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 brd-right">
+                                            <address class="text-center">
+                                                <h5>Lower Parel :</h5>
+                                                <p>
+                                                    Unit No. F-08, First Floor, High Street Phoenix 462, Senapati Bapat Marg, Lower Parel (West),
+                                                    <br>
+                                                    Mumbai - 400 013.
 
-                                                    </p>
-                                                    <p>
-                                                        Call Us : +91 22 40128080 /40129090,
-                                                    </p>
-                                                    <p>
-                                                        +91 9819383117
-                                                    </p>
-                                                </address>
-                                            </div>
-                                            <div class="col-md-4 col-sm-4">
-                                                <address class="text-center">
-                                                    <h5>Bandra :</h5>
-                                                    <p>
-                                                        Maqba heights, Shop no. 3, Dr. Ambedkar Road, Opposite HDFC Bank, Pali Naka, Bandra (West),
-                                                        <br>Mumbai - 400 050.
-                                                    </p>
-                                                    <p>
-                                                        Call Us : +91 22 26000170 /26000171
-                                                    </p>
-                                                </address>
-                                            </div>
+                                                </p>
+                                                <p>
+                                                    Call Us : +91 22 40128080 /40129090,
+                                                </p>
+                                                <p>
+                                                    +91 9819383117
+                                                </p>
+                                            </address>
                                         </div>
-                                        <div class="tag-line">
-                                            <h5>DESSANGE PARIS SALON AND SPA ARE OPEN SEVEN DAYS A WEEK, FROM 10 AMTO 9PM</h5>
+                                        <div class="col-md-4 col-sm-4">
+                                            <address class="text-center">
+                                                <h5>Bandra :</h5>
+                                                <p>
+                                                    Maqba heights, Shop no. 3, Dr. Ambedkar Road, Opposite HDFC Bank, Pali Naka, Bandra (West),
+                                                    <br>Mumbai - 400 050.
+                                                </p>
+                                                <p>
+                                                    Call Us : +91 22 26000170 /26000171
+                                                </p>
+                                            </address>
                                         </div>
+                                    </div>
+                                    <div class="tag-line">
+                                        <h5>DESSANGE PARIS SALON AND SPA ARE OPEN SEVEN DAYS A WEEK, FROM 10 AMTO 9PM</h5>
                                     </div>
                                 </div>
                             </div>
@@ -220,4 +202,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>
