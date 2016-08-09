@@ -24,9 +24,9 @@
                 <li class="">
                   <div class="row" ng-repeat="row in slide track by $index">
                     <div class="col-md-4 col-xs-4" ng-repeat="wall in row">
-                      <a fancybox href="{{wall.img}}">
+                      <a fancybox href="{{wall.image | uploadpath}}">
                         <div class="media-image">
-                          <img ng-src="{{wall.img}}" alt="" class="img-responsive">
+                          <img ng-src="{{wall.image | uploadpath}}" alt="" class="img-responsive">
                           <i class="fa {{wall.icon}}"></i>
                         </div>
                       </a>
@@ -38,9 +38,9 @@
                 <li class="">
                   <div class="row" ng-repeat="row in slide track by $index">
                     <div class="col-md-4 col-xs-4" ng-repeat="wall in row track by $index">
-                      <a fancybox href="{{wall.img}}">
+                      <a fancybox href="{{wall.image|uploadpath}}">
                         <div class="media-image">
-                          <img ng-src="{{wall.img}}" alt="" class="img-responsive">
+                          <img ng-src="{{wall.image|uploadpath}}" alt="" class="img-responsive">
                           <i class="fa {{wall.icon}}"></i>
                         </div>
                       </a>

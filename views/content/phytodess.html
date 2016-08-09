@@ -21,8 +21,8 @@
                                     <h2 class="uppercase text-center">ABOUT PHYTODESS</h2>
                                 </div>
                                 <div class="cont-abt">
-                                    <p class="text-justify">
-                                        Launched in 1996, Phytodess products symbolize the alliance of plants, PHYTO and hair expertise of a large luxury company, DESSANGE. This name symbolizes the foundations of its line of quality scalp and hair care. Phytodess has been the first line of hair products created by a hair salon company. True hair salon artists know: "There is no beautiful hair without a healthy scalp". That is why Phytodess is a genuine hair care brand designed by professionals for professionals who deliver services and expert advice to clients with high standards in search of products that meet their expectations. The Phytodess philosophy is based on several values: primarily natural ingredients, responsible sourcing fostering respect for biodiversity and the development of the local economy, commitment to the international movement 1% for the Planet, packaging from cardboard from managed forests and the products and packaging materials tested and validated by the trainers from the DESSANGE Training Center.
+                                    <p class="text-justify" ng-bind-html="Phytodess.about">
+                                        <!-- Launched in 1996, Phytodess products symbolize the alliance of plants, PHYTO and hair expertise of a large luxury company, DESSANGE. This name symbolizes the foundations of its line of quality scalp and hair care. Phytodess has been the first line of hair products created by a hair salon company. True hair salon artists know: "There is no beautiful hair without a healthy scalp". That is why Phytodess is a genuine hair care brand designed by professionals for professionals who deliver services and expert advice to clients with high standards in search of products that meet their expectations. The Phytodess philosophy is based on several values: primarily natural ingredients, responsible sourcing fostering respect for biodiversity and the development of the local economy, commitment to the international movement 1% for the Planet, packaging from cardboard from managed forests and the products and packaging materials tested and validated by the trainers from the DESSANGE Training Center. -->
                                     </p>
                                 </div>
                                 <div class="row">
@@ -30,11 +30,31 @@
                                         <div class="sub-title">
                                             <h2 class="uppercase text-center">The Phytodess universe</h2>
                                         </div>
-                                        <div class="brand-video">
+
+
+                                        <!-- <a class="various fancybox.iframe" fancybox rel="gallery1" href="http://www.youtube.com/embed/{{moviefindOne.theatricalTrailerUrl}}?autoplay=1&modestbranding=0&showinfo=0&rel=0&loop=1" data-fancybox-type="iframe">
+                                            <img ng-src="{{moviefindOne.theatricalTrailerImage|uploadpath}}" alt="Dharma Productions" class="img-responsive margin-auto width100" ng-if="(moviefindOne.theatricalTrailerImage || moviefindOne.theatricalTrailerImage != '')">
+                                            <img ng-src="{{moviefindOne.theatricalTrailerUrl|youtubethumb}}" alt="Dharma Productions" class="img-responsive width100" ng-if="!(moviefindOne.theatricalTrailerImage || moviefindOne.theatricalTrailerImage != '')"> -->
+
+
+
+                                        <!-- <div class="brand-video">
                                             <div class="row">
                                                 <div class="salon-video fancybox.iframe" fancybox href="http://www.youtube.com/embed/A-pPD2tX4Z4?autoplay=1&modestbranding=0&showinfo=0&rel=0&loop=1">
                                                     <img src="img/phytodess/video.jpg" class="img-responsive" alt="Video">
                                                     <i class="fa fa-play"></i>
+                                                </div>
+                                            </div>
+                                        </div> -->
+
+                                        <div class="brand-video">
+                                            <div class="row">
+                                                <div class="salon-video fancybox.iframe" fancybox href="http://www.youtube.com/embed/{{Phytodess.videourl | youtubethumb:true}}?autoplay=1&modestbranding=0&showinfo=0&rel=0&loop=1">
+
+                                                    <img ng-src="http://img.youtube.com/vi/{{Phytodess.videourl}}/maxresdefault.jpg" alt="Dharma Productions" class="img-responsive width100">
+                                                    <i class="fa fa-play">
+
+                                                    </i>
                                                 </div>
                                             </div>
                                         </div>
@@ -44,26 +64,26 @@
                                     <h2 class="uppercase text-center">Our Product</h2>
                                 </div>
                                 <div class="cont-abt">
-                                    <p class="text-justify">
-                                        Entering one of our salons means discovering the pleasure of a positive attitude and the warmth of a welcoming atmosphere. Our salons are made for encounters and advice and are designed to encourage discussions and confidences between you and our franchisees.
-                                        You will be welcomed and taken care of immediately. The many talents of our experts offer you real reassurance.
+                                    <p class="text-justify" ng-bind-html="Phytodess.content">
+                                        <!-- Entering one of our salons means discovering the pleasure of a positive attitude and the warmth of a welcoming atmosphere. Our salons are made for encounters and advice and are designed to encourage discussions and confidences between you and our franchisees.
+                                        You will be welcomed and taken care of immediately. The many talents of our experts offer you real reassurance. -->
                                     </p>
                                 </div>
                                 <div class="row">
-                                  <div class="col-md-3">
+                                  <div class="col-md-3" ng-repeat="data in Phytodess.products">
                                     <div class="salon-product">
                                       <div class="img-product">
-                                        <img src="img/phytodess/1.png" class="img-responsive" alt="">
+                                        <img ng-src="{{data.image|uploadpath}}" class="img-responsive" alt="">
                                       </div>
                                       <div class="product-detail text-center">
-                                        <h4>ALOE VERA SERUM</h4>
-                                        <p>Relaxation and balance</p>
-                                        <p>Sensitive scalps in need of soothing</p>
+                                        <h4>{{data.name}}</h4>
+                                        <p ng-bind-html="data.content"></p>
+                                        <!-- <p>Sensitive scalps in need of soothing</p> -->
                                       </div>
                                     </div>
                                   </div>
 
-                                  <div class="col-md-3">
+                                  <!-- <div class="col-md-3">
                                     <div class="salon-product">
                                       <div class="img-product">
                                         <img src="img/phytodess/2.png" class="img-responsive" alt="">
@@ -152,7 +172,7 @@
                                         <p>All hair types</p>
                                       </div>
                                     </div>
-                                  </div>
+                                  </div> -->
                                 </div>
                                 <div class="text-center">
                                     <a class="btn btn-primary btn-outline uppercase" href="http://phytodess.com/en/" target="_blank">Visit Website</a>

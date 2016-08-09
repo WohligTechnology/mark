@@ -10,6 +10,7 @@ var firstapp = angular.module('firstapp', [
   'pascalprecht.translate',
   'angulartics',
   'angulartics.google.analytics'
+
 ]);
 
 firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
@@ -73,19 +74,19 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
   })
 
   .state('dessange', {
-    url: "/brands/dessange",
+    url: "/brands/dessange/:id",
     templateUrl: "views/template.html",
     controller: 'DessangeCtrl'
   })
 
   .state('albane', {
-    url: "/brands/albane",
+    url: "/brands/albane/:id",
     templateUrl: "views/template.html",
     controller: 'AlbaneCtrl'
   })
 
   .state('phytodess', {
-    url: "/brands/phytodess",
+    url: "/brands/phytodess/:id",
     templateUrl: "views/template.html",
     controller: 'PhytodessCtrl'
   })
@@ -232,4 +233,72 @@ firstapp.config(function($translateProvider) {
   $translateProvider.translations('en', LanguageEnglish);
   $translateProvider.translations('hi', LanguageHindi);
   $translateProvider.preferredLanguage('en');
+});
+
+firstapp.filter('uploadpath', function() {
+    return function(input, width, height, style) {
+        var other = "";
+        if (width && width != "") {
+            other += "&width=" + width;
+        }
+        if (height && height != "") {
+            other += "&height=" + height;
+        }
+        if (style && style != "") {
+            other += "&style=" + style;
+        }
+        if (input) {
+            if (input.indexOf('https://') == -1) {
+                return uploadurl + input + other;
+
+            } else {
+                return input;
+            }
+        }
+    };
+});
+
+// firstapp.filter('youtubethumb', function() {
+//     return function(input, onlyid) {
+//         if (input) {
+//           console.log("input",input);
+//             var videoid = input.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
+//             if (input != null) {
+//                 if (onlyid == false) {
+//                     return "http://img.youtube.com/vi/" + videoid[1] + "/hqdefault.jpg";
+//                 } else if (onlyid == true) {
+//                     return videoid[1];
+//                 }
+//             } else {
+//                 return input;
+//             }
+//         } else {
+//             return input;
+//         }
+//     };
+// });
+
+
+firstapp.filter('youtubethumb', function() {
+    return function(input, onlyid) {
+        if (input) {
+          console.log(input);
+            var videoid = input.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
+            console.log(videoid);
+            if (videoid != null) {
+              console.log('tgyuhj',videoid);
+                if (onlyid == false) {
+                    return "http://img.youtube.com/vi/" + videoid[1] + "/hqdefault.jpg";
+                } else if (onlyid == true) {
+                    return videoid[1];
+                }
+            } else {
+                return input;
+                console.log('1 else',input);
+            }
+        } else {
+            return input;
+            console.log('2 else',input);
+        }
+    };
 });
