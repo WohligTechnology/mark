@@ -57,6 +57,28 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         makeAnimation(id);
         $location.replace();
     };
+    $scope.formComplete = false;
+    $scope.contactForm = {};
+
+
+    $scope.submitForm = function(contactForm) {
+        $scope.formComplete = true;
+        NavigationService.contactSubmit($scope.contactForm, function(data) {
+            console.log('  $scope.contactForm', $scope.contactForm);
+        });
+        $timeout(function() {
+            $scope.formComplete = false;
+        }, 2000);
+          $scope.contactForm = {};
+    };
+
+    NavigationService.getAllCareer(function(data){
+      $scope.careers=data;
+      console.log("  $scope.careers",  $scope.careers);
+    })
+
+
+
 
 
 
@@ -76,7 +98,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
 })
 
-.controller('DessangeCtrl', function($scope, TemplateService, NavigationService, $timeout,$stateParams) {
+.controller('DessangeCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("dessange");
     $scope.menutitle = NavigationService.makeactive("Dessange Paris");
@@ -93,82 +115,57 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
     $scope.kemps = [{
         img: "img/kemps/IMG_7953.jpg"
-    },
-     {
+    }, {
         img: "img/kemps/IMG_7954.jpg"
-    },
-     {
+    }, {
         img: "img/kemps/IMG_7962.jpg"
-    },
-    {
+    }, {
         img: "img/kemps/IMG_7967.jpg"
-    },
-    {
-       img: "img/kemps/IMG_7970.jpg"
-   },
-    {
-       img: "img/kemps/IMG_7976.jpg"
-   },
-   {
-       img: "img/kemps/IMG_7977.jpg"
-   },
-   {
-      img: "img/kemps/IMG_7982.jpg"
-  },
-  {
-      img: "img/kemps/IMG_7985.jpg"
-  },
-  {
-     img: "img/kemps/IMG_7987.jpg"
- },
-  {
-     img: "img/kemps/IMG_7991.jpg"
- },
- {
-     img: "img/kemps/IMG_7996.jpg"
- },
- {
-    img: "img/kemps/IMG_8000.jpg"
-},
- {
-    img: "img/kemps/IMG_8001.jpg"
-},
-{
-    img: "img/kemps/IMG_8004.jpg"
-},
-{
-   img: "img/kemps/IMG_8009.jpg"
-},
-{
-   img: "img/kemps/IMG_8011.jpg"
-},
-{
-   img: "img/kemps/IMG_8017.jpg"
-},
-{
-   img: "img/kemps/IMG_8077.jpg"
-},
-{
-   img: "img/kemps/IMG_8085.jpg"
-},
-{
-   img: "img/kemps/IMG_8086.jpg"
-},
-{
-   img: "img/kemps/IMG_8089.jpg"
-},
-{
-   img: "img/kemps/IMG_8109.jpg"
-},
-{
-   img: "img/kemps/IMG_8114.jpg"
-},
-{
-   img: "img/kemps/IMG_8131.jpg"
-},
-{
-   img: "img/kemps/IMG_8132.jpg"
-}];
+    }, {
+        img: "img/kemps/IMG_7970.jpg"
+    }, {
+        img: "img/kemps/IMG_7976.jpg"
+    }, {
+        img: "img/kemps/IMG_7977.jpg"
+    }, {
+        img: "img/kemps/IMG_7982.jpg"
+    }, {
+        img: "img/kemps/IMG_7985.jpg"
+    }, {
+        img: "img/kemps/IMG_7987.jpg"
+    }, {
+        img: "img/kemps/IMG_7991.jpg"
+    }, {
+        img: "img/kemps/IMG_7996.jpg"
+    }, {
+        img: "img/kemps/IMG_8000.jpg"
+    }, {
+        img: "img/kemps/IMG_8001.jpg"
+    }, {
+        img: "img/kemps/IMG_8004.jpg"
+    }, {
+        img: "img/kemps/IMG_8009.jpg"
+    }, {
+        img: "img/kemps/IMG_8011.jpg"
+    }, {
+        img: "img/kemps/IMG_8017.jpg"
+    }, {
+        img: "img/kemps/IMG_8077.jpg"
+    }, {
+        img: "img/kemps/IMG_8085.jpg"
+    }, {
+        img: "img/kemps/IMG_8086.jpg"
+    }, {
+        img: "img/kemps/IMG_8089.jpg"
+    }, {
+        img: "img/kemps/IMG_8109.jpg"
+    }, {
+        img: "img/kemps/IMG_8114.jpg"
+    }, {
+        img: "img/kemps/IMG_8131.jpg"
+    }, {
+        img: "img/kemps/IMG_8132.jpg"
+    }];
     $scope.parel = [{
         img: "img/dessange/experience.jpg"
     }, {
@@ -182,7 +179,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         img: "img/bandra/_MG_9685c.jpg"
     }, {
         img: "img/bandra/Bandra (4).jpg"
-    },{
+    }, {
         img: "img/bandra/bandra.jpg"
     }, {
         img: "img/bandra/Dessange-3.jpg"
@@ -216,18 +213,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         img: "img/bandra/Dessange-42.jpg"
     }, {
         img: "img/bandra/Dessange-46.jpg"
-    }
-  ];
-console.log('in me');
+    }];
+    console.log('in me');
 
-  NavigationService.getBrands($stateParams.id,function(data){
-    $scope.Dessange=data;
-console.log("$scope.Dessange",$scope.Dessange.images[0].image1);
-  });
+    NavigationService.getBrands($stateParams.id, function(data) {
+        $scope.Dessange = data;
+        console.log("$scope.Dessange", $scope.Dessange.images[0].image1);
+    });
 
 })
 
-.controller('AlbaneCtrl', function($scope, TemplateService, NavigationService, $timeout, $location,$stateParams) {
+.controller('AlbaneCtrl', function($scope, TemplateService, NavigationService, $timeout, $location, $stateParams) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("camille");
     $scope.menutitle = NavigationService.makeactive("Camille Albane Paris");
@@ -238,13 +234,13 @@ console.log("$scope.Dessange",$scope.Dessange.images[0].image1);
         console.log(id);
         $location.path("" + id);
     };
-    NavigationService.getBrands($stateParams.id,function(data){
-      $scope.Albane=data;
-      console.log("$scope.Albane",$scope.Albane);
+    NavigationService.getBrands($stateParams.id, function(data) {
+        $scope.Albane = data;
+        console.log("$scope.Albane", $scope.Albane);
     });
 })
 
-.controller('PhytodessCtrl', function($scope, TemplateService, NavigationService, $timeout, $location,$stateParams) {
+.controller('PhytodessCtrl', function($scope, TemplateService, NavigationService, $timeout, $location, $stateParams) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("phytodess");
     $scope.menutitle = NavigationService.makeactive("Phytodess Paris");
@@ -255,9 +251,9 @@ console.log("$scope.Dessange",$scope.Dessange.images[0].image1);
         console.log(id);
         $location.path("" + id);
     };
-    NavigationService.getBrands($stateParams.id,function(data){
-      $scope.Phytodess=data;
-      console.log('$scope.Phytodess',$scope.Phytodess);
+    NavigationService.getBrands($stateParams.id, function(data) {
+        $scope.Phytodess = data;
+        console.log('$scope.Phytodess', $scope.Phytodess);
     });
 })
 
@@ -475,25 +471,25 @@ console.log("$scope.Dessange",$scope.Dessange.images[0].image1);
     //     // icon: "fa-play-circle-o"
     // }];
 
-NavigationService.getMedia(1,function(data){
-  $scope.hairmakeup=data;
-  $scope.hairmakeup = _.chunk($scope.hairmakeup, 9);
-  for (var i = 0; i < $scope.hairmakeup.length; i++) {
-      $scope.hairmakeup[i] = _.chunk($scope.hairmakeup[i], 3);
-  }
-  console.log("$scope.hairmakeupasdf",$scope.hairmakeup);
-})
+    NavigationService.getMedia(1, function(data) {
+        $scope.hairmakeup = data;
+        $scope.hairmakeup = _.chunk($scope.hairmakeup, 9);
+        for (var i = 0; i < $scope.hairmakeup.length; i++) {
+            $scope.hairmakeup[i] = _.chunk($scope.hairmakeup[i], 3);
+        }
+        console.log("$scope.hairmakeupasdf", $scope.hairmakeup);
+    })
 
-NavigationService.getMedia(2,function(data){
-  $scope.editorails=data;
-  $scope.editorails = _.chunk($scope.editorails, 9);
-  for (var i = 0; i < $scope.editorails.length; i++) {
-      $scope.editorails[i] = _.chunk($scope.editorails[i], 3);
-  }
-})
+    NavigationService.getMedia(2, function(data) {
+        $scope.editorails = data;
+        $scope.editorails = _.chunk($scope.editorails, 9);
+        for (var i = 0; i < $scope.editorails.length; i++) {
+            $scope.editorails[i] = _.chunk($scope.editorails[i], 3);
+        }
+    })
 
 
-      console.log("$scope.dsad",$scope.hairmakeup);
+    console.log("$scope.dsad", $scope.hairmakeup);
 })
 
 .controller('headerctrl', function($scope, TemplateService, $state) {

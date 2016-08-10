@@ -15,17 +15,17 @@
         <h2 class="spread-head uppercase text-center hidden-xs">Careers</h2>
         <div class="white-accordion">
           <uib-accordion close-others="oneAtATime">
-            <uib-accordion-group>
-              <uib-accordion-heading>Esthetician<span class="pull-right">+</span></uib-accordion-heading>
-              <p>Work Experience: 5+ years
-                <br> CTC: Open for the right candidate
-                <br> Positions Open: 1
-                <br> Location: Bandra</p>
+            <uib-accordion-group ng-repeat="data in careers">
+              <uib-accordion-heading>{{data.title}}<span class="pull-right">+</span></uib-accordion-heading>
+              <p>Work Experience: {{data.experience}}
+                <br> CTC: {{data.ctc}}
+                <br> Positions Open: {{data.position}}
+                <br> Location: {{data.location}}</p>
               <p class="light-color">If interested, email us your resume at
-                <a href="mailto:join@marksalonandspa.com" class="slant">join@marksalonandspa.com</a>
+                <a href="mailto:join@marksalonandspa.com" class="slant">{{data.mailat}}</a>
               </p>
             </uib-accordion-group>
-            <uib-accordion-group>
+            <!-- <uib-accordion-group>
               <uib-accordion-heading>Massage Therapist <span class="pull-right">+</span></uib-accordion-heading>
               <p>Work Experience: 5+ years
                 <br> CTC: Open for the right candidate
@@ -73,7 +73,7 @@
               <p class="light-color">If interested, email us your resume at
                 <a href="mailto:join@marksalonandspa.com" class="slant">join@marksalonandspa.com</a>
               </p>
-            </uib-accordion-group>
+            </uib-accordion-group> -->
           </uib-accordion>
         </div>
       </div>

@@ -1,49 +1,59 @@
 <div class="container">
-  <div class="overflow-contact">
-    <div class="row">
-      <div class="contact">
-        <h3 class="spread-head-contact uppercase text-right">Contact Us</h3>
-        <div class="col-sm-7">
-          <div class="map-holder">
-            <a href="https://www.google.com/maps/place/105,+Dr+BR+Ambedkar+Rd,+Pali+Hill,+Mumbai,+Maharashtra+400050,+India/@19.063964,72.829513,16z/data=!4m5!3m4!1s0x3be7c91369ab3877:0x6518b60de2f4264c!8m2!3d19.0639635!4d72.8295133?hl=en-US" target="_blank">
-              <img src=img/home/contactmap.jpg "" alt="Mark Salon and Spa Pvt Ltd" class="img-responsive" />
-            </a>
-            <div class="address-box">
-              <p>
-                <span class="strong">Mark Salon and Spa Pvt Ltd,</span>
-                <br> Office number 201, 3rd Floor, Anand Center, 105, Pali Hill, Dr Amedkar Road,
-                <br> Bandra (West), Mumbai-400050.
-              </p>
-              <p class="margin0">
-                <a href="tel:+912226050546"><i class="fa fa-phone"></i> +91 2226 0505 46 / 47</a>
-                <br>
-                <a href="tel:+912226050582"><i class="fa fa-fax"></i> +91 2226 0505 82</a>
-                <br>
-                <a href="mailto:info@marksalonandspa.com"><i class="fa fa-envelope"></i> info@marksalonandspa.com</a>
-                <br>
-              </p>
+   <div class="overflow-contact">
+      <div class="row">
+         <div class="contact">
+            <h3 class="spread-head-contact uppercase text-right">Contact Us</h3>
+            <div class="col-sm-7">
+               <div class="map-holder">
+                  <a href="https://www.google.com/maps/place/105,+Dr+BR+Ambedkar+Rd,+Pali+Hill,+Mumbai,+Maharashtra+400050,+India/@19.063964,72.829513,16z/data=!4m5!3m4!1s0x3be7c91369ab3877:0x6518b60de2f4264c!8m2!3d19.0639635!4d72.8295133?hl=en-US" target="_blank">
+                     <img src=img/home/contactmap.jpg "" alt="Mark Salon and Spa Pvt Ltd" class="img-responsive" />
+                  </a>
+                  <div class="address-box">
+                     <p>
+                        <span class="strong">Mark Salon and Spa Pvt Ltd,</span>
+                        <br> Office number 201, 3rd Floor, Anand Center, 105, Pali Hill, Dr Amedkar Road,
+                        <br> Bandra (West), Mumbai-400050.
+                     </p>
+                     <p class="margin0">
+                        <a href="tel:+912226050546"><i class="fa fa-phone"></i> +91 2226 0505 46 / 47</a>
+                        <br>
+                        <a href="tel:+912226050582"><i class="fa fa-fax"></i> +91 2226 0505 82</a>
+                        <br>
+                        <a href="mailto:info@marksalonandspa.com"><i class="fa fa-envelope"></i> info@marksalonandspa.com</a>
+                        <br>
+                     </p>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
-        <div class="col-sm-5">
-          <div class="in-width">
-            <div class="position-center staticmobile full-width">
-              <div class="underline-form">
-                <input type="text" class="form-control" placeholder="Your Name">
-                <input type="email" class="form-control" placeholder="Email">
-                <input type="tel" class="form-control" placeholder="Telephone">
-                <textarea class="form-control" placeholder="Message"></textarea>
-                <div class="text-right">
-                  <button class="btn btn-primary btn-outline uppercase">Submit</button>
-                </div>
-              </div>
+            <div class="col-sm-5">
+               <div class="in-width">
+                  <form name="user" ng-submit="submitForm(contactForm)" ng-if="!formComplete">
+                     <div class="position-center staticmobile full-width">
+                        <div class="underline-form">
+                           <input type="text" class="form-control" name="name" placeholder="Your Name" ng-model="contactForm.name" required>
+                           <div class="error-msg" ng-show="user.name.$error.required && user.name.$touched">Please Enter Your Name</div>
+                           <input type="email" class="form-control" name="email" placeholder="Email" ng-model="contactForm.email" required>
+                           <div class="error-msg" ng-show="user.email.$error.required && user.email.$touched">Please Enter Your Email</div>
+                           <input type="tel" class="form-control" name="telephone" placeholder="Telephone" ng-model="contactForm.telephone"  only-digits required>
+                           <div class="error-msg" ng-show="user.telephone.$error.required && user.telephone.$touched">Please Enter Your Telephone Number</div>
+                           <textarea class="form-control" name="message" placeholder="Message" ng-model="contactForm.message" required></textarea>
+                           <div class="error-msg" ng-show="user.message.$error.required && user.message.$touched">Plaese Enter Your Message</div>
+                           <div class="text-right">
+                              <button class="btn btn-primary btn-outline uppercase" type="submit" ng-disabled="user.$invalid">Submit</button>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+                  <div class="submit-thank" ng-if="formComplete">
+                     <h2 class="text-center">Thank You</h2>
+                  </div>
+               </div>
+
             </div>
-          </div>
-        </div>
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
 </div>
 <div class="btm-footer">
-  <div ng-include="template.footer" class="template footer"></div>
+   <div ng-include="template.footer" class="template footer"></div>
 </div>

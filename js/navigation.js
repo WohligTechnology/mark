@@ -1,5 +1,5 @@
-var adminurl = "http://192.168.0.114/markbackend/index.php/json/";
-var imgurl = "http://192.168.0.114/markbackend/uploads/";
+var adminurl = "http://192.168.1.109/markbackend/index.php/json/";
+var imgurl = "http://192.168.1.109/markbackend/uploads/";
 // var imgpath = imgurl + "readFile";
 var uploadurl = imgurl;
 
@@ -84,6 +84,35 @@ var navigationservice = angular.module('navigationservice', [])
     console.log(type);
     $http.get(adminurl + 'getMedia?type=' + type).success(callback);
   },
+
+
+  contactSubmit: function(formData, callback) {
+  // console.log('form data: ', formData);
+  $http({
+    url: adminurl + 'contactUs',
+    method: 'POST',
+    withCredentials: true,
+    data: {
+      "email": formData.email,
+      "telephone": formData.telephone,
+      "comment": formData.comment,
+      "name": formData.name,
+    }
+  }).success(callback);
+},
+  contactSubmit:function(contactForm,callback)
+  {
+    $http({
+      url: adminurl + 'contactSubmit',
+      method: 'POST',
+      withCredentials: true,
+      data: contactForm
+    }).success(callback);
+  },
+  getAllCareer: function(callback) {
+
+   $http.get(adminurl + 'getAllCareer').success(callback);
+ },
 
   };
 });

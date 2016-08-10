@@ -1206,5 +1206,14 @@ footer {
   color: #000 !important;
   border-color: #000 !important;
 }
+.submit-thank {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  @include transform(translateY(-50%));
+  h2{
+    margin: 0;
+  }
+}
 @import "fancybox-override";
 @import "mobile";
