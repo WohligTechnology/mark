@@ -69,12 +69,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $timeout(function() {
             $scope.formComplete = false;
         }, 2000);
-          $scope.contactForm = {};
+        $scope.contactForm = {};
     };
 
-    NavigationService.getAllCareer(function(data){
-      $scope.careers=data;
-      console.log("  $scope.careers",  $scope.careers);
+    NavigationService.getAllCareer(function(data) {
+        $scope.careers = data;
+        console.log("  $scope.careers", $scope.careers);
     })
 
 
