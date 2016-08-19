@@ -1,5 +1,7 @@
-var adminurl = "http://192.168.1.109/markbackend/index.php/json/";
-var imgurl = "http://192.168.1.109/markbackend/uploads/";
+// var adminurl = "http://192.168.1.109/markbackend/index.php/json/";
+// var imgurl = "http://192.168.1.109/markbackend/uploads/";
+var adminurl = "http://wohlig.co.in/markbackend/index.php/json/";
+var imgurl = "http://wohlig.co.in/markbackend/uploads/";
 // var imgpath = imgurl + "readFile";
 var uploadurl = imgurl;
 
@@ -112,6 +114,16 @@ var navigationservice = angular.module('navigationservice', [])
   getAllCareer: function(callback) {
 
    $http.get(adminurl + 'getAllCareer').success(callback);
+ },
+
+ franchiseSubmit:function(franchiseForm,callback)
+ {
+   $http({
+     url: adminurl + 'franchiseSubmit',
+     method: 'POST',
+     withCredentials: true,
+     data: franchiseForm
+   }).success(callback);
  },
 
   };

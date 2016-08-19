@@ -39,14 +39,14 @@
                            <textarea class="form-control" name="message" placeholder="Message" ng-model="contactForm.message" required></textarea>
                            <div class="error-msg" ng-show="user.message.$error.required && user.message.$touched">Plaese Enter Your Message</div>
                            <div class="text-right">
-                              <button class="btn btn-primary btn-outline uppercase" type="submit" ng-disabled="user.$invalid">Submit</button>
+                              <button class="btn btn-primary btn-outline uppercase" type="submit" ng-disabled="user.$invalid" ng-click="openThank()">Submit</button>
                            </div>
                         </div>
                      </div>
                   </form>
-                  <div class="submit-thank" ng-if="formComplete">
+                  <!-- <div class="submit-thank" ng-if="formComplete">
                      <h2 class="text-center">Thank You</h2>
-                  </div>
+                  </div> -->
                </div>
 
             </div>

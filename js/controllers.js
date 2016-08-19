@@ -1,6 +1,6 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'duScroll'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $state, $document, $location) {
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $state, $document, $location, $uibModal) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("home");
     $scope.menutitle = NavigationService.makeactive("Home");
@@ -76,6 +76,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.careers = data;
         console.log("  $scope.careers", $scope.careers);
     })
+
+    $scope.openThank = function() {
+
+        var modalInstance = $uibModal.open({
+            animation: true,
+            templateUrl: 'views/modal/thank.html'
+        });
+    }
+
+
 
 
 
@@ -257,7 +267,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     });
 })
 
-.controller('FranchiseCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+.controller('FranchiseCtrl', function($scope, TemplateService, NavigationService, $timeout, $location,$uibModal ) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("franchise");
     $scope.menutitle = NavigationService.makeactive("Franchise");
@@ -268,6 +278,40 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         console.log(id);
         $location.path("" + id);
     };
+    $scope.formComplete = false;
+    $scope.franchiseForm = {};
+    $scope.franchiseForm.enquiryarr = [];
+
+    $scope.submitFranchiseForm = function(franchiseForm) {
+        $scope.formComplete = true;
+
+        NavigationService.franchiseSubmit($scope.franchiseForm, function(data) {
+            console.log('$scope.franchiseForm', $scope.franchiseForm);
+        });
+        $timeout(function() {
+            $scope.formComplete = false;
+        }, 2000);
+        $scope.franchiseForm = {};
+
+
+    }
+    $scope.franchise = function(val) {
+        var foundIndex = $scope.franchiseForm.enquiryarr.indexOf(val);
+        if (foundIndex == -1) {
+            $scope.franchiseForm.enquiryarr.push(val);
+        } else {
+            $scope.franchiseForm.enquiryarr.splice(foundIndex, 1);
+        }
+    },
+    $scope.openThank = function() {
+
+        var modalInstance = $uibModal.open({
+            animation: true,
+            templateUrl: 'views/modal/franchisethank.html'
+        });
+    }
+
+
 })
 
 .controller('MediaCornerCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
