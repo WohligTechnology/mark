@@ -19,8 +19,11 @@
                             <div class="sub-title">
                                 <h2 class="uppercase text-center">ABOUT Dessange</h2>
                             </div>
+
                             <div class="cont-abt">
+                              <div ng-if="Dessange.about==null"><h3 style="color:#fff:" class="text-center">No Data Found</h3></div>
                                 <p class="text-justify" ng-bind-html="Dessange.about">
+
                                     <!-- Post-war France revolutionized female beauty, abandoning a fixed fashion standard for more fluid lines and lighter silhouettes. In Paris a young hairdresser, Jacques Dessange crowned this new generation of free women by creating innovative, elegant
                                     and natural cuts. Pioneer of hairstyles full of movement which enhance the face, he established the Coiffé-Décoiffé ("messy look") technique which led to his success -->
                                     </p>
@@ -39,6 +42,7 @@
                                 <h2 class="uppercase text-center">The SALON EXPERIENCE</h2>
                             </div>
                             <div class="cont-abt btn-location" >
+                              <div ng-if="Dessange.salonexp==null"><h3 style="color:#fff:" class="text-center">No Data Found</h3></div>
                                 <p class="text-justify" ng-bind-html="Dessange.salonexp">
                                     <!-- Finally, it is time for you to open the door to this intimate beauty parlor, a subtle incarnation of French art de vivre where you will experience a luxury that suits your style. Every time, you have the same impression: it is as if you were
                                     returning home. A face lights up over there as it sees you, and is followed by another. Your hostesses smile and walk over to you, carrying the elegance of the environment with them. -->
@@ -103,6 +107,7 @@
                                     <h2 class="uppercase text-center">Collection</h2>
                                 </div>
                                 <div class="cont-about">
+                                  <div ng-if="Dessange.collectionname==null"><h3 style="color:#fff:" class="text-center">No Data Found</h3></div>
                                     <h3 class="text-center">{{Dessange.collectionname}}</h3>
                                     <p class="text-center" ng-bind-html="Dessange.content">
                                         <!-- Light and colors emerge from a velvety black background as symbols of irresistible femininity. The graphic lines of the accessories and styling with an Eighties inspiration match the acid and translucent colors that are hot news this season. Visibly
@@ -117,8 +122,9 @@
                                         </div>
                                     </div>
                                 </div> -->
+
                                 <div class="brand-video">
-                                    <div class="row">
+                                    <div class="row" ng-if="Dessange.length>0">
                                         <div class="salon-video fancybox.iframe" fancybox href="http://www.youtube.com/embed/{{Dessange.videourl |youtubethumb:true}}?autoplay=1&modestbranding=0&showinfo=0&rel=0&loop=1">
                                             <img ng-src="http://img.youtube.com/vi/{{Dessange.videourl}}/maxresdefault.jpg" class="img-responsive" alt="Video">
                                             <i class="fa fa-play"></i>
@@ -126,7 +132,7 @@
                                     </div>
                                 </div>
                                 <div class="img-collect">
-                                    <div class="row">
+                                    <div class="row" ng-if="Dessange.length>0">
                                         <div class="together">
                                             <div class="collect">
                                                 <div class="collect1">

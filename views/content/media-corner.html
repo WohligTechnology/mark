@@ -19,7 +19,8 @@
             </div>
           </div>
           <div class="col-md-5">
-            <div class="slider-client">
+            <div class="slider-client" >
+              <div ng-if="hairmakeup.length==0"><h3>No Data Found</h3></div>
               <flex-slider flex-slide="slide in hairmakeup track by $index" animation="slide" animation-loop="false" slideshow="false" prev-text="" next-text="" ng-if="showSlider == 1">
                 <li class="">
                   <div class="row" ng-repeat="row in slide track by $index">

@@ -81,7 +81,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         var modalInstance = $uibModal.open({
             animation: true,
-            templateUrl: 'views/modal/thank.html'
+            templateUrl: 'views/modal/thank.html',
+            backdropClass:'backcolor'
         });
     }
 
@@ -227,8 +228,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     console.log('in me');
 
     NavigationService.getBrands($stateParams.id, function(data) {
+      if (data) {
         $scope.Dessange = data;
-        console.log("$scope.Dessange", $scope.Dessange.images[0].image1);
+        console.log("$scope.Dessangesdfg", $scope.Dessange);
+      }
+
     });
 
 })
@@ -281,27 +285,32 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.formComplete = false;
     $scope.franchiseForm = {};
     $scope.franchiseForm.enquiryarr = [];
-
+$scope.nofranchise=false;
     $scope.submitFranchiseForm = function(franchiseForm) {
-        $scope.formComplete = true;
-        $scope.franchiseForm.franchise = "";
+      $scope.nofranchise=false;
+
         if ($scope.franchiseForm) {
             if ($scope.franchiseForm.enquiryarr.length > 0) {
                 _.each($scope.franchiseForm.enquiryarr, function(n) {
                     $scope.franchiseForm.franchise += n + ",";
                 })
                 $scope.franchiseForm.franchise = $scope.franchiseForm.franchise.substring(0, $scope.franchiseForm.franchise.length - 1);
+                NavigationService.franchiseSubmit($scope.franchiseForm, function(data) {
+
+
+                    console.log('$scope.franchiseForm', $scope.franchiseForm);
+                    $scope.formComplete = true;
+                    $scope.openThank();
+                });
+                $timeout(function() {
+                    $scope.formComplete = false;
+                }, 2000);
+                $scope.franchiseForm = {};
+            }else{
+              $scope.nofranchise = true;
             }
         }
-        NavigationService.franchiseSubmit($scope.franchiseForm, function(data) {
 
-
-            console.log('$scope.franchiseForm', $scope.franchiseForm);
-        });
-        $timeout(function() {
-            $scope.formComplete = false;
-        }, 2000);
-        $scope.franchiseForm = {};
 
 
     }
@@ -317,7 +326,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
             var modalInstance = $uibModal.open({
                 animation: true,
-                templateUrl: 'views/modal/franchisethank.html'
+                templateUrl: 'views/modal/franchisethank.html',
+                backdropClass:"backcolor"
             });
         }
 

@@ -21,6 +21,7 @@
                            <h2 class="uppercase text-center">ABOUT CAMILLE ALBANE</h2>
                         </div>
                         <div class="cont-abt">
+                          <div ng-if="Albane.about==null"><h3 style="color:#fff:" class="text-center">No Data Found</h3></div>
                            <p class="text-justify" ng-bind-html="Albane.about">
                               <!-- Camille Albane is the leading French hair salon franchise with nearly 300 locations throughout Europe; it is part of the larger Dessange International network that also includes the luxury Dessange Paris and value-oriented Fantastic Sams salon brands.
                                         Camille Albane is not just another hairdresser. It is above all a brand that understands that women want to be and look the way they feel. They want their beauty to reflect their personality in spite of their imperfections
@@ -38,6 +39,7 @@
                            <h2 class="uppercase text-center">The SALON</h2>
                         </div>
                         <div class="cont-abt">
+                          <div ng-if="Albane.salonexp==null"><h3 style="color:#fff:" class="text-center">No Data Found</h3></div>
                            <p class="text-justify" ng-bind-html="Albane.salonexp">
                               <!-- Entering one of our salons means discovering the pleasure of a positive attitude and the warmth of a welcoming atmosphere. Our salons are made for encounters and advice and are designed to encourage discussions and confidences between you and our franchisees.
                                         You will be welcomed and taken care of immediately. The many talents of our experts offer you real reassurance. -->
@@ -70,6 +72,7 @@
                                  <h2 class="uppercase text-center">COLLection</h2>
                               </div>
                               <div class="cont-about">
+                                <div ng-if="Albane.collectionname==null"><h3 style="color:#fff:" class="text-center">No Data Found</h3></div>
                                  <h3 class="text-center">{{Albane.collectionname}}</h3>
                                  <!-- <h4 class="text-center">Spring-Summer 2016 Collection</h4> -->
                                  <p class="text-center" ng-bind-html="Albane.content">
@@ -87,7 +90,7 @@
 
 
                               <div class="brand-video">
-                                 <div class="row">
+                                 <div class="row" ng-if="Albane.length>0">
                                     <div class="salon-video fancybox.iframe" fancybox href="http://www.youtube.com/embed/{{Albane.videourl | youtubethumb:true}}?autoplay=1&modestbranding=0&showinfo=0&rel=0&loop=1">
 
                                        <img ng-src="http://img.youtube.com/vi/{{Albane.videourl}}/maxresdefault.jpg" alt="Dharma Productions" class="img-responsive width100">
@@ -103,7 +106,7 @@
                                                     <img src="img/albane/collection.png" class="img-responsive" alt="" />
                                                 </div>
                                               </div> -->
-                                 <div class="row">
+                                 <div class="row"  ng-if="Albane.length>0">
                                     <div class="together">
                                        <div class="collect">
                                           <div class="collect1">
