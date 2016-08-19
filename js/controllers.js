@@ -267,7 +267,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     });
 })
 
-.controller('FranchiseCtrl', function($scope, TemplateService, NavigationService, $timeout, $location,$uibModal ) {
+.controller('FranchiseCtrl', function($scope, TemplateService, NavigationService, $timeout, $location, $uibModal) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("franchise");
     $scope.menutitle = NavigationService.makeactive("Franchise");
@@ -284,8 +284,18 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     $scope.submitFranchiseForm = function(franchiseForm) {
         $scope.formComplete = true;
-
+        $scope.franchiseForm.franchise = "";
+        if ($scope.franchiseForm) {
+            if ($scope.franchiseForm.enquiryarr.length > 0) {
+                _.each($scope.franchiseForm.enquiryarr, function(n) {
+                    $scope.franchiseForm.franchise += n + ",";
+                })
+                $scope.franchiseForm.franchise = $scope.franchiseForm.franchise.substring(0, $scope.franchiseForm.franchise.length - 1);
+            }
+        }
         NavigationService.franchiseSubmit($scope.franchiseForm, function(data) {
+
+
             console.log('$scope.franchiseForm', $scope.franchiseForm);
         });
         $timeout(function() {
@@ -296,20 +306,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     }
     $scope.franchise = function(val) {
-        var foundIndex = $scope.franchiseForm.enquiryarr.indexOf(val);
-        if (foundIndex == -1) {
-            $scope.franchiseForm.enquiryarr.push(val);
-        } else {
-            $scope.franchiseForm.enquiryarr.splice(foundIndex, 1);
-        }
-    },
-    $scope.openThank = function() {
+            var foundIndex = $scope.franchiseForm.enquiryarr.indexOf(val);
+            if (foundIndex == -1) {
+                $scope.franchiseForm.enquiryarr.push(val);
+            } else {
+                $scope.franchiseForm.enquiryarr.splice(foundIndex, 1);
+            }
+        },
+        $scope.openThank = function() {
 
-        var modalInstance = $uibModal.open({
-            animation: true,
-            templateUrl: 'views/modal/franchisethank.html'
-        });
-    }
+            var modalInstance = $uibModal.open({
+                animation: true,
+                templateUrl: 'views/modal/franchisethank.html'
+            });
+        }
 
 
 })
