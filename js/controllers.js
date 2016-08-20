@@ -124,107 +124,107 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.myFunc = function() {
     $scope.showMe = !$scope.showMe;
   };
-  // $scope.kemps = [{
-  //     img: "img/kemps/IMG_7953.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_7954.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_7962.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_7967.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_7970.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_7976.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_7977.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_7982.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_7985.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_7987.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_7991.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_7996.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_8000.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_8001.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_8004.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_8009.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_8011.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_8017.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_8077.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_8085.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_8086.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_8089.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_8109.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_8114.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_8131.jpg"
-  // }, {
-  //     img: "img/kemps/IMG_8132.jpg"
-  // }];
-  // $scope.parel = [{
-  //     img: "img/dessange/experience.jpg"
-  // }, {
-  //     img: "img/dessange/experience.jpg"
-  // }, {
-  //     img: "img/dessange/experience.jpg"
-  // }];
-  // $scope.bandra = [{
-  //     img: "img/bandra/_MG_9650c.jpg"
-  // }, {
-  //     img: "img/bandra/_MG_9685c.jpg"
-  // }, {
-  //     img: "img/bandra/Bandra (4).jpg"
-  // }, {
-  //     img: "img/bandra/bandra.jpg"
-  // }, {
-  //     img: "img/bandra/Dessange-3.jpg"
-  // }, {
-  //     img: "img/bandra/Dessange-6.jpg"
-  // }, {
-  //     img: "img/bandra/Dessange-7.jpg"
-  // }, {
-  //     img: "img/bandra/Dessange-8.jpg"
-  // }, {
-  //     img: "img/bandra/Dessange-9.jpg"
-  // }, {
-  //     img: "img/bandra/Dessange-16.jpg"
-  // }, {
-  //     img: "img/bandra/Dessange-22.jpg"
-  // }, {
-  //     img: "img/bandra/Dessange-27.jpg"
-  // }, {
-  //     img: "img/bandra/Dessange-28.jpg"
-  // }, {
-  //     img: "img/bandra/Dessange-29.jpg"
-  // }, {
-  //     img: "img/bandra/Dessange-30.jpg"
-  // }, {
-  //     img: "img/bandra/Dessange-33.jpg"
-  // }, {
-  //     img: "img/bandra/Dessange-38.jpg"
-  // }, {
-  //     img: "img/bandra/Dessange-40.jpg"
-  // }, {
-  //     img: "img/bandra/Dessange-42.jpg"
-  // }, {
-  //     img: "img/bandra/Dessange-46.jpg"
-  // }];
+  $scope.kemps = [{
+    img: "img/kemps/IMG_7953.jpg"
+  }, {
+    img: "img/kemps/IMG_7954.jpg"
+  }, {
+    img: "img/kemps/IMG_7962.jpg"
+  }, {
+    img: "img/kemps/IMG_7967.jpg"
+  }, {
+    img: "img/kemps/IMG_7970.jpg"
+  }, {
+    img: "img/kemps/IMG_7976.jpg"
+  }, {
+    img: "img/kemps/IMG_7977.jpg"
+  }, {
+    img: "img/kemps/IMG_7982.jpg"
+  }, {
+    img: "img/kemps/IMG_7985.jpg"
+  }, {
+    img: "img/kemps/IMG_7987.jpg"
+  }, {
+    img: "img/kemps/IMG_7991.jpg"
+  }, {
+    img: "img/kemps/IMG_7996.jpg"
+  }, {
+    img: "img/kemps/IMG_8000.jpg"
+  }, {
+    img: "img/kemps/IMG_8001.jpg"
+  }, {
+    img: "img/kemps/IMG_8004.jpg"
+  }, {
+    img: "img/kemps/IMG_8009.jpg"
+  }, {
+    img: "img/kemps/IMG_8011.jpg"
+  }, {
+    img: "img/kemps/IMG_8017.jpg"
+  }, {
+    img: "img/kemps/IMG_8077.jpg"
+  }, {
+    img: "img/kemps/IMG_8085.jpg"
+  }, {
+    img: "img/kemps/IMG_8086.jpg"
+  }, {
+    img: "img/kemps/IMG_8089.jpg"
+  }, {
+    img: "img/kemps/IMG_8109.jpg"
+  }, {
+    img: "img/kemps/IMG_8114.jpg"
+  }, {
+    img: "img/kemps/IMG_8131.jpg"
+  }, {
+    img: "img/kemps/IMG_8132.jpg"
+  }];
+  $scope.parel = [{
+    img: "img/dessange/experience.jpg"
+  }, {
+    img: "img/dessange/experience.jpg"
+  }, {
+    img: "img/dessange/experience.jpg"
+  }];
+  $scope.bandra = [{
+    img: "img/bandra/_MG_9650c.jpg"
+  }, {
+    img: "img/bandra/_MG_9685c.jpg"
+  }, {
+    img: "img/bandra/Bandra (4).jpg"
+  }, {
+    img: "img/bandra/bandra.jpg"
+  }, {
+    img: "img/bandra/Dessange-3.jpg"
+  }, {
+    img: "img/bandra/Dessange-6.jpg"
+  }, {
+    img: "img/bandra/Dessange-7.jpg"
+  }, {
+    img: "img/bandra/Dessange-8.jpg"
+  }, {
+    img: "img/bandra/Dessange-9.jpg"
+  }, {
+    img: "img/bandra/Dessange-16.jpg"
+  }, {
+    img: "img/bandra/Dessange-22.jpg"
+  }, {
+    img: "img/bandra/Dessange-27.jpg"
+  }, {
+    img: "img/bandra/Dessange-28.jpg"
+  }, {
+    img: "img/bandra/Dessange-29.jpg"
+  }, {
+    img: "img/bandra/Dessange-30.jpg"
+  }, {
+    img: "img/bandra/Dessange-33.jpg"
+  }, {
+    img: "img/bandra/Dessange-38.jpg"
+  }, {
+    img: "img/bandra/Dessange-40.jpg"
+  }, {
+    img: "img/bandra/Dessange-42.jpg"
+  }, {
+    img: "img/bandra/Dessange-46.jpg"
+  }];
   console.log('in me');
 
   NavigationService.getBrands($stateParams.id, function(data) {
