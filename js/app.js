@@ -322,6 +322,8 @@ firstapp.directive('onlyDigits', function() {
                         ctrl.$setViewValue(digits);
                         ctrl.$render();
                     }
+                    console.log(digits);
+                    console.log(parseInt(digits,10));
                     return parseInt(digits, 10);
                 }
                 return undefined;

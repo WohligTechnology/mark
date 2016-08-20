@@ -82,7 +82,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         var modalInstance = $uibModal.open({
             animation: true,
             templateUrl: 'views/modal/thank.html',
-            backdropClass:'backcolor'
+            backdropClass: 'backcolor'
         });
     }
 
@@ -228,10 +228,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     console.log('in me');
 
     NavigationService.getBrands($stateParams.id, function(data) {
-      if (data) {
-        $scope.Dessange = data;
-        console.log("$scope.Dessangesdfg", $scope.Dessange);
-      }
+        if (data) {
+            $scope.Dessange = data;
+            console.log("$scope.Dessangesdfg", $scope.Dessange);
+        }
 
     });
 
@@ -285,11 +285,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.formComplete = false;
     $scope.franchiseForm = {};
     $scope.franchiseForm.enquiryarr = [];
-$scope.nofranchise=false;
+    $scope.nofranchise = false;
     $scope.submitFranchiseForm = function(franchiseForm) {
-      $scope.nofranchise=false;
+        $scope.nofranchise = false;
 
         if ($scope.franchiseForm) {
+            $scope.franchiseForm.franchise = "";
             if ($scope.franchiseForm.enquiryarr.length > 0) {
                 _.each($scope.franchiseForm.enquiryarr, function(n) {
                     $scope.franchiseForm.franchise += n + ",";
@@ -298,7 +299,6 @@ $scope.nofranchise=false;
                 NavigationService.franchiseSubmit($scope.franchiseForm, function(data) {
 
 
-                    console.log('$scope.franchiseForm', $scope.franchiseForm);
                     $scope.formComplete = true;
                     $scope.openThank();
                 });
@@ -306,8 +306,9 @@ $scope.nofranchise=false;
                     $scope.formComplete = false;
                 }, 2000);
                 $scope.franchiseForm = {};
-            }else{
-              $scope.nofranchise = true;
+                $scope.franchiseForm.enquiryarr = [];
+            } else {
+                $scope.nofranchise = true;
             }
         }
 
@@ -315,21 +316,21 @@ $scope.nofranchise=false;
 
     }
     $scope.franchise = function(val) {
-            var foundIndex = $scope.franchiseForm.enquiryarr.indexOf(val);
-            if (foundIndex == -1) {
-                $scope.franchiseForm.enquiryarr.push(val);
-            } else {
-                $scope.franchiseForm.enquiryarr.splice(foundIndex, 1);
-            }
-        },
-        $scope.openThank = function() {
-
-            var modalInstance = $uibModal.open({
-                animation: true,
-                templateUrl: 'views/modal/franchisethank.html',
-                backdropClass:"backcolor"
-            });
+        var foundIndex = $scope.franchiseForm.enquiryarr.indexOf(val);
+        if (foundIndex == -1) {
+            $scope.franchiseForm.enquiryarr.push(val);
+        } else {
+            $scope.franchiseForm.enquiryarr.splice(foundIndex, 1);
         }
+    };
+    $scope.openThank = function() {
+
+        var modalInstance = $uibModal.open({
+            animation: true,
+            templateUrl: 'views/modal/franchisethank.html',
+            backdropClass: "backcolor"
+        });
+    }
 
 
 })

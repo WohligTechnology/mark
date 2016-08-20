@@ -11,23 +11,23 @@
                     </div>
                     <div class="col-sm-7">
                         <form class="underline-form" name="user" ng-submit ="submitFranchiseForm(franchiseForm)" ng-if="!formComplete">
-                            <input type="text" class="form-control" placeholder="Your Name"  name="name" ng-model=" franchiseForm.name" required>
+                            <input type="text" class="form-control" placeholder="Your Name"  name="name" ng-model="franchiseForm.name" required>
                             <div class="error-msg" ng-show="user.name.$error.required && user.name.$touched">Please Enter Your Name</div>
-                            <input type="text" class="form-control" placeholder="Company Name" name="company" ng-model=" franchiseForm.company" required>
+                            <input type="text" class="form-control" placeholder="Company Name" name="company" ng-model="franchiseForm.company" required>
                             <div class="error-msg" ng-show="user.company.$error.required && user.company.$touched">Please Enter Your Company Name</div>
-                            <input type="email" class="form-control" placeholder="Email" name="email" ng-model=" franchiseForm.email" required>
+                            <input type="email" class="form-control" placeholder="Email" name="email" ng-model="franchiseForm.email" required>
                             <div class="error-msg" ng-show="user.email.$error.required && user.email.$touched">Please Enter Your Email</div>
-                            <input type="tel" class="form-control" placeholder="Mobile" name="telephone" ng-model=" franchiseForm.telephone" required  only-digits >
+                            <input type="tel" class="form-control" placeholder="Mobile" name="telephone" ng-model="franchiseForm.telephone" required  only-digits >
                             <div class="error-msg" ng-show="user.telephone.$error.required && user.telephone.$touched">Please Enter Your Mobile Number</div>
                             <div class="margin-top padding-bottom">
                                 Franchise For
                                 <br>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" id=Dessange value=Dessange  ng-click="franchise('Dessange')">
+                                    <input type="checkbox" id="Dessange" value="Dessange"  ng-click="franchise('Dessange')">
                                     Dessange
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" id=CamilleAlbane value=CamilleAlbane  ng-click="franchise('CamilleAlbane')">
+                                    <input type="checkbox" id="CamilleAlbane" value="CamilleAlbane"  ng-click="franchise('CamilleAlbane')">
                                     Camille Albane
                                 </label>
                                 <div ng-if="nofranchise" style="font-size:16px;margin:10px 0 0;">
@@ -37,7 +37,7 @@
 
                             <div class="text-right">
 
-                                <button class="btn btn-primary btn-outline uppercase" type="submit" ng-disabled="user.$invalid" >Submit</button>
+                                <button class="btn btn-primary btn-outline uppercase" type="submit"  >Submit</button>
                             </div>
                         </form>
                     </div>
