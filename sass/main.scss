@@ -702,14 +702,17 @@ footer {
     margin-bottom: 6%;
   }
   .salon-image1 {
-    width: 60%;
-    float: left;
+    // width: 60%;
+    // float: left;
+    img{
+      margin: 0 auto;
+    }
   }
-  .salon-image2 {
-    width: 39%;
-    float: left;
-    margin-left: 2px;
-  }
+  // .salon-image2 {
+  //   width: 39%;
+  //   float: left;
+  //   margin-left: 2px;
+  // }
   .img-collect {
     margin-bottom: 50px;
   }

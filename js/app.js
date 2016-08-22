@@ -78,6 +78,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
         templateUrl: "views/template.html",
         controller: 'DessangeCtrl'
     })
+    // .state('dessange1', {
+    //     url: "/:id",
+    //     templateUrl: "views/template.html",
+    //     controller: 'DessangeCtrl'
+    // })
 
     .state('albane', {
         url: "/brands/albane/:id",

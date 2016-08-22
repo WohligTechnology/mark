@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="head-title in-middle">
-                            <img class="position-center" src="img/dessange/Logo.png" alt="Dessange Logo">
+                            <img class="position-center" src="img/dessange/Logo.png" alt="dessange Logo">
                         </div>
                     </div>
                 </div>
@@ -21,20 +21,20 @@
                             </div>
 
                             <div class="cont-abt">
-                              <div ng-if="Dessange.about==null"><h3 style="color:#fff:" class="text-center">No Data Found</h3></div>
-                                <p class="text-justify" ng-bind-html="Dessange.about">
+                              <div ng-if="dessange.about==null"><h3 style="color:#fff:" class="text-center">No Data Found</h3></div>
+                                <p class="text-justify" ng-bind-html="dessange.about">
 
-                                    <!-- Post-war France revolutionized female beauty, abandoning a fixed fashion standard for more fluid lines and lighter silhouettes. In Paris a young hairdresser, Jacques Dessange crowned this new generation of free women by creating innovative, elegant
+                                    <!-- Post-war France revolutionized female beauty, abandoning a fixed fashion standard for more fluid lines and lighter silhouettes. In Paris a young hairdresser, Jacques dessange crowned this new generation of free women by creating innovative, elegant
                                     and natural cuts. Pioneer of hairstyles full of movement which enhance the face, he established the Coiffé-Décoiffé ("messy look") technique which led to his success -->
                                     </p>
                                 <!-- <p class="text-justify">
-                                    In 1954, to give free rein to his creativity, Jacques Dessange opened his first salon on the Champs-Elysées – soon to become a famous "temple" where hairdressing and global beauty were reinvented on a daily basis. The generous ambition which has
+                                    In 1954, to give free rein to his creativity, Jacques dessange opened his first salon on the Champs-Elysées – soon to become a famous "temple" where hairdressing and global beauty were reinvented on a daily basis. The generous ambition which has
                                     driven the brand forward since its creation is still, even now, modeled on this historic salon that has since moved to 39, avenue Franklin Roosevelt where the heart of Maison DESSANGE continues to beat.</p>
                                 <p class="text-justify">
                                     In the 60s, the pioneer spirit and professionalism of Maison DESSANGE made a real name for the company. It launched the "Prestige Shows", spectacular demonstrations which, every year, brought together hairdressing professionals in the Cirque d'Hiver
                                     venue in Paris. In its desire to bring about the reign of beauty, the brand expanded worldwide, while its founder created training centers around the world where the trade is handed down with passion to the future architects of glamour.</p>
                                 <p class="text-justify">
-                                    Today, this same passion drives all the key players of Maison DESSANGE, today chairmes by Benjamin Dessange, expanded by its elegant legacy and forever turned towards the future. With 500 salons spread throughout more than 45 countries, it exerts its
+                                    Today, this same passion drives all the key players of Maison DESSANGE, today chairmes by Benjamin dessange, expanded by its elegant legacy and forever turned towards the future. With 500 salons spread throughout more than 45 countries, it exerts its
                                     influence and know-how across the globe.
                                 </p> -->
                             </div>
@@ -42,8 +42,8 @@
                                 <h2 class="uppercase text-center">The SALON EXPERIENCE</h2>
                             </div>
                             <div class="cont-abt btn-location" >
-                              <div ng-if="Dessange.salonexp==null"><h3 style="color:#fff:" class="text-center">No Data Found</h3></div>
-                                <p class="text-justify" ng-bind-html="Dessange.salonexp">
+                              <div ng-if="dessange.salonexp==null"><h3 style="color:#fff:" class="text-center">No Data Found</h3></div>
+                                <p class="text-justify" ng-bind-html="dessange.salonexp">
                                     <!-- Finally, it is time for you to open the door to this intimate beauty parlor, a subtle incarnation of French art de vivre where you will experience a luxury that suits your style. Every time, you have the same impression: it is as if you were
                                     returning home. A face lights up over there as it sees you, and is followed by another. Your hostesses smile and walk over to you, carrying the elegance of the environment with them. -->
                                 </p>
@@ -63,28 +63,28 @@
                             </div>
                             <div class="btn-location" ng-init="showSlider = 1">
                                 <div class="row">
-                                    <div class="col-md-4 col-sm-4">
-                                        <a class="btn btn-primary btn-med btn-outline uppercase" ng-click="showSlider = 1" ng-class="{'active-links' : showSlider=='1'}">Kemps Corner</a>
+                                    <div class="col-md-4 col-sm-4" ng-repeat="data in dessange.location" >
+                                        <a class="btn btn-primary btn-med btn-outline uppercase" ng-click="tabActive(data.id,$index);changeLocImages(data.location);" ng-class="{'active-links' :data.activetab}">{{data.location}}</a>
                                     </div>
-                                    <div class="col-md-4 col-sm-4">
+                                    <!-- <div class="col-md-4 col-sm-4">
                                         <a class="btn btn-primary btn-med btn-outline uppercase" ng-click="showSlider = 2" ng-class="{'active-links' : showSlider=='2'}">Lower Parel</a>
                                     </div>
                                     <div class="col-md-4 col-sm-4">
                                         <a class="btn btn-primary btn-med btn-outline uppercase" ng-click="showSlider = 3" ng-class="{'active-links' : showSlider=='3'}">Bandra</a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="salon">
                                 <div class="row">
                                     <div class="slider-location">
-                                        <flex-slider flex-slide="slide in kemps track by $index" animation="slide" prev-text="" next-text="" ng-if="showSlider == 1" animationSpeed="300" ,>
+                                        <flex-slider flex-slide="slide in slides.location track by slide.image" animation="slide" prev-text="" next-text=""  animationSpeed="300" ,>
                                         <li class="">
                                             <div class="salon-image">
-                                                <img ng-src="{{slide.img}}" class="img-responsive" alt="Salon">
+                                                <img ng-src="{{slide.image  | uploadpath}}" class="img-responsive" alt="Salon">
                                             </div>
                                         </li>
                                     </flex-slider>
-                                    <flex-slider flex-slide="slide in parel track by $index" animation="slide" prev-text="" next-text="" ng-if="showSlider == 2" animationSpeed="300" ,>
+                                    <!-- <flex-slider flex-slide="slide in parel track by $index" animation="slide" prev-text="" next-text="" ng-if="showSlider == 2" animationSpeed="300" ,>
                                         <li class="">
                                             <div class="salon-image">
                                                 <img ng-src="{{slide.img}}" class="img-responsive" alt="Salon">
@@ -97,7 +97,7 @@
                                                 <img ng-src="{{slide.img}}" class="img-responsive" alt="Salon">
                                             </div>
                                         </li>
-                                    </flex-slider>
+                                    </flex-slider> -->
                                 </div>
                             </div>
                         </div>
@@ -107,26 +107,26 @@
                                     <h2 class="uppercase text-center">Collection</h2>
                                 </div>
                                 <div class="cont-about">
-                                  <div ng-if="Dessange.collectionname==null"><h3 style="color:#fff:" class="text-center">No Data Found</h3></div>
-                                    <h3 class="text-center">{{Dessange.collectionname}}</h3>
-                                    <p class="text-center" ng-bind-html="Dessange.content">
+                                  <div ng-if="dessange.collectionname==null"><h3 style="color:#fff:" class="text-center">No Data Found</h3></div>
+                                    <h3 class="text-center">{{dessange.collectionname}}</h3>
+                                    <p class="text-center" ng-bind-html="dessange.content">
                                         <!-- Light and colors emerge from a velvety black background as symbols of irresistible femininity. The graphic lines of the accessories and styling with an Eighties inspiration match the acid and translucent colors that are hot news this season. Visibly
                                         layered cuts with wispy ends brighten up faces. The misleading simplicity of texture and styling and the flowing movements of the cuts evoke a feeling of freedom and natural sophistication. Colors have their word to say with intensity and candor. -->
                                     </p>
                                 </div>
                                 <!-- <div class="brand-video">
                                     <div class="row">
-                                        <div class="salon-video fancybox.iframe" fancybox href="{{Dessange.videourl|youtubethumb:true}}?autoplay=1&modestbranding=0&showinfo=0&rel=0&loop=1">
-                                            <img ng-src="{{Dessange.videourl|youtubethumb:false}}" class="img-responsive" alt="Video">
+                                        <div class="salon-video fancybox.iframe" fancybox href="{{dessange.videourl|youtubethumb:true}}?autoplay=1&modestbranding=0&showinfo=0&rel=0&loop=1">
+                                            <img ng-src="{{dessange.videourl|youtubethumb:false}}" class="img-responsive" alt="Video">
                                             <i class="fa fa-play"></i>
                                         </div>
                                     </div>
                                 </div> -->
 
                                 <div class="brand-video">
-                                    <div class="row" ng-if="Dessange.videourl">
-                                        <div class="salon-video fancybox.iframe" fancybox href="http://www.youtube.com/embed/{{Dessange.videourl |youtubethumb:true}}?autoplay=1&modestbranding=0&showinfo=0&rel=0&loop=1">
-                                            <img ng-src="http://img.youtube.com/vi/{{Dessange.videourl}}/maxresdefault.jpg" class="img-responsive" alt="Video">
+                                    <div class="row" ng-if="dessange.videourl">
+                                        <div class="salon-video fancybox.iframe" fancybox href="http://www.youtube.com/embed/{{dessange.videourl |youtubethumb:true}}?autoplay=1&modestbranding=0&showinfo=0&rel=0&loop=1">
+                                            <img ng-src="http://img.youtube.com/vi/{{dessange.videourl}}/maxresdefault.jpg" class="img-responsive" alt="Video">
                                             <i class="fa fa-play"></i>
                                         </div>
                                     </div>
@@ -136,18 +136,18 @@
                                         <div class="together">
                                             <div class="collect">
                                                 <div class="collect1">
-                                                    <img ng-src="{{Dessange.images[0].image1|uploadpath}}" class="img-responsive" alt="">
+                                                    <img ng-src="{{dessange.images[0].image1|uploadpath}}" class="img-responsive" alt="">
                                                 </div>
                                                 <div class="collect2">
-                                                    <img ng-src="{{Dessange.images[0].image3|uploadpath}}" class="img-responsive" alt="">
+                                                    <img ng-src="{{dessange.images[0].image3|uploadpath}}" class="img-responsive" alt="">
                                                 </div>
                                             </div>
                                             <div class="collects">
                                                 <div class="collects1">
-                                                    <img ng-src="{{Dessange.images[0].image2|uploadpath}}" class="img-responsive" alt="">
+                                                    <img ng-src="{{dessange.images[0].image2|uploadpath}}" class="img-responsive" alt="">
                                                 </div>
                                                 <div class="collects2">
-                                                    <img ng-src="{{Dessange.images[0].image4|uploadpath}}" class="img-responsive" alt="">
+                                                    <img ng-src="{{dessange.images[0].image4|uploadpath}}" class="img-responsive" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -161,22 +161,22 @@
                             <div class="col-md-12">
                                 <div class="store-locator" ng-show="showMe" class="animate-if">
                                     <div class="row">
-                                        <div class="col-md-4 col-sm-4 brd-right">
+                                        <div class="col-md-4 col-sm-4 brd-right" ng-repeat="data in dessange.location ">
                                             <address class="text-center">
-                                                <h5>Kemps Corner :</h5>
-                                                <p>
-                                                    Chinoy Mansion, 162, Warden Road, Kemps Corner,
-                                                    <br>Mumbai - 400 036.
+                                                <h5>{{data.location}}:</h5>
+                                                <p ng-bind-html="data.address">
+                                                    <!-- Chinoy Mansion, 162, Warden Road, Kemps Corner,
+                                                    <br>Mumbai - 400 036. -->
                                                 </p>
-                                                <p>
+                                                <!-- <p>
                                                     Call Us : +91 22 23630100 / 23630200,
-                                                </p>
+                                                </p> -->
                                                 <p>
-                                                    +91 9819925359
+                                                  {{data.contact}}
                                                 </p>
                                             </address>
                                         </div>
-                                        <div class="col-md-4 col-sm-4 brd-right">
+                                        <!-- <div class="col-md-4 col-sm-4 brd-right">
                                             <address class="text-center">
                                                 <h5>Lower Parel :</h5>
                                                 <p>
@@ -204,7 +204,7 @@
                                                     Call Us : +91 22 26000170 /26000171
                                                 </p>
                                             </address>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="tag-line">
                                         <h5>DESSANGE PARIS SALON AND SPA ARE OPEN SEVEN DAYS A WEEK, FROM 10 AMTO 9PM</h5>
