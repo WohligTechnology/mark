@@ -975,6 +975,9 @@ footer {
 }
 .store-locator {
   margin: 25px 0;
+  .col-md-4 +.col-md-4{
+    border-left: 1px solid #fff;
+  }
   address {
     min-height: 100px;
     p {
