@@ -240,6 +240,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     });
     $scope.changeLocImages = function (location) {
+      console.log("$scope.slides.location",$scope.slides.location);
       $scope.slides.location = _.find($scope.dessange.location,function (key) {
         return key.location == location;
       }).images;
