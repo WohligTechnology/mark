@@ -35,6 +35,10 @@
   .section.one video {
     width: auto;
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    @include transform(translateX(-50%));
   }
 }
 @media (max-width: $screen-xs-max) {

@@ -16,6 +16,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     four: "views/section/section4.html",
     five: "views/section/section5.html"
   };
+  $scope.showPlay = true;
+
+  $scope.playVid = function() {
+    $('#videoId').get(0).play();
+    $scope.showPlay = false;
+  }
 
   $scope.oneAtATime = true;
 

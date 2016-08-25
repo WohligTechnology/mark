@@ -1,14 +1,14 @@
 <video autoplay loop class="hidden-xs hidden-sm">
   <source src="img/video/salon.mp4" type="video/mp4">
 </video>
-<video autoplay="autoplay" loop class="hidden-md hidden-lg" ng-click="playVid()">
+<video autoplay="autoplay" loop class="hidden-md hidden-lg" id="videoId">
   <source src="img/video/salon.mp4" type="video/mp4">
 </video>
 <div class="home-landing text-center">
   <div class="position-center top60">
     <h4>Welcome to</h4>
     <a class="logo" ui-sref="home"><img src="img/logo.png" alt="Mark Salon & Spa"></a>
-    <a href=""><img src="img/play.png" alt="" class="w40"></a>
+    <a ng-click="playVid()" ng-if="showPlay" class="visible-xs"><img src="img/play.png" class="w40"></a>
     <div class="landing-menu text-center hidden-xs hidden-sm" ng-include="template.menu"></div>
   </div>
 </div>
