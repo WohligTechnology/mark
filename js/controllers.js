@@ -14,7 +14,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     two: "views/section/section2.html",
     three: "views/section/section3.html",
     four: "views/section/section4.html",
-    five: "views/section/section5.html"
+    // five: "views/section/section5.html"
   };
   $scope.showPlay = true;
 
@@ -83,14 +83,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     console.log("  $scope.careers", $scope.careers);
   })
 
-  $scope.openThank = function() {
 
-    var modalInstance = $uibModal.open({
-      animation: true,
-      templateUrl: 'views/modal/thank.html',
-      backdropClass: 'backcolor'
-    });
-  }
 
 
 
@@ -364,6 +357,44 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
 })
+.controller('ContactUsCtrl', function($scope, TemplateService, NavigationService, $timeout, $location, $uibModal) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("contact");
+  $scope.menutitle = NavigationService.makeactive("Contact Us");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+  TemplateService.header = "views/header2.html";
+  $scope.changePage = function(id) {
+    console.log(id);
+    $location.path("" + id);
+  };
+
+
+  $scope.formComplete = false;
+  $scope.contactForm = {};
+
+
+  $scope.submitForm = function(contactForm) {
+    $scope.formComplete = true;
+    NavigationService.contactSubmit($scope.contactForm, function(data) {
+      if (data.value===true) {
+        $uibModal.open({
+          animation: true,
+          templateUrl: 'views/modal/thank.html',
+          backdropClass: 'backcolor'
+        });
+            }
+    });
+    $timeout(function() {
+      $scope.formComplete = false;
+    }, 2000);
+    $scope.contactForm = {};
+  };
+
+
+
+})
+
 
 .controller('MediaCornerCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
   //Used to name the .html file
@@ -392,179 +423,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     console.log(id);
     $location.path("" + id);
   };
-  // $scope.editorails = [{
-  //     img: "img/media/editorial/1.jpg",
-  //     video: ""
-  // }, {
-  //     img: "img/media/editorial/2.jpg",
-  //     video: ""
-  // }, {
-  //     img: "img/media/editorial/3.jpg",
-  //     video: ""
-  // }, {
-  //     img: "img/media/editorial/4.jpg",
-  //     video: ""
-  // }, {
-  //     img: "img/media/editorial/5.jpg",
-  //     video: ""
-  // }, {
-  //     img: "img/media/editorial/6.jpg",
-  //     video: "",
-  // }, {
-  //     img: "img/media/editorial/7.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/8.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/9.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/10.jpg",
-  //     video: "",
-  // }, {
-  //     img: "img/media/editorial/11.jpg",
-  //     video: "",
-  // }, {
-  //     img: "img/media/editorial/12.jpg",
-  //     video: "",
-  // }, {
-  //     img: "img/media/editorial/13.jpg",
-  //     video: "",
-  // }, {
-  //     img: "img/media/editorial/14.jpg",
-  //     video: "",
-  // }, {
-  //     img: "img/media/editorial/15.jpg",
-  //     video: "",
-  // }, {
-  //     img: "img/media/editorial/16.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/17.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/18.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/19.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/20.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/21.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/22.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/23.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/24.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/25.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/26.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/27.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/28.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/29.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/30.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/31.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/32.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/33.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/34.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/35.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/36.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/37.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/38.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/39.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/40.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/41.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/42.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/43.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/44.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/45.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }, {
-  //     img: "img/media/editorial/46.jpg",
-  //     video: "",
-  //     // icon: "fa-play-circle-o"
-  // }];
+
 
   NavigationService.getMedia(1, function(data) {
     $scope.hairmakeup = data;
@@ -593,7 +452,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $(window).scrollTop(0);
   });
   console.log($state.current.name);
-  if ($state.current.name == "media-corner" || $state.current.name == "about" || $state.current.name == "albane" || $state.current.name == "dessange" || $state.current.name == "phytodess") {
+  if ($state.current.name == "media-corner" || $state.current.name == "about" || $state.current.name == "albane" || $state.current.name == "dessange" || $state.current.name == "phytodess" || $state.current.name == "contactus") {
     $scope.uiSref = true;
   } else {
     $scope.uiSref = false;

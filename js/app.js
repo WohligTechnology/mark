@@ -27,14 +27,15 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
         })
 
 
-    .state('contact', {
-        url: "/contact",
-        templateUrl: "views/template-home.html",
-        controller: 'HomeCtrl',
-        params: {
-            'id': 'contact',
-        }
-    })
+    // .state('contact', {
+    //     url: "/contact",
+    //     templateUrl: "views/template-home.html",
+    //     controller: 'HomeCtrl',
+    //     params: {
+    //         'id': 'contact',
+    //     }
+    // })
+
 
     .state('brands', {
         url: "/brands",
@@ -106,6 +107,13 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
         url: "/franchise",
         templateUrl: "views/template.html",
         controller: 'FranchiseCtrl'
+    })
+
+
+    .state('contactusmade', {
+        url: "/contactus",
+        templateUrl: "views/template.html",
+        controller: 'ContactUsCtrl'
     })
 
     ;

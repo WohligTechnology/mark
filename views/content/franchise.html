@@ -17,7 +17,7 @@
                             <div class="error-msg" ng-show="user.company.$error.required && user.company.$touched">Please Enter Your Company Name</div>
                             <input type="email" class="form-control" placeholder="Email" name="email" ng-model="franchiseForm.email" required>
                             <div class="error-msg" ng-show="user.email.$error.required && user.email.$touched">Please Enter Your Email</div>
-                            <input type="tel" class="form-control" placeholder="Mobile" name="telephone" ng-model="franchiseForm.telephone" required  only-digits >
+                            <input type="text" class="form-control" placeholder="Mobile" name="telephone" ng-model="franchiseForm.telephone" required  only-digits minlength="10" maxlength="10">
                             <div class="error-msg" ng-show="user.telephone.$error.required && user.telephone.$touched">Please Enter Your Mobile Number</div>
                             <div class="margin-top padding-bottom">
                                 Franchise For
