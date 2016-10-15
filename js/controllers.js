@@ -1,89 +1,87 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'duScroll'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $state, $document, $location, $uibModal) {
-  //Used to name the .html file
-  $scope.template = TemplateService.changecontent("home");
-  $scope.menutitle = NavigationService.makeactive("Home");
-  TemplateService.title = $scope.menutitle;
-  $scope.navigation = NavigationService.getnav();
-  TemplateService.footer = "views/footer2.html";
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("home");
+    $scope.menutitle = NavigationService.makeactive("Home");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    TemplateService.footer = "views/footer2.html";
 
 
-  $scope.section = {
-    one: "views/section/section1.html",
-    two: "views/section/section2.html",
-    three: "views/section/section3.html",
-    four: "views/section/section4.html",
-    // five: "views/section/section5.html"
-  };
-  $scope.showPlay = true;
+    $scope.section = {
+        one: "views/section/section1.html",
+        two: "views/section/section2.html",
+        three: "views/section/section3.html",
+        four: "views/section/section4.html",
+        // five: "views/section/section5.html"
+    };
+    $scope.showPlay = true;
 
-  $scope.playVid = function() {
-    $('#videoId').get(0).play();
-    $scope.showPlay = false;
-  }
-
-  $scope.oneAtATime = true;
-
-  $scope.$on('$viewContentLoaded', function() {
-    $('body').addClass('fp-viewing-3');
-    $(window).scroll(function() {
-      var scroller = $(document).scrollTop();
-      var height = $(window).height();
-      if (height <= scroller) {
-        $('body').removeClass('fp-viewing-0');
-      } else {
-        $('body').addClass('fp-viewing-0');
-      }
-    });
-  });
-
-  function makeAnimation(id) {
-    if (_.isEmpty(id)) {
-      id = "home";
+    $scope.playVid = function() {
+        $('#videoId').get(0).play();
+        $scope.showPlay = false;
     }
-    var someElement = angular.element(document.getElementById(id));
-    $document.scrollToElement(someElement, 0, 1400);
-  }
 
-  $scope.$on('$viewContentLoaded', function(event) {
-    setTimeout(function() {
-      makeAnimation($stateParams.id);
-    }, 1000);
-  });
+    $scope.oneAtATime = true;
 
-
-  $scope.changePage = function(id) {
-    $scope.menutitle = NavigationService.makeactive(id);
-    $state.transitionTo('home', {
-      id: id
-    }, {
-      notify: false
+    $scope.$on('$viewContentLoaded', function() {
+        $('body').addClass('fp-viewing-3');
+        $(window).scroll(function() {
+            var scroller = $(document).scrollTop();
+            var height = $(window).height();
+            if (height <= scroller) {
+                $('body').removeClass('fp-viewing-0');
+            } else {
+                $('body').addClass('fp-viewing-0');
+            }
+        });
     });
-    makeAnimation(id);
-    $location.replace();
-  };
-  $scope.formComplete = false;
-  $scope.contactForm = {};
 
+    function makeAnimation(id) {
+        if (_.isEmpty(id)) {
+            id = "home";
+        }
+        var someElement = angular.element(document.getElementById(id));
+        $document.scrollToElement(someElement, 0, 1400);
+    }
 
-  $scope.submitForm = function(contactForm) {
-    $scope.formComplete = true;
-    NavigationService.contactSubmit($scope.contactForm, function(data) {
-      console.log('  $scope.contactForm', $scope.contactForm);
+    $scope.$on('$viewContentLoaded', function(event) {
+        setTimeout(function() {
+            makeAnimation($stateParams.id);
+        }, 1000);
     });
-    $timeout(function() {
-      $scope.formComplete = false;
-    }, 2000);
+
+
+    $scope.changePage = function(id) {
+        $scope.menutitle = NavigationService.makeactive(id);
+        $state.transitionTo('home', {
+            id: id
+        }, {
+            notify: false
+        });
+        makeAnimation(id);
+        $location.replace();
+    };
+    $scope.formComplete = false;
     $scope.contactForm = {};
-  };
-
-  NavigationService.getAllCareer(function(data) {
-    $scope.careers = data;
-    console.log("  $scope.careers", $scope.careers);
-  })
 
 
+    $scope.submitForm = function(contactForm) {
+        $scope.formComplete = true;
+        NavigationService.contactSubmit($scope.contactForm, function(data) {
+            console.log('  $scope.contactForm', $scope.contactForm);
+        });
+        $timeout(function() {
+            $scope.formComplete = false;
+        }, 2000);
+        $scope.contactForm = {};
+    };
+
+    NavigationService.getAllCareer(function(data) {
+        $scope.careers = data;
+        console.log("  $scope.careers", $scope.careers);
+    })
 
 
 
@@ -96,16 +94,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 .controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $location) {
-  //Used to name the .html file
-  $scope.template = TemplateService.changecontent("about");
-  $scope.menutitle = NavigationService.makeactive("About Us");
-  TemplateService.title = $scope.menutitle;
-  $scope.navigation = NavigationService.getnav();
-  TemplateService.header = "views/header2.html";
-  $scope.changePage = function(id) {
-    console.log(id);
-    $location.path("" + id);
-  };
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("about");
+    $scope.menutitle = NavigationService.makeactive("About Us");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    TemplateService.header = "views/header2.html";
+    $scope.changePage = function(id) {
+        console.log(id);
+        $location.path("" + id);
+    };
 })
 
 .controller('DessangeCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
@@ -124,7 +122,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.myFunc = function() {
         $scope.showMe = !$scope.showMe;
     };
-    $scope.slides ={};
+    $scope.slides = {};
     $scope.slides.location = [];
     $scope.kemps = [{
         img: "img/kemps/IMG_7953.jpg"
@@ -238,18 +236,18 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }
 
     });
-    $scope.changeLocImages = function (location) {
-      $scope.slides.location = _.find($scope.dessange.location,function (key) {
-        return key.location == location;
-      }).images;
-      // $scope.$apply();
+    $scope.changeLocImages = function(location) {
+        $scope.slides.location = _.find($scope.dessange.location, function(key) {
+            return key.location == location;
+        }).images;
+        // $scope.$apply();
     };
     $scope.tabActive = function(id, indexid) {
         // $scope.subCatid = id;
         _.each($scope.dessange.location, function(key) {
             key.activetab = false;
         });
-      $scope.dessange.location[indexid].activetab = true;
+        $scope.dessange.location[indexid].activetab = true;
         NavigationService.getBrands($stateParams.id, function(data) {
             $scope.locations = data.location;
 
@@ -261,223 +259,215 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 .controller('AlbaneCtrl', function($scope, TemplateService, NavigationService, $timeout, $location, $stateParams) {
-  //Used to name the .html file
-  $scope.template = TemplateService.changecontent("camille");
-  $scope.menutitle = NavigationService.makeactive("Camille Albane Paris");
-  TemplateService.title = $scope.menutitle;
-  $scope.navigation = NavigationService.getnav();
-  TemplateService.header = "views/header2.html";
-  $scope.changePage = function(id) {
-    console.log(id);
-    $location.path("" + id);
-  };
-  NavigationService.getBrands($stateParams.id, function(data) {
-    $scope.Albane = data;
-    console.log("$scope.Albane", $scope.Albane);
-  });
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("camille");
+    $scope.menutitle = NavigationService.makeactive("Camille Albane Paris");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    TemplateService.header = "views/header2.html";
+    $scope.changePage = function(id) {
+        console.log(id);
+        $location.path("" + id);
+    };
+    NavigationService.getBrands($stateParams.id, function(data) {
+        $scope.Albane = data;
+        console.log("$scope.Albane", $scope.Albane);
+    });
 })
 
 .controller('PhytodessCtrl', function($scope, TemplateService, NavigationService, $timeout, $location, $stateParams) {
-  //Used to name the .html file
-  $scope.template = TemplateService.changecontent("phytodess");
-  $scope.menutitle = NavigationService.makeactive("Phytodess Paris");
-  TemplateService.title = $scope.menutitle;
-  $scope.navigation = NavigationService.getnav();
-  TemplateService.header = "views/header2.html";
-  $scope.changePage = function(id) {
-    console.log(id);
-    $location.path("" + id);
-  };
-  NavigationService.getBrands($stateParams.id, function(data) {
-    $scope.Phytodess = data;
-    console.log('$scope.Phytodess', $scope.Phytodess);
-  });
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("phytodess");
+    $scope.menutitle = NavigationService.makeactive("Phytodess Paris");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    TemplateService.header = "views/header2.html";
+    $scope.changePage = function(id) {
+        console.log(id);
+        $location.path("" + id);
+    };
+    NavigationService.getBrands($stateParams.id, function(data) {
+        $scope.Phytodess = data;
+        console.log('$scope.Phytodess', $scope.Phytodess);
+    });
 })
 
 .controller('FranchiseCtrl', function($scope, TemplateService, NavigationService, $timeout, $location, $uibModal) {
-  //Used to name the .html file
-  $scope.template = TemplateService.changecontent("franchise");
-  $scope.menutitle = NavigationService.makeactive("Franchise");
-  TemplateService.title = $scope.menutitle;
-  $scope.navigation = NavigationService.getnav();
-  TemplateService.header = "views/header2.html";
-  $scope.changePage = function(id) {
-    console.log(id);
-    $location.path("" + id);
-  };
-  $scope.formComplete = false;
-  $scope.franchiseForm = {};
-  $scope.franchiseForm.enquiryarr = [];
-  $scope.nofranchise = false;
-  $scope.submitFranchiseForm = function(franchiseForm) {
-    $scope.nofranchise = false;
-
-    if ($scope.franchiseForm) {
-      $scope.franchiseForm.franchise = "";
-      if ($scope.franchiseForm.enquiryarr.length > 0) {
-        _.each($scope.franchiseForm.enquiryarr, function(n) {
-          $scope.franchiseForm.franchise += n + ",";
-        })
-        $scope.franchiseForm.franchise = $scope.franchiseForm.franchise.substring(0, $scope.franchiseForm.franchise.length - 1);
-        NavigationService.franchiseSubmit($scope.franchiseForm, function(data) {
-
-
-          $scope.formComplete = true;
-          $scope.openThank();
-        });
-        $timeout(function() {
-          $scope.formComplete = false;
-        }, 2000);
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("franchise");
+        $scope.menutitle = NavigationService.makeactive("Franchise");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        TemplateService.header = "views/header2.html";
+        $scope.changePage = function(id) {
+            console.log(id);
+            $location.path("" + id);
+        };
+        $scope.formComplete = false;
         $scope.franchiseForm = {};
         $scope.franchiseForm.enquiryarr = [];
-      } else {
-        $scope.nofranchise = true;
-      }
-    }
+        $scope.nofranchise = false;
+        $scope.submitFranchiseForm = function(franchiseForm) {
+            $scope.nofranchise = false;
 
+            if ($scope.franchiseForm) {
+                $scope.franchiseForm.franchise = "";
+                if ($scope.franchiseForm.enquiryarr.length > 0) {
+                    _.each($scope.franchiseForm.enquiryarr, function(n) {
+                        $scope.franchiseForm.franchise += n + ",";
+                    })
+                    $scope.franchiseForm.franchise = $scope.franchiseForm.franchise.substring(0, $scope.franchiseForm.franchise.length - 1);
+                    NavigationService.franchiseSubmit($scope.franchiseForm, function(data) {
+                        if (data.value === true) {
+                            $uibModal.open({
+                                animation: true,
+                                templateUrl: 'views/modal/franchisethank.html',
+                                backdropClass: "backcolor"
+                            });
+                            $scope.formComplete = true;
+                        }
 
+                    });
+                    $timeout(function() {
+                        $scope.formComplete = false;
+                        $scope.franchiseForm = {};
+                        $scope.franchiseForm.enquiryarr = [];
+                    }, 2000);
 
-  }
-  $scope.franchise = function(val) {
-    var foundIndex = $scope.franchiseForm.enquiryarr.indexOf(val);
-    if (foundIndex == -1) {
-      $scope.franchiseForm.enquiryarr.push(val);
-    } else {
-      $scope.franchiseForm.enquiryarr.splice(foundIndex, 1);
-    }
-  };
-  $scope.openThank = function() {
-
-    var modalInstance = $uibModal.open({
-      animation: true,
-      templateUrl: 'views/modal/franchisethank.html',
-      backdropClass: "backcolor"
-    });
-  }
-
-
-})
-.controller('ContactUsCtrl', function($scope, TemplateService, NavigationService, $timeout, $location, $uibModal) {
-  //Used to name the .html file
-  $scope.template = TemplateService.changecontent("contact");
-  $scope.menutitle = NavigationService.makeactive("Contact Us");
-  TemplateService.title = $scope.menutitle;
-  $scope.navigation = NavigationService.getnav();
-  TemplateService.header = "views/header2.html";
-  $scope.changePage = function(id) {
-    console.log(id);
-    $location.path("" + id);
-  };
-
-
-  $scope.formComplete = false;
-  $scope.contactForm = {};
-
-
-  $scope.submitForm = function(contactForm) {
-    $scope.formComplete = true;
-    NavigationService.contactSubmit($scope.contactForm, function(data) {
-      if (data.value===true) {
-        $uibModal.open({
-          animation: true,
-          templateUrl: 'views/modal/thank.html',
-          backdropClass: 'backcolor'
-        });
+                } else {
+                    $scope.nofranchise = true;
+                }
             }
-    });
-    $timeout(function() {
-      $scope.formComplete = false;
-    }, 2000);
-    $scope.contactForm = {};
-  };
+        }
+        $scope.franchise = function(val) {
+            var foundIndex = $scope.franchiseForm.enquiryarr.indexOf(val);
+            if (foundIndex == -1) {
+                $scope.franchiseForm.enquiryarr.push(val);
+            } else {
+                $scope.franchiseForm.enquiryarr.splice(foundIndex, 1);
+            }
+        };
+
+
+    })
+    .controller('ContactUsCtrl', function($scope, TemplateService, NavigationService, $timeout, $location, $uibModal) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("contact");
+        $scope.menutitle = NavigationService.makeactive("Contact Us");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        TemplateService.header = "views/header2.html";
+        $scope.changePage = function(id) {
+            console.log(id);
+            $location.path("" + id);
+        };
+        $scope.formComplete = false;
+        $scope.contactForm = {};
+        $scope.submitForm = function(contactForm) {
+            NavigationService.contactSubmit($scope.contactForm, function(data) {
+                if (data.value === true) {
+                    $uibModal.open({
+                        animation: true,
+                        templateUrl: 'views/modal/thank.html',
+                        backdropClass: 'backcolor'
+                    });
+                    $scope.formComplete = true;
+                }
+            });
+            $timeout(function() {
+                $scope.formComplete = false;
+                  $scope.contactForm = {};
+            }, 2000);
+
+        };
 
 
 
-})
+    })
 
 
 .controller('MediaCornerCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
-  //Used to name the .html file
-  $scope.template = TemplateService.changecontent("media-corner");
-  $scope.menutitle = NavigationService.makeactive("Media Corner");
-  TemplateService.title = $scope.menutitle;
-  $scope.navigation = NavigationService.getnav();
-  TemplateService.header = "views/header2.html";
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("media-corner");
+    $scope.menutitle = NavigationService.makeactive("Media Corner");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    TemplateService.header = "views/header2.html";
 
-  // $scope.showSlider = 1;
-  // $scope.slider = function(val) {
-  //   if(val == 1) {
-  //     $scope.showSlider = 1;
-  //   }
-  //   else if(val == 2) {
-  //     $scope.showSlider = 2;
-  //   }
-  //   else if (val == 3) {
-  //     $scope.showSlider =3 ;
-  //   }
-  //   else {
-  //     $scope.showSlider = 1;
-  //   }
-  // }
-  $scope.changePage = function(id) {
-    console.log(id);
-    $location.path("" + id);
-  };
-
-
-  NavigationService.getMedia(1, function(data) {
-    $scope.hairmakeup = data;
-    $scope.hairmakeup = _.chunk($scope.hairmakeup, 9);
-    for (var i = 0; i < $scope.hairmakeup.length; i++) {
-      $scope.hairmakeup[i] = _.chunk($scope.hairmakeup[i], 3);
-    }
-    console.log("$scope.hairmakeupasdf", $scope.hairmakeup);
-  })
-
-  NavigationService.getMedia(2, function(data) {
-    $scope.editorails = data;
-    $scope.editorails = _.chunk($scope.editorails, 9);
-    for (var i = 0; i < $scope.editorails.length; i++) {
-      $scope.editorails[i] = _.chunk($scope.editorails[i], 3);
-    }
-  })
+    // $scope.showSlider = 1;
+    // $scope.slider = function(val) {
+    //   if(val == 1) {
+    //     $scope.showSlider = 1;
+    //   }
+    //   else if(val == 2) {
+    //     $scope.showSlider = 2;
+    //   }
+    //   else if (val == 3) {
+    //     $scope.showSlider =3 ;
+    //   }
+    //   else {
+    //     $scope.showSlider = 1;
+    //   }
+    // }
+    $scope.changePage = function(id) {
+        console.log(id);
+        $location.path("" + id);
+    };
 
 
-  console.log("$scope.dsad", $scope.hairmakeup);
+    NavigationService.getMedia(1, function(data) {
+        $scope.hairmakeup = data;
+        $scope.hairmakeup = _.chunk($scope.hairmakeup, 9);
+        for (var i = 0; i < $scope.hairmakeup.length; i++) {
+            $scope.hairmakeup[i] = _.chunk($scope.hairmakeup[i], 3);
+        }
+        console.log("$scope.hairmakeupasdf", $scope.hairmakeup);
+    })
+
+    NavigationService.getMedia(2, function(data) {
+        $scope.editorails = data;
+        $scope.editorails = _.chunk($scope.editorails, 9);
+        for (var i = 0; i < $scope.editorails.length; i++) {
+            $scope.editorails[i] = _.chunk($scope.editorails[i], 3);
+        }
+    })
+
+
+    console.log("$scope.dsad", $scope.hairmakeup);
 })
 
 .controller('headerctrl', function($scope, TemplateService, $state) {
-  $scope.template = TemplateService;
-  $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
-    $(window).scrollTop(0);
-  });
-  console.log($state.current.name);
-  if ($state.current.name == "media-corner" || $state.current.name == "about" || $state.current.name == "albane" || $state.current.name == "dessange" || $state.current.name == "phytodess" || $state.current.name == "contactus") {
-    $scope.uiSref = true;
-  } else {
-    $scope.uiSref = false;
-  }
+    $scope.template = TemplateService;
+    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+        $(window).scrollTop(0);
+    });
+    console.log($state.current.name);
+    if ($state.current.name == "media-corner" || $state.current.name == "about" || $state.current.name == "albane" || $state.current.name == "dessange" || $state.current.name == "phytodess" || $state.current.name == "contactus") {
+        $scope.uiSref = true;
+    } else {
+        $scope.uiSref = false;
+    }
 
 })
 
 .controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope) {
 
-  $scope.changeLanguage = function() {
-    console.log("Language CLicked");
+    $scope.changeLanguage = function() {
+        console.log("Language CLicked");
 
-    if (!$.jStorage.get("language")) {
-      $translate.use("hi");
-      $.jStorage.set("language", "hi");
-    } else {
-      if ($.jStorage.get("language") == "en") {
-        $translate.use("hi");
-        $.jStorage.set("language", "hi");
-      } else {
-        $translate.use("en");
-        $.jStorage.set("language", "en");
-      }
-    }
-  };
+        if (!$.jStorage.get("language")) {
+            $translate.use("hi");
+            $.jStorage.set("language", "hi");
+        } else {
+            if ($.jStorage.get("language") == "en") {
+                $translate.use("hi");
+                $.jStorage.set("language", "hi");
+            } else {
+                $translate.use("en");
+                $.jStorage.set("language", "en");
+            }
+        }
+    };
 
 
 });
