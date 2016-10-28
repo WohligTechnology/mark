@@ -33,7 +33,7 @@ var navigationservice = angular.module('navigationservice', [])
         name: "Media Corner",
         classis: "active",
         anchor: "media-corner",
-        pagename: "media",
+        pagename1: "media",
         subnav: []
     }, {
         name: "Careers",
@@ -45,13 +45,13 @@ var navigationservice = angular.module('navigationservice', [])
         name: "Contact Us",
         classis: "active",
         anchor: "contactusmade",
-            pagename: "media",
+        new: "_blank",
         subnav: []
     }, {
         name: "Franchise",
         classis: "active",
         anchor: "franchise",
-        pagename: "media",
+        pagename1: "media",
         subnav: []
     }];
 

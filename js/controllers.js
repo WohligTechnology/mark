@@ -402,7 +402,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     //   else if(val == 2) {
     //     $scope.showSlider = 2;
     //   }
-    //   else if (val == 3) {
+    //   else if (val == 3) {changePage
     //     $scope.showSlider =3 ;
     //   }
     //   else {
@@ -442,11 +442,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $(window).scrollTop(0);
     });
     console.log($state.current.name);
-    if ($state.current.name == "media-corner" || $state.current.name == "about" || $state.current.name == "albane" || $state.current.name == "dessange" || $state.current.name == "phytodess" || $state.current.name == "contactus") {
-        $scope.uiSref = true;
-    } else {
-        $scope.uiSref = false;
-    }
+    // if ($state.current.name == "media-corner" || $state.current.name == "about" || $state.current.name == "albane" || $state.current.name == "dessange" || $state.current.name == "phytodess" ) {
+    //     $scope.uiSref = true;
+    // } else {
+    //     $scope.uiSref = false;
+    // }
 
 })
 
