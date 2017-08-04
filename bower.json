@@ -27,7 +27,7 @@
     "angular-sanitize": "~1.4.3",
     "font-awesome": "^4.6.3",
     "lodash": "~4.0.0",
-    "angular": "^1.5.0",
+    "angular": "1.5.8",
     "fancyBox": "fancybox#^2.1.5",
     "angulartics-google-analytics": "^0.1.4",
     "fullpage.js": "^2.8.0",

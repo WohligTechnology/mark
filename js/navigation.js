@@ -1,7 +1,8 @@
 // var adminurl = "http://192.168.1.109/markbackend/index.php/json/";
 // var imgurl = "http://192.168.1.109/markbackend/uploads/";
-var adminurl = "http://marksalonandspa.com/admin/index.php/json/";
-var imgurl = "http://marksalonandspa.com/admin/uploads/";
+var mainUrl = "http://dessangemumbai.com/";
+var adminurl = mainUrl + "admin/index.php/json/";
+var imgurl = mainUrl + "admin/uploads/";
 // var imgpath = imgurl + "readFile";
 var uploadurl = imgurl;
 
@@ -16,113 +17,113 @@ var uploadurl = imgurl;
 var navigationservice = angular.module('navigationservice', [])
 
 
-.factory('NavigationService', function($http) {
-    var navigation = [{
-        name: "Overview",
-        classis: "active",
-        anchor: "overview",
-        pagename: "overview",
-        subnav: []
-    }, {
-        name: "Brands",
-        classis: "active",
-        anchor: "brands",
-        pagename: "brands",
-        subnav: []
-    }, {
-        name: "Media Corner",
-        classis: "active",
-        anchor: "media-corner",
-        pagename1: "media",
-        subnav: []
-    }, {
-        name: "Careers",
-        classis: "active",
-        anchor: "careers",
-        pagename: "careers",
-        subnav: []
-    }, {
-        name: "Contact Us",
-        classis: "active",
-        anchor: "contactusmade",
-        new: "_blank",
-        subnav: []
-    }, {
-        name: "Franchise",
-        classis: "active",
-        anchor: "franchise",
-        pagename1: "media",
-        subnav: []
-    }];
+    .factory('NavigationService', function ($http) {
+        var navigation = [{
+            name: "Overview",
+            classis: "active",
+            anchor: "overview",
+            pagename: "overview",
+            subnav: []
+        }, {
+            name: "Brands",
+            classis: "active",
+            anchor: "brands",
+            pagename: "brands",
+            subnav: []
+        }, {
+            name: "Media Corner",
+            classis: "active",
+            anchor: "media-corner",
+            pagename1: "media",
+            subnav: []
+        }, {
+            name: "Careers",
+            classis: "active",
+            anchor: "careers",
+            pagename: "careers",
+            subnav: []
+        }, {
+            name: "Contact Us",
+            classis: "active",
+            anchor: "contactusmade",
+            new: "_blank",
+            subnav: []
+        }, {
+            name: "Franchise",
+            classis: "active",
+            anchor: "franchise",
+            pagename1: "media",
+            subnav: []
+        }];
 
-    return {
-        getnav: function() {
-            return navigation;
-        },
-        makeactive: function(menuname) {
-            for (var i = 0; i < navigation.length; i++) {
-                if (navigation[i].name == menuname) {
-                    navigation[i].classis = "active";
-                } else {
-                    navigation[i].classis = "";
+        return {
+            getnav: function () {
+                return navigation;
+            },
+            makeactive: function (menuname) {
+                for (var i = 0; i < navigation.length; i++) {
+                    if (navigation[i].name == menuname) {
+                        navigation[i].classis = "active";
+                    } else {
+                        navigation[i].classis = "";
+                    }
                 }
-            }
-            return menuname;
-        },
+                return menuname;
+            },
 
 
-        // getBrands:function(id,callback){
-        //   $http({
-        //     url:adminurl+'getBrand',
-        //     method:'GET',
-        //     withCredentials:true
-        //   }).success(callback);
-        // }id
-        getBrands: function(id, callback) {
-            console.log(id);
-            $http.get(adminurl + 'getBrand?id=' + id).success(callback);
-        },
-        getMedia: function(type, callback) {
-            console.log(type);
-            $http.get(adminurl + 'getMedia?type=' + type).success(callback);
-        },
+            // getBrands:function(id,callback){
+            //   $http({
+            //     url:adminurl+'getBrand',
+            //     method:'GET',
+            //     withCredentials:true
+            //   }).success(callback);
+            // }id
+            getBrands: function (id, callback) {
+                console.log(id);
+                $http.get(adminurl + 'getBrand?id=' + id).success(callback);
+            },
+            getMedia: function (type, callback) {
+                console.log(type);
+                $http.get(adminurl + 'getMedia?type=' + type).success(callback);
+            },
 
 
-        // contactSubmit: function(formData, callback) {
-        //     // console.log('form data: ', formData);
-        //     $http({
-        //         url: adminurl + 'contactUs',
-        //         method: 'POST',
-        //         withCredentials: true,
-        //         data: {
-        //             "email": formData.email,
-        //             "telephone": formData.telephone,
-        //             "comment": formData.comment,
-        //             "name": formData.name,
-        //         }
-        //     }).success(callback);
-        // },
-        contactSubmit: function(contactForm, callback) {
-            $http({
-                url: adminurl + 'contactSubmit',
-                method: 'POST',
-                withCredentials: true,
-                data: contactForm
-            }).success(callback);
-        },
-        getAllCareer: function(callback) {
+            // contactSubmit: function(formData, callback) {
+            //     // console.log('form data: ', formData);
+            //     $http({
+            //         url: adminurl + 'contactUs',
+            //         method: 'POST',
+            //         withCredentials: true,
+            //         data: {
+            //             "email": formData.email,
+            //             "telephone": formData.telephone,
+            //             "comment": formData.comment,
+            //             "name": formData.name,
+            //         }
+            //     }).success(callback);
+            // },
+            contactSubmit: function (contactForm, callback) {
+                $http({
+                    url: adminurl + 'contactSubmit',
+                    method: 'POST',
+                    withCredentials: true,
+                    data: contactForm
+                }).success(callback);
+            },
+            getAllCareer: function (callback) {
 
-            $http.get(adminurl + 'getAllCareer').success(callback);
-        },
+                $http.get(adminurl + 'getAllCareer').success(callback);
+            },
 
-        franchiseSubmit: function(franchiseForm, callback) {
-            $http({
-                url: adminurl + 'franchiseSubmit',
-                method: 'POST',
-                withCredentials: true,
-                data: franchiseForm
-            }).success(callback);
-        },
+            franchiseSubmit: function (franchiseForm, callback) {
+                $http({
+                    url: adminurl + 'franchiseSubmit',
+                    method: 'POST',
+                    withCredentials: true,
+                    data: franchiseForm
+                }).success(callback);
+            },
 
-    };
-});
+        };
+    });
